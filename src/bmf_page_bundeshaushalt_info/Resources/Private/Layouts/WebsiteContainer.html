@@ -1,0 +1,71 @@
+<div class="container row">
+
+    <f:if condition="{0:pageTyp}=={0:'home'}">
+        <f:then><f:render partial="Header/Navigation/SR-home.html" /></f:then>
+        <f:else><f:render partial="Header/Navigation/SR-article.html" /></f:else>
+    </f:if>
+
+        <div class="row header-meta-wrapper">
+            <div class="header-meta grid_6">
+                <h2 class="sr-hint">Servicemenü</h2>
+                <f:render partial="Header/MetaAccessibility.html" arguments="{access:access}" />
+                <f:render partial="Header/SocialMedia.html" arguments="{socialMedia:socialMedia}" />
+            </div>
+            <div class="header-search grid_6">
+                <h2 class="sr-hint">Suche</h2>
+                <f:render partial="Header/Search.html" arguments="{searchbox:searchbox}" />
+            </div>
+        </div>
+
+        <!-- header area -->
+        <div id="header" role="banner">
+
+            <div id="branding" class="clearfix">
+                <f:render partial="Header/Logo.html" arguments="{pidLogo:pidLogo}" />
+                <div class="grid_9">
+                    <div class="row">
+                        <f:render partial="Header/Headline.html" arguments="{pageTyp:pageTyp}" />
+                    </div>
+                </div>
+                <div class="header-search grid_11">
+                    <f:render partial="Header/SearchMobile.html" arguments="{searchboxm:searchboxm}" />
+                </div>
+                <!-- primary navigation -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav-main" aria-expanded="false">
+                    <span>Menü</span>
+                </button>
+                <div id="nav-main" class="clearfix">
+
+                    <f:if condition="{0:pageTyp}=={0:'home'}">
+                        <f:then><f:format.raw>{primenustart}</f:format.raw></f:then>
+                        <f:else><f:format.raw>{primenu}</f:format.raw></f:else>
+                    </f:if>
+                    <div class="meta-mobile">
+                        <f:render partial="Header/MetaAccessibilityMobile.html" arguments="{accessmobile:accessmobile}" />
+                        <f:render partial="Header/SocialMediaMobile.html" arguments="{socialmediamobile:socialmediamobile}" />
+                    </div>
+                </div>
+            </div>
+
+            <f:if condition="{0:pageTyp}=={0:'home'}">
+                <f:then></f:then>
+                <f:else>
+                    <h2 class="sr-hint">Sie sind hier:</h2>
+                    <div class="breadcrumbArticle clearfix">
+                        <f:format.raw>{bcArticle}</f:format.raw>
+                    </div>
+                </f:else>
+            </f:if>
+
+            <f:if condition="{subheader}"><f:render partial="Header/Title.html" arguments="{subheader:subheader}" /></f:if>
+        </div>
+        <!-- end header -->
+
+        <div id="main" role="main">
+            <f:render section="content" />
+        </div>
+
+        <f:render partial="Contact.html" arguments="{contact:contact}" />
+        <f:render partial="Footer.html" arguments="{copyright:copyright,metaNav:metaNav}" />
+    </div>
+    <!-- #end container -->

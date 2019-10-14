@@ -1,0 +1,162 @@
+@charset "utf-8";
+
+/** GLOBALS ############################################################################################################
+##################################################################################################################### */
+div.tx-bmf-budget {
+    position: relative;
+}
+
+div.tx-bmf-budget .intro {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+div.tx-bmf-budget .introWrapper {
+    font-size: 1.0em;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    text-shadow: none;
+    top: 0;
+    width: 100%;
+}
+
+div.tx-bmf-budget .introWrapper h1 {
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    text-shadow: none;
+    top: 29px;
+    width: 100%;
+}
+
+div.tx-bmf-budget .introWrapper div {
+    margin: 0;
+    padding: 0;
+}
+
+div.tx-bmf-budget .introWrapper .einnahmen {
+    float: left;
+    padding-top: 3%;
+    width: 22.25%;
+}
+
+div.tx-bmf-budget .introWrapper .headline {
+    float: left;
+    font-size: 0.9375em; /* 30px auf Basis von 32 px */
+    line-height: 1.8em;
+    padding-top: 6%;
+    text-align: center;
+    width: 55.5%;
+}
+
+div.tx-bmf-budget .introWrapper .headline span {
+    color: #666;
+    font-size: .66667em; /* 20 px auf Basis von 30px; */
+}
+
+div.tx-bmf-budget .introWrapper .ausgaben {
+    float: left;
+    padding-top: 3%;
+    width: 22.25%;
+}
+
+div.tx-bmf-budget .introWrapper h2 a,
+div.tx-bmf-budget .introWrapper a {
+    color: #ffffff;
+    display: block;
+    float: left;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1.9em;
+    width: 95%;
+}
+
+div.tx-bmf-budget .introWrapper .einnahmen h2 a,
+div.tx-bmf-budget .introWrapper .einnahmen a {
+    font-size: 1.5em;
+    padding: 93% 0 90% 0;
+    text-align: center;
+    text-shadow: -1px -1px 3px #BA4A00;
+}
+
+div.tx-bmf-budget .introWrapper .ausgaben h2 a,
+div.tx-bmf-budget .introWrapper .ausgaben a {
+    font-size: 1.5em;
+    padding: 93% 0 90% 0;
+    text-align: center;
+    text-shadow: -1px -1px 3px #E08600;
+}
+
+div.tx-bmf-budget .introWrapper h3 {
+    font-size: 2.0em;
+    left: 22.25%;
+    line-height: 1.2em;
+    position: absolute;
+    text-align: center;
+    top: 5%;
+    width: 55.5%;
+}
+
+* html div.tx-bmf-budget .introWrapper h3 {
+    width: 100%;
+}
+
+div.tx-bmf-budget .introWrapper .manual {
+    bottom: 8%;
+    color: #666;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    left: 22.25%;
+    line-height: 1.2em;
+    position: absolute;
+    text-align: center;
+    width: 55.5%;
+}
+
+div.tx-bmf-budget .introWrapper .manual h2 {
+    color: #C85000; /* orange */
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1.42857em; /* 20 px auf Basis von 14px; */
+    line-height: 1.2em;
+    text-align: center;
+}
+
+div.tx-bmf-budget .introWrapper .manual p,
+div.tx-bmf-budget .introWrapper .manual p a {
+    color: #333;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1em;
+    line-height: 1.2em;
+    text-align: center;
+    width: 100%;
+}
+
+/** JAVASCRIPT #########################################################################################################
+##################################################################################################################### */
+.js .tx-bmf-budget #data-breadcrumb {
+    /* display: none; */
+}
+
+.js .tx-bmf-budget .intro {
+    /* display: none; */
+}
+
+.js .tx-bmf-budget .intro {
+    /* display: none; */
+}
+
+/** MEDIA QUERIES ######################################################################################################
+##################################################################################################################### */
+@media (max-width: 1005px) {
+
+}
+
+@media (max-width: 639px) {
+
+}
+
+@media (max-width: 479px) {
+
+}

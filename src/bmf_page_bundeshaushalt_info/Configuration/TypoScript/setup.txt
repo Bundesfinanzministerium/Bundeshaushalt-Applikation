@@ -1,0 +1,15 @@
+# system
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_page_bundeshaushalt_info/Configuration/TypoScript/Setup/" extensions="ts">
+
+# extensions
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bmf_page_bundeshaushalt_info/Configuration/Extensions/solr/TypoScript/Setup.ts">
+
+# environment
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bmf_page_bundeshaushalt_info/Configuration/Environment/setup.ts">
+
+# plugin
+plugin.tx_bmfpagebundeshaushaltinfo.view {
+    templateRootPaths.0 = {$plugin.tx_bmfpagebundeshaushaltinfo.view.templateRootPaths.default}
+    partialRootPaths.0 = {$plugin.tx_bmfpagebundeshaushaltinfo.view.partialRootPaths.default}
+    layoutRootPaths.0 = {$plugin.tx_bmfpagebundeshaushaltinfo.view.layoutRootPaths.default}
+}

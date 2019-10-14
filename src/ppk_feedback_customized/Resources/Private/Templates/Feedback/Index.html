@@ -1,0 +1,102 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+
+    <div class="messages">
+        <f:render partial="FormErrors" arguments="{object:'feedback'}" />
+    </div>
+
+
+    <f:form id="feedbackForm" action="submit" section="ppkFeedback" name="feedback" object="{feedback}" class="clearfix">
+        <fieldset>
+            <legend class="sr-hint">
+                <f:translate key="tx_ppkfeedback_contactFormHeadline" />
+            </legend>
+            <div class="row">
+                <div class="label small">
+                    <label for="topic" id="labelthemen">
+                        <f:translate key="tx_ppkfeedback_domain_model_topic" />
+                        <f:image src="EXT:ppk_feedback_customized/Resources/Public/Images/bg-form-required.gif" alt="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.requiredField')}" />
+                    </label>
+                </div>
+                <div class="field small">
+                    <f:form.select property="topic"
+                                   options="{topics}"
+                                   id="topic"
+                                   optionLabelField="name"
+                                   prependOptionValue="0"
+                                   prependOptionLabel="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.chooseTopic')}"
+                                   errorClass="error" />
+                </div>
+            </div>
+            <div class="row">
+                <div class="label small">
+                    <label id="labelname" for="name">
+                        <f:translate key="tx_ppkfeedback_domain_model_topic.name" />
+                        <f:image src="EXT:ppk_feedback_customized/Resources/Public/Images/bg-form-required.gif" alt="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.requiredField')}" />
+                    </label>
+                </div>
+                <div class="field small">
+                    <f:form.textfield id="name" property="name" errorClass="error" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label small">
+                    <label class="required" id="labelemail" for="email">
+                        <f:translate key="tx_ppkfeedback_domain_model_topic.email" />
+                        <f:image src="EXT:ppk_feedback_customized/Resources/Public/Images/bg-form-required.gif" alt="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.requiredField')}" />
+                    </label>
+                </div>
+                <div class="field small">
+                    <f:form.textfield id="email" property="email" errorClass="error" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label full">
+                    <label id="labelnachricht" for="message">
+                        <f:translate key="tx_ppkfeedback_domain_model_topic.feedback" />:
+                        <f:image src="EXT:ppk_feedback_customized/Resources/Public/Images/bg-form-required.gif" alt="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.requiredField')}" />
+                    </label>
+                </div>
+                <div class="field full">
+                    <f:form.textarea  id="message" property="message" cols="20" rows="10" errorClass="error" />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="label full">
+                    <label id="labelterms" for="termsAccepted">
+                        <f:form.checkbox id="termsAccepted" property="termsAccepted" errorClass="error" value="1" />
+                        <f:alias map="{privacy: '{f:translate(key:\'tx_ppkfeedback_contactForm.privacy\')}'}">
+                            <f:format.raw><f:translate key="tx_ppkfeedback_domain_model_dto_feedback.termsAccepted"
+                                                       arguments="{0:'{privacy -> f:link.page(pageUid:settings.dataPrivacyPageUid)}'}"
+                            /></f:format.raw>
+                        </f:alias>
+                        <f:image src="EXT:ppk_feedback_customized/Resources/Public/Images/bg-form-required.gif" alt="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.requiredField')}" />
+                    </label>
+                </div>
+            </div>
+
+            <f:form.validationResults for="{object}">
+                <f:if condition="{validationResults.flattenedErrors}">
+                    <f:then>
+                        <p class="error"><f:translate key="Error.headline" />
+                            <f:form.submit id="submit" value="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.send')}" />
+                        </p>
+                    </f:then>
+                    <f:else>
+                        <p><span></span>
+                            <f:form.submit id="submit" value="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.send')}" />
+                        </p>
+                    </f:else>
+                </f:if>
+            </f:form.validationResults>
+            <f:comment>
+                <f:form.submit value="{f:translate(key: 'tx_ppkfeedback_domain_model_topic.send')}" />
+            </f:comment>
+        </fieldset>
+        <f:form.hidden name="lang" value="{language}" />
+    </f:form>
+</f:section>

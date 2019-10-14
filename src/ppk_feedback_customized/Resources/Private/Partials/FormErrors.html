@@ -1,0 +1,20 @@
+{namespace ppk=PPKOELN\PpkFeedback\ViewHelpers}
+
+<f:form.validationResults for="{object}">
+	<f:if condition="{validationResults.flattenedErrors}">
+		<div class="error">
+			<h2 class="error"><f:translate key="Error.headline" /></h2>
+			<ul class="error">
+				<f:for each="{validationResults.flattenedErrors}" key="propertyPath" as="errors">
+					<f:for each="{errors}" as="error">
+						<li>
+							<a href="<ppk:currentUrl />#label.{propertyPath}" class="{propertyPath}">
+								<f:translate key="Error.{propertyPath}.{error.code}"/><!--{error} - Error.{propertyPath}.{error.code}-->
+							</a>
+						</li>
+					</f:for>
+				</f:for>
+			</ul>
+		</div>
+	</f:if>
+</f:form.validationResults>

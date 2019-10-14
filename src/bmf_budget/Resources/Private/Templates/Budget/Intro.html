@@ -1,0 +1,40 @@
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <f:render partial="Budget/Navigation/Breadcrumb"
+              arguments="{budgets:budgets,
+                          detail:result.detail,
+                          childs:result.childs,
+                          referrer:referrer,
+                          segments:segments}"/>
+
+    <div class="intro">
+        <f:image src="EXT:bmf_budget/Resources/Public/Images/intro-background.jpg" />
+        <div class="grid_12">
+            <div class="introWrapper row">
+                <h1>{f:translate(key: 'intro.headline')}</h1>
+                <div class="einnahmen grid_00"><h2><f:link.action action="show"
+                                                              arguments="{year:budget.year,
+                                                                          account:'{f:translate(key:\'segment.account.{settings.default.account}\')}',
+                                                                          flow:'{f:translate(key:\'segment.flow.income\')}',
+                                                                          structure:'{f:translate(key:\'segment.structure.{settings.default.structure}\')}'}">
+                    {f:translate(key: 'flow.income')}
+                </f:link.action></h2></div>
+                <div class="headline grid_00"> </div>
+                <div class="ausgaben grid_00"><h2><f:link.action action="show"
+                                                             arguments="{year:budget.year,
+                                                                         account:'{f:translate(key:\'segment.account.{settings.default.account}\')}',
+                                                                         flow:'{f:translate(key:\'segment.flow.expenses\')}',
+                                                                         structure:'{f:translate(key:\'segment.structure.{settings.default.structure}\')}'}">
+                    {f:translate(key: 'flow.expenses')}
+                </f:link.action></h2></div>
+                <div class="manual">
+                    <h2>{f:translate(key: 'intro.copy')}</h2>
+                    <p><a href="/service/anleitung">{f:translate(key: 'intro.subcopy')}</a></p>
+                </div>
+          </div>
+        </div>
+    </div>
+
+</f:section>

@@ -1,0 +1,62 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:if condition="{data.layout} == 20">
+	<div class="ppAccordion-header" role="tab" id="heading-{data.uid}-1">
+		<h3 class="ppAccordion-title">
+			<a href="#accordion-{data.uid}-1" data-toggle="ppAccordion" aria-expanded="false" aria-controls="accordion-{data.uid}-1">{data.header}</a>
+		</h3>
+	</div>
+</f:if>
+
+<f:if condition="{data.layout} == 20">
+	<f:then><div id="accordion-{data.uid}-1" class="ppAccordion" role="tabpanel" aria-labelledby="heading-{data.uid}-1"></f:then>
+	<f:else>
+		<f:if condition="{data.layout} == 40">
+			<f:then><div id="c{data.uid}" class="teaser"></f:then>
+			<f:else><div id="c{data.uid}"></f:else>
+		</f:if>
+	</f:else>
+</f:if>
+	<div class="ce-textpic{f:if(condition:'{data.layout} == 30', then:' row')} ce-{gallery.position.horizontal} ce-{gallery.position.vertical}{f:if(condition: gallery.position.noWrap, then: ' ce-nowrap')}">
+		<f:if condition="{gallery.position.vertical} != 'below'">
+
+			<f:if condition="{data.layout} == 10">
+				<f:then>
+					<!-- Header in image -->
+					<f:render partial="MediaGalleryWithHeader" arguments="{_all}" />
+				</f:then>
+				<f:else>
+					<!-- Default -->
+					<f:render partial="MediaGallery" arguments="{_all}" />
+				</f:else>
+			</f:if>
+		</f:if>
+
+		<div class="ce-bodytext{f:if(condition:'{data.layout} == 30', then:' grid_6')}">
+			<f:if condition="{gallery.position.noWrap}">
+				<f:render partial="Header/All" arguments="{_all}" />
+			</f:if>
+			<div class="row">
+				<div class="grid_6">
+					<f:if condition="{gallery.position.noWrap} != 1">
+						<f:render partial="Header/All" arguments="{_all}" />
+					</f:if>
+					<f:format.html>{data.bodytext}</f:format.html>
+				</div>
+				<div class="grid_6">
+					<f:if condition="{gallery.position.noWrap} != 1">
+						<f:render partial="Header2/All" arguments="{_all}" />
+					</f:if>
+					<f:format.html>{data.bodytext2}</f:format.html>
+				</div>
+			</div>
+		</div>
+
+		<f:if condition="{gallery.position.vertical} == 'below'">
+			<f:render partial="MediaGallery" arguments="{_all}" />
+		</f:if>
+	</div>
+
+	<f:render partial="Footer/All" arguments="{_all}" />
+</div>
+</html>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" product-name="bmf_page_bundeshaushalt_info"
+          date="2015-06-23T15:05:10+02:00">
+        <header/>
+        <body>
+            <trans-unit id="tx_solr.result.path">
+                <source>Pfad</source>
+            </trans-unit>
+            <trans-unit id="tx_solr.pagebrowser.page">
+                <source>Seite</source>
+            </trans-unit>
+            <trans-unit id="tx_solr.pagebrowser.previous">
+                <source>vorherige</source>
+            </trans-unit>
+            <trans-unit id="tx_solr.pagebrowser.next">
+                <source>nächste</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

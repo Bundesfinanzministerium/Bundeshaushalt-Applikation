@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/** UNIT-INFO ##########################################################################################################
+##################################################################################################################### */
+#unit-info {
+    min-height: 10px;
+}
+
+#unit-info p {
+    color: #555;
+    font-size: 14px;
+    line-height: normal;
+    padding: 0 0 1.64286em 0; /* 23px based on 14px */
+}
+
+#unit-info div h2,
+#unit-info div strong {
+    border-bottom: 0.0625rem solid #CCC;
+    color: #333;
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 2rem;
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+
+#unit-info p strong {
+    color: #333;
+}
+
+/** UNIT-DETAIL HTML ###################################################################################################
+##################################################################################################################### */
+#unit-detail {
+    position: relative;
+    text-align: center;
+}
+
+#unit-detail a:hover,
+#unit-detail a:focus {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+#unit-detail .html {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#unit-detail .html strong {
+    color: #555;
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 28px;
+    font-weight: normal;
+    line-height: 22px;
+    margin: 25% 20% 10px 27%;
+    padding: 0 0 4px 0;
+}
+
+#unit-detail .html strong small {
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+#unit-detail .html p {
+    margin: 0;
+    padding: 0;
+}
+
+#unit-detail .html p.currency {
+    color: #333;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 28px;
+    line-height: 20px;
+    margin: 0 20% 10px 27%;
+}
+
+#unit-detail .html p.title {
+    color: #333;
+    font-size: 14px;
+    margin: 0 20% 10px 27%;
+}
+
+#unit-detail .html p.pdf {
+    color: #333;
+    font-size: 14px;
+    margin: 0 20% 0 27%;
+}
+
+/** UNIT-DETAIL RAFAEL #################################################################################################
+##################################################################################################################### */
+#unit-detail {
+    margin: 0 0 1.25rem 0; /* 20px based on 16px */
+}
+
+#unit-detail .details {
+    left: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    z-index: 10;
+}
+
+#unit-detail .details h2,
+#unit-detail .details strong {
+    color: #555;
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1.6em;
+    font-weight: normal;
+    line-height: 0.8em;
+    margin: -20px auto 0 auto;
+    padding: 0;
+    width: 5em;
+}
+
+#unit-detail .details h2 small,
+#unit-detail .details strong small {
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 0.6em;
+    margin: 0;
+    padding: 0;
+}
+
+#unit-detail .details .budget {
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 2em;
+    line-height: normal;
+    margin: 0 auto;
+    padding: 0 0 0.1875em;
+    text-align: center;
+    width: 5em;
+}
+
+#unit-detail .details .title {
+    font-size: 0.875em; /* 14 */
+    line-height: normal;
+    margin: 0;
+    padding: 0 1.0em 0 1.0em;
+}
+
+#unit-detail .details p.pdf {
+    margin: 0.28571em 0 0 0; /* 4px based on 14px */
+}
+
+#unit-detail .details a.pdf { /* removed background gray */
+    background: url("../Images/sprites.png") no-repeat scroll right -60px #FFF;
+}
+
+.js #unit-detail .details .loadSpinner {
+    height: 21px;
+    margin: 0 auto;
+    width: 1rem;
+}
+
+.js #unit-detail .details .loadSpinner img {
+    display: block;
+    height: auto;
+    width: auto;
+
+}
+
+/** UNIT-OVERVIEW ######################################################################################################
+##################################################################################################################### */
+#unit-overview h2 {
+    border: 0 none;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0 0 0 0;
+}
+
+#unit-overview ul {
+    font-size: 14px;
+    line-height: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0 0 1rem 0;
+}
+
+#unit-overview li {
+    padding: 10px 0 0 18px;
+}
+
+#unit-overview li.level1x {
+    background: url("../Images/unit-overview_list_1levelX.gif") no-repeat 0 -1px;
+}
+
+#unit-overview li.level2x {
+    background: url("../Images/unit-overview_list_1levelX.gif") no-repeat 3px -1px;
+}
+
+#unit-overview li.level2 {
+    background: url("../Images/unit-overview_list_1level.gif") no-repeat 3px -1px;
+}
+
+#unit-overview li.level3 {
+    background: url("../Images/unit-overview_list_1level.gif") no-repeat 6px -1px;
+}
+
+#unit-overview li a {
+    color: #555;
+}
+
+#unit-overview li a:hover,
+#unit-overview li a:focus {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+/* javascript enabled #################################### */
+/*.inlinesvg.js #unit-detail .html,
+.inlinesvg.js #unit-detail img          { display: none; } */
+
+/* javascript disabled ################################### */
+.no-inlinesvg.js #unit-detail .html {
+    display: block;
+}
+
+.no-js #unit-detail .html {
+    display: block;
+}
+
+div#unit-detail svg path,
+div#unit-detail svg circle.intro,
+div#unit-detail svg rect.intro {
+    cursor: pointer;
+}
+
+/** MEDIA QUERIES ######################################################################################################
+##################################################################################################################### */
+@media (max-width: 1005px) {
+
+}
+
+@media (max-width: 639px) {
+    div.tx-bmf-budget .introWrapper {
+        font-size: 0.5em;
+    }
+}
+
+@media (max-width: 479px) {
+    div.tx-bmf-budget .introWrapper {
+        font-size: 0.32em;
+    }
+}

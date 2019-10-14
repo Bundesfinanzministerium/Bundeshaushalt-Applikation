@@ -1,0 +1,43 @@
+<h1>BMF, Crawler</h1>
+
+<h2>Show crawler queue</h2>
+
+<table class="table table-bordered">
+
+    <tr>
+        <th>Crawler</th>
+        <th>Arguments</th>
+        <th>Progress</th>
+        <th>Start</th>
+        <th>End</th>
+    </tr>
+
+    <f:for each="{crawlers}" as="crawler">
+        <tr>
+            <td>
+                {crawler.extTitle}<br>
+                {crawler.extClass}
+            </td>
+
+            <td>
+                {crawler.budget.year}<br>
+                {crawler.account}
+                {crawler.flow}
+                {crawler.structure}
+            </td>
+
+            <td>
+                <f:format.number decimals="0">{crawler.progress}</f:format.number>%
+            </td>
+
+            <td>
+                <f:format.date format="d.m.Y H:i">{crawler.processStart}</f:format.date>
+            </td>
+
+            <td>
+                <f:format.date format="d.m.Y H:i">{crawler.processEnd}</f:format.date>
+            </td>
+        </tr>
+    </f:for>
+
+</table>

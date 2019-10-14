@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-08-26T13:01:25Z"
+          product-name="bmf_budget_crawler">
+        <header/>
+        <body>
+            <trans-unit id="budget.description">
+                <source>budget</source>
+            </trans-unit>
+            <trans-unit id="year.description">
+                <source>year</source>
+            </trans-unit>
+            <trans-unit id="account.description">
+                <source>account</source>
+            </trans-unit>
+            <trans-unit id="flow.description">
+                <source>flow</source>
+            </trans-unit>
+            <trans-unit id="structure.description">
+                <source>structure</source>
+            </trans-unit>
+            <trans-unit id="address.description">
+                <source>address</source>
+            </trans-unit>
+            <trans-unit id="status.description">
+                <source>status</source>
+            </trans-unit>
+            <trans-unit id="result.description">
+                <source>result</source>
+            </trans-unit>
+            <trans-unit id="error.description">
+                <source>error</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

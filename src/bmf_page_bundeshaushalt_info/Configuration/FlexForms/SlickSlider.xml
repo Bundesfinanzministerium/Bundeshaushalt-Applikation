@@ -1,0 +1,28 @@
+<T3DataStructure>
+    <sheets>
+        <general>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Allgemein</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.contentelements>
+                        <TCEforms>
+                            <label>Inhaltselemente</label>
+                            <config>
+                                <type>group</type>
+                                <internal_type>db</internal_type>
+                                <allowed>tt_content</allowed>
+                                <size>5</size>
+                                <maxitems>99</maxitems>
+                                <minitems>1</minitems>
+                                <show_thumbs>1</show_thumbs>
+                            </config>
+                        </TCEforms>
+                    </settings.contentelements>
+                </el>
+            </ROOT>
+        </general>
+    </sheets>
+</T3DataStructure>

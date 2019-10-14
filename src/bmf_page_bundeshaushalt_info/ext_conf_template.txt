@@ -1,0 +1,2 @@
+# cat=Basic/RealUrl/10; type=boolean; label=Use RealUrl Config from BMF Page Template
+UseRealUrlConfig = 1

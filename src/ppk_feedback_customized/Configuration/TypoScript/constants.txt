@@ -1,0 +1,15 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ppk_feedback/Configuration/TypoScript/constants.txt">
+
+plugin.tx_ppkfeedback {
+
+    view {
+        pluginFilesPath  = /typo3conf/ext/ppk_feedback_customized/Resources
+        templateRootPath = EXT:ppk_feedback_customized/Resources/Private/Templates
+        partialRootPath  = EXT:ppk_feedback_customized/Resources/Private/Partials
+        layoutRootPath   = EXT:ppk_feedback_customized/Resources/Private/Layouts
+
+        styleRootPath    = EXT:ppk_feedback_customized/Resources/Public/Styles
+        scriptRootPath   = EXT:ppk_feedback_customized/Resources/Public/Scripts
+    }
+
+}

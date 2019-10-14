@@ -1,0 +1,196 @@
+/* GLOBALS ######################################################
+############################################################## */
+html, body {
+    /* background-color: transparent; */
+    background-color: transparent;
+    margin:           0;
+    padding:          0;
+    height:           100%;         /* WICHTIG!!! STRECKT ANZEIGENBEREICH AUF 100% */
+}
+
+
+/* NOSCRIPT AREA ################################################
+############################################################## */
+.no-js #page #unit-detail {
+    display: none;
+}
+
+.no-js #page {
+
+    font-size:  1em;
+    width:      100%;
+    margin:     auto;                   /* Div soll zentriert werden */
+    min-height: 100%;                   /* Mindesthöhe für moderne Browser */
+    height:     auto !important;        /* Important Regel für moderne Browser */
+    height:     100%;                   /* Mindesthöhe für den IE */
+    overflow:   hidden !important;      /* FF Scroll-leiste */
+
+    background: url('../Images/data-circle-background.jpg') #ffffff no-repeat;
+
+    -webkit-background-size: 100% auto;
+       -moz-background-size: 100% auto;
+         -o-background-size: 100% auto;
+            background-size: 100% auto;
+}
+
+.no-js #page h1 {
+    color:          #555;
+    display:        block;
+    font-family:    "BundesSerif", Georgia, Times New roman, serif;
+    font-size:      1.6em;
+    line-height:    1em;
+    font-weight:    normal;
+    margin:         0 auto;
+    text-align:     center;
+    padding:        30% 2% 5% 2%;
+}
+
+.no-js #page h1 span {
+    font-size:      0.6em;
+    line-height:    0.8em;
+    font-family:    "BundesSerif",Georgia,Times New roman,serif;
+    font-weight:    normal;
+    margin:         0;
+    padding:        0;
+}
+
+.no-js #page p {
+    font-size:      0.8em;
+    line-height:    1.3em;
+    text-align: center;
+    margin:  0;
+    padding: 0 15% 3% 15%;
+}
+
+.no-js #page a,
+.no-js #page a:link,
+.no-js #page a:visited {
+    background: url('../Images/sprites.png') transparent no-repeat right -47px;
+    text-decoration: none;
+    color: #C85000;
+    margin:  0;
+    padding: 0 16px 0 0;
+}
+
+.no-js #page a:hover,
+.no-js #page a:focus,
+.no-js #page a:active {
+    text-decoration: underline;
+}
+
+
+    /* SCRIPT AREA ##################################################
+   ############################################################## */
+.js .noScript {
+    display: none;
+}
+
+.js .tx-pp-bundeshaushalt {
+    position: relative;
+}
+
+.js #unit-detail {
+    display: block;
+    position:relative;
+}
+
+.js  #unit-detail .details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    padding: 0;
+    text-align: center;
+}
+
+.js  #unit-detail .details h2,
+.js  #unit-detail .details strong {
+    font-size:              1.6em;
+    font-family:            "BundesSerif", Georgia, Times New roman, serif;
+    font-weight:            normal;
+    line-height:            0.8em;
+    display:                block;
+    color:                  #555;
+    padding:                0;
+    margin:                 -20px auto 0 auto;
+    width:                  5em;
+}
+
+.js  #unit-detail .details h2 small,
+.js  #unit-detail .details strong small {
+    font-size: 0.6em;
+    font-family:            "BundesSans", Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+
+.js  #unit-detail .details .budget {
+    display: block;
+    font-family: "BundesSerif",Georgia,Times New roman,serif;
+    font-size: 2em;
+    line-height: normal;
+    margin: 0 auto;
+    padding: 0 0 0.1875em;
+    text-align: center;
+    width: 5em;
+}
+
+.js  #unit-detail .details .title {
+    font-size:      0.875em;
+    line-height:    normal;
+    padding:        0 1.0em 0 1.0em;
+    margin:         0;
+}
+
+.js  #unit-detail .details p.pdf {
+    margin: 0.6em 0 0 0;
+}
+
+.js  #unit-detail .details p.pdf a {
+    display:    inline-block;
+    width:      20px;
+    height:     20px;
+    background: url("../Images/sprites.png") no-repeat scroll right -75px transparent;
+}
+
+.js  #unit-detail .details p.pdf a.pdfSH {
+    background: url("../Images/sprites.png") no-repeat scroll right -75px transparent;
+}
+.js  #unit-detail .details p.pdf a.pdfNH1 {
+    background: url("../Images/sprites.png") no-repeat scroll right -100px transparent;
+}
+.js  #unit-detail .details p.pdf a.pdfNH2 {
+    background: url("../Images/sprites.png") no-repeat scroll right -125px transparent;
+}
+
+
+.js #unit-detail .details .loadSpinner {
+    margin: 0 auto;
+    width:16px;
+    height:21px;
+}
+
+.js #unit-detail .details .loadSpinner img {
+    display: block;
+    width: auto;
+    height: auto;
+
+}
+
+
+
+/** Detail #############################################################################################################
+##################################################################################################################### */
+.js #detail {
+    position: absolute;
+    bottom:   4%;
+    right:    4%;
+    width:    6%;
+    height:   6%;
+}
+
+.js #detail a img {
+    width: 100%;
+    /* background: url("../Images/LupenPlus.png") no-repeat 0 0 transparent; */
+}

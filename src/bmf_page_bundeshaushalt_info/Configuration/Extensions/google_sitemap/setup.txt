@@ -1,0 +1,81 @@
+xmlSitemap = PAGE
+xmlSitemap {
+    config {
+        no_cache = 1
+        disableAllHeaderCode = 1
+        additionalHeaders = Content-Type: text/xml; charset=utf-8
+        simulateStaticDocuments = 0
+        tx_realurl_enable = 1
+    }
+    10 = COA
+    10 {
+        wrap (
+      <?xml version="1.0" encoding="UTF-8"?>
+      <urlset xmlns="http://www.google.com/schemas/sitemap/0.84"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://www.google.com/schemas/sitemap/0.84 http://www.google.com/schemas/sitemap/0.84/sitemap.xsd"
+      >|</urlset>
+        )
+        10 = HMENU
+        10 {
+            special = directory
+
+            #Root
+            special.value = 2
+
+            #1 = Standard
+            #2 = Erweitert
+            #3 = Externe URL
+            #4 = Shortcut
+            #5 = Nicht im Menü
+            #6 = Backend Benutzer Bereich
+            #7 = Mount Seite
+            #199 = Abstand
+            #254 = Sysordner
+            #255 = Recycler
+
+            excludeDoktypes = 2,3,6,7,199,254,255
+            includeNotInMenu = 1
+            #excludeUidList = 11,12,13,23,24,25,36,37,38,124
+            excludeUidList = {$plugin.tx_bmfpagebundeshaushaltinfo.settings.google_sitemap.excludeList}
+            1 = TMENU
+            1 {
+                expAll = 1
+                NO {
+                    doNotLinkIt = 1
+                    stdWrap {
+                        cObject = COA
+                        cObject {
+                            wrap = <url>|</url>
+                            10 = TEXT
+                            10 {
+                                typolink {
+                                    parameter.field = uid
+                                    returnLast = url
+                                    forceAbsoluteUrl = 1
+                                }
+                                wrap = <loc>|</loc>
+                            }
+                            20 = TEXT
+                            20 {
+                                field = SYS_LASTCHANGED
+                                strftime = %Y-%m-%d
+                                wrap = <lastmod>|</lastmod>
+                            }
+                            if.isFalse.field = shortcut
+                        }
+                    }
+                }
+            }
+            2 < .1
+            3 < .1
+            4 < .1
+            5 < .1
+            6 < .1
+            7 < .6
+            8 < .6
+            9 < .6
+            10 < .6
+        }
+    }
+}

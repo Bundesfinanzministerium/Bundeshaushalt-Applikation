@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2015-08-28T10:09:22Z"
+          product-name="bmf_page_bundeshaushalt_info_embed">
+        <header/>
+        <body>
+
+            <trans-unit id="Embed">
+                <source>Embed</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

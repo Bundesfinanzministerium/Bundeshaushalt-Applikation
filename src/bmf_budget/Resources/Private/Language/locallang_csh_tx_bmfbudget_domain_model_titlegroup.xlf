@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-22T11:53:44Z" product-name="bmf_budget">
+		<header/>
+		<body>
+			<trans-unit id="address.description">
+				<source>address</source>
+			</trans-unit>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="actual_income.description">
+				<source>actualIncome</source>
+			</trans-unit>
+			<trans-unit id="actual_expenses.description">
+				<source>actualExpenses</source>
+			</trans-unit>
+			<trans-unit id="target_income.description">
+				<source>targetIncome</source>
+			</trans-unit>
+			<trans-unit id="target_expenses.description">
+				<source>targetExpenses</source>
+			</trans-unit>
+			<trans-unit id="info_image.description">
+				<source>infoImage</source>
+			</trans-unit>
+			<trans-unit id="info_text.description">
+				<source>infoText</source>
+			</trans-unit>
+			<trans-unit id="info_link.description">
+				<source>infoLink</source>
+			</trans-unit>
+			<trans-unit id="titles.description">
+				<source>titles</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

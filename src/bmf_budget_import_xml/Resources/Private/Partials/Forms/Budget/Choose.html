@@ -1,0 +1,15 @@
+<f:form action="budget" enctype="multipart/form-data" name="budgetDto" object="{dto}">
+    <h3>
+        1. {f:translate(key: 'form.budget.choose.headline')}
+        <f:if condition="{dto.budget}">
+            <br><small>{f:translate(key: 'common.choosen')}: <strong>"{dto.budget.titleTarget}"</strong></small>
+        </f:if>
+    </h3>
+    <f:form.select property="budget"
+                   options="{budgets}"
+                   optionLabelField="year"
+                   prependOptionLabel="-- {f:translate(key: 'common.choose.please')} --"
+                   prependOptionValue=""
+                   value="{dto.budget.uid}" />
+    <f:form.submit value="{f:translate(key: 'common.choose')}" />
+</f:form>

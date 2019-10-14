@@ -1,0 +1,20 @@
+# TODO: Magic Number
+[page["uid"] == 2]
+page {
+    headerData {
+        99992992 = TEXT
+        99992992.value (
+        <script>
+            var txPpBundeshaushaltPreDomain = '{$config.domain}';
+            var a = document.location.href;
+            var p = document.location.pathname;
+            p = p.toLowerCase();
+            if ( a.indexOf('#') == -1 ) {
+                p = ((parseInt(p.indexOf('einnahmen')) + parseInt(p.indexOf('ausgaben'))) < 3  ? '/2019/soll' : '') + p;
+                document.location.href = '/#' + (p.indexOf('bundehaushalt') == -1 ? p : '/' );
+            }
+        </script>
+        )
+    }
+}
+[end]

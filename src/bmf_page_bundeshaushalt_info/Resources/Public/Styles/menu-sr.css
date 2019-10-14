@@ -1,0 +1,30 @@
+@charset "utf-8";
+/**
+ * $Id: fonts.css 646 2012-05-25 10:31:25Z pixelpark $
+ * special stylesheet for screen reader navigation
+ */
+
+#sr-navigation {
+    background: none repeat scroll 0 0 white;
+    display: inline;
+    height: 0;
+    left: -9999px;
+    position: absolute;
+    top: -9999px;
+    width: 0;
+}
+
+#sr-navigation a:focus {
+    background-color: #FFFFFF;
+    color: #000000;
+    display: block;
+    font-size: 1.25em;
+    left: 10010px;
+    line-height: 2em;
+    padding: 0.35em;
+    position: absolute;
+    text-align: center;
+    top: 10010px;
+    width: 10em;
+    z-index: 3000;
+}

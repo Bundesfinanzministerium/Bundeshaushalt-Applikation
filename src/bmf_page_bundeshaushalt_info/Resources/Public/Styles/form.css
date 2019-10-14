@@ -1,0 +1,152 @@
+
+/* =footerFeedbackForm
+================================================== */
+
+form#footerFeedbackForm{
+	background: url(../Images/bg-form.gif) repeat-y right top;
+	font-family: inherit;
+	padding: 20px 0 20px 20px;
+}
+
+/* JS Fallback*/
+body.noJS form#footerFeedbackForm{
+	display: block;
+}
+
+.loadingIcon {
+	background: url("../images/ajax-loader.gif") no-repeat 1px;
+	display:none;
+	float:left;
+	height:25px;
+	width:30px;
+}
+
+form#footerFeedbackForm p.error{
+	background:#fffbcf url(../Images/bg-form-error.gif) no-repeat 10px center;
+	border: solid 1px #C85000;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	margin: 0;
+	padding: 7px 5px 10px 35px;
+	width: 385px;
+	-webkit-background-clip: padding-box;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+.required{
+	background: url(../Images/bg-form-required.gif) no-repeat right center;
+}
+
+form#footerFeedbackForm fieldset{
+	float:left;
+	overflow:hidden;
+}
+
+form#footerFeedbackForm legend{
+	display: none;
+}
+
+form#footerFeedbackForm input, form#footerFeedbackForm label, form#footerFeedbackForm textarea, form#footerFeedbackForm select{
+	color:#333;
+	display:block;
+	float:left;
+	font-family:inherit;
+	line-height: 20px;
+	margin: 0 10px 20px 0;
+}
+
+form#footerFeedbackForm label{
+	cursor: pointer;
+	width: 150px;
+}
+
+form#footerFeedbackForm input, form#footerFeedbackForm textarea, form#footerFeedbackForm select{
+	border: solid 1px #ddd;
+	border-bottom-color:#ccc;
+	border-left-color:#999;
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-right-color:#ccc;
+	border-top-color:#999;
+	box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+	color:#666;
+	padding: 3px;
+	width: 260px;
+	-webkit-background-clip: padding-box;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+}
+
+form#footerFeedbackForm select{
+	width: 267px;
+}
+
+form#footerFeedbackForm select option{
+	border-bottom: solid 1px #eee;
+	line-height: 25px;
+}
+
+form#footerFeedbackForm textarea{
+	height: 200px;
+	resize: vertical;
+	width: 420px;
+}
+
+form#footerFeedbackForm input:hover, form#footerFeedbackForm textarea:hover{
+	border-color:#ccc;
+}
+
+form#footerFeedbackForm input:focus, form#footerFeedbackForm textarea:focus{
+	border-color:#666;
+	color: #333;
+}
+
+form#footerFeedbackForm input#submit {
+	background: #C85000;
+	border: none;
+	box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	-moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	-webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	color: #fff;
+	cursor:pointer;
+	float: right;
+	font-weight: bold;
+	margin-bottom: 1px;
+	margin-top: 0;
+	text-shadow: 1px 1px #c35421;
+	width: 100px;
+	-ms-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+	-o-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+.lt-ie9 form#footerFeedbackForm input#submit {
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8833', endColorstr='#e75925',GradientType=0 ); /* IE6-8 */
+}
+
+form#footerFeedbackForm input#submit:hover{
+	color: #fff;
+}
+
+form#footerFeedbackForm input#submit:active{
+	margin-bottom: 0;
+	margin-top: 1px;
+}
+
+form#footerFeedbackForm br{
+	clear: both;
+	float:none;
+}
+
+form#footerFeedbackForm input.error{
+	background: url(../Images/bg-form-error.gif) no-repeat 96% center;
+	border: solid 1px #C85000!important;
+	box-shadow: 0 0 3px #fe893b!important;
+	-moz-box-shadow: 0 0 3px #fe893b!important;
+	-webkit-box-shadow: 0 0 3px #fe893b!important;
+	color: #C85000!important;
+	-ms-box-shadow: 0 0 3px #fe893b!important;
+	-o-box-shadow: 0 0 3px #fe893b!important;
+}

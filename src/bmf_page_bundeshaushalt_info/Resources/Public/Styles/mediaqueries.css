@@ -1,0 +1,174 @@
+.visible240 {
+    display: none !important;
+}
+
+.visible320 {
+    display: none !important;
+}
+
+.visible480 {
+    display: none !important;
+}
+
+.visible640 {
+    display: none !important;
+}
+
+.visible960 {
+    display: none !important;
+}
+
+.visibleDSK {
+    display: none !important;
+}
+
+@media (max-width: 239px) {
+    .visible240 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 240px) and (max-width: 319px) {
+    .visible320 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    .visible480 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 639px) {
+    .visible640 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 640px) and (max-width: 959px) {
+    .visible960 {
+        display: block !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .visibleDSK {
+        display: block !important;
+    }
+}
+
+@media (max-width: 959px) {
+
+    #article-main {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    #teaser .row .grid_6 {
+        margin: 0;
+        width: 99.99999998999999%;
+        *width: 99.94680850063828%;
+    }
+
+    #teaser .row .grid_3 {
+        width: 48.93617020799999%;
+        *width: 48.88297871863829%;
+    }
+
+    #teaser .row .grid_3.odd {
+        clear: both;
+        margin: 0;
+    }
+
+    #branding {
+        margin-bottom: 30px;
+    }
+
+    #page-title h1,
+    #page-title h2 {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+
+    /* CONTENT ################################### */
+    .csc-textpic-caption {
+        color: #555;
+        margin: 0 0 1em;
+        position: static;
+        text-align: left;
+        width: 100%;
+    }
+
+    .csc-textpic-caption:before {
+        display: inline;
+    }
+
+    /* TEASER #################################### */
+    #teaser .image h2,
+    #teaser .image h3 {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 639px) {
+
+    .row .grid_10,
+    .row .grid_5,
+    .row .grid_6,
+    .row .grid_4,
+    .row .grid_3 {
+        margin: 0;
+        width: 99.99999998999999%;
+        *width: 99.94680850063828%;
+    }
+
+    #page-title h1,
+    #page-title h2 {
+        font-size: 28px;
+        padding-top: 20px;
+    }
+
+    #teaser .row .grid_3 {
+        margin: 0;
+        width: 99.99999998999999%;
+        *width: 99.94680850063828%;
+    }
+
+    #branding {
+        height: auto;
+        margin-bottom: 30px;
+    }
+
+    #nav-main {
+        padding: 10px 0 10px 10px;
+    }
+
+    #footer ul {
+        display: block;
+        float: none;
+        margin-left: -10px;
+    }
+
+    #footer p {
+        float: none;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    #page-title h1,
+    #page-title h2 {
+        font-size: 26px;
+        padding-top: 20px;
+    }
+
+}
+
+#teaser ul.row,
+ul.row {
+    margin-left: 0;
+    list-style: none;
+}
+

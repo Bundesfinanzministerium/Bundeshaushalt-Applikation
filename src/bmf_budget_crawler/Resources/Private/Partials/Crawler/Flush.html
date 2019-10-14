@@ -1,0 +1,23 @@
+<h1>BMF, Crawler</h1>
+
+<h2>Flush crawler queue</h2>
+
+<f:form action="process" enctype="multipart/form-data" name="crawlerDto">
+
+    <h2>Are you sure?</h2>
+
+    <p class="info">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+        Aenean commodo ligula eget dolor. Aenean
+        massa. Cum sociis natoque penatibus et magnis
+    </p>
+
+    <f:form.submit value="Flush queue" class="processForm"/>
+
+</f:form>
+
+<f:if condition="{result}">
+
+    <h2>Table(s) flushed!</h2>
+
+</f:if>

@@ -1,0 +1,28 @@
+{namespace ppBH=PPKOELN\BmfBudgetApplicationEmbed\ViewHelpers}
+<div class="tx-pp-bundeshaushalt row">
+
+    <div class="noScript">
+        <h1>Hinweis:<br /><span>Bitte aktivieren Sie JavaScript</span></h1>
+        <p>Für diese interaktive Datenvisualisierung muss JavaScript aktiviert sein.</p>
+        <p><a href="http://www.bundeshaushalt-info.de" target="_blank">www.bundeshaushalt-info.de</a></p>
+
+    </div>
+
+    <div id="unit-detail" aria-hidden="true">
+
+    </div>
+
+    <script type="text/json">
+        {
+        "jahr"     : "<ppBH:displayObject object="{cnf.yr}" />",
+        "plan"     : "<ppBH:displayObject object="{cnf.qt}" />",
+        "typ"      : "<ppBH:displayObject object="{cnf.tp}" />",
+        "struktur" : "<ppBH:displayObject object="{cnf.un}" />",
+        "adresse"  : "<ppBH:displayObject object="{cnf.ad}" />",
+        "min"      : "<ppBH:displayObject object="{cnf.eb}" />",
+        "delta"    : "<ppBH:displayObject object="{cnf.dt}" />"
+        }
+    </script>
+
+    <div id="detail"><a href="#" title="Detailansicht in neuem Fenster öffnen" target="_blank"><img src="typo3conf/ext/bmf_budget_application_embed/Resources/Public/Images/LupenPlus.png" alt="Lupe: Detailansicht in neuem Fenster öffnen"></a></div>
+</div>

@@ -1,0 +1,11 @@
+
+.bmfBudget td,
+.bmfBudget th {
+    padding: 0 0.5rem 0.125rem 0;
+    vertical-align: text-top;
+}
+
+.bmfBudget #typo3-docbody #process th {
+    white-space: nowrap;
+    width: 6.25rem;
+}

@@ -1,0 +1,1 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_page_bundeshaushalt_info_embed/Configuration/TypoScript/Constants/" extensions="ts">

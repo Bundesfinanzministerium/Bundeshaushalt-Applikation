@@ -1,0 +1,114 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+	  xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+	  xmlns:s="http://typo3.org/ns/ApacheSolrForTypo3/Solr/ViewHelpers/">
+
+<f:layout name="Split"/>
+
+<f:section name="content">
+	<div id="tx-solr-search">
+
+		<div class="row">
+			<div class="tx-solr-search-form">
+				<f:render partial="Search/Form" section="Form" arguments="{search:search, additionalFilters:additionalFilters, pluginNamespace: pluginNamespace, resultSet: resultSet}" />
+			</div>
+			<div>
+				<f:if condition="{resultSet.hasSearched}">
+					<f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchSorting}">
+						<f:render partial="Result/Sorting" section="Sorting" arguments="{resultSet:resultSet}" />
+					</f:if>
+				</f:if>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<f:render partial="Result/FacetsActive" section="FacetsActive" arguments="{resultSet:resultSet}" />
+			</div>
+		</div>
+
+		<div class="row searchinfo">
+			<div class="col-md-12">
+
+				<f:if condition="{resultSet.isAutoCorrected}">
+					<f:then>
+					<div class="searched-for tx-solr-whatis">
+						<s:translate key="no_results_nothing_found" arguments="{0: resultSet.initialQueryString}">Nothing found for "%s".</s:translate>
+						<s:translate key="no_results_showing_results_suggestion" arguments="{0: resultSet.correctedQueryString}">Showing results for &quot;@suggestedWord&quot;.</s:translate>
+					</div>
+					</f:then>
+					<f:else>
+						<f:if condition="{resultSet.usedQuery.queryStringContainer.keywordsCleaned}">
+						<div class="searched-for tx-solr-whatis">
+							<f:if condition="{resultSet.usedSearch.numberOfResults}">
+								<f:then>
+									<s:translate key="results_searched_for" arguments="{0: resultSet.usedQuery.queryStringContainer.keywordsCleaned}">Searched for "%s"</s:translate>
+								</f:then>
+								<f:else>
+									<s:translate key="noresults_searched_for" arguments="{0: resultSet.usedQuery.queryStringContainer.keywordsCleaned}">Nothing found! Searched for "%s"</s:translate>
+								</f:else>
+							</f:if>
+						</div>
+						</f:if>
+					</f:else>
+				</f:if>
+
+				<f:if condition="{resultSet.hasSpellCheckingSuggestions}">
+					<f:then>
+						<s:translate key="didYouMean">Did you mean</s:translate>
+						<f:for each="{resultSet.spellCheckingSuggestions}" as="suggestion">
+							<f:link.page additionalParams="{q:suggestion.suggestion}" noCacheHash="1">{suggestion.suggestion}</f:link.page>
+						</f:for> ?
+					</f:then>
+				</f:if>
+
+				<f:if condition="{resultSet.usedSearch.numberOfResults}">
+					<div class="tx-solr-browsebox first-browsebox">
+						<p class="result-range">
+							<f:format.raw>
+								<s:pageBrowserRange>
+									<s:translate key="results_range" arguments="{0:from, 1: to, 2: total}">Results %d until %d of %d</s:translate>
+								</s:pageBrowserRange>
+							</f:format.raw>
+						</p>
+					</div>
+				</f:if>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<f:if condition="{resultSet.hasSearched}">
+					<s:widget.resultPaginate resultSet="{resultSet}" configuration="{insertAbove:0}">
+						<ol data-start="{pagination.resultCountStart}" class="results-list list-group">
+							<f:for each="{documents}" as="document">
+								<f:render partial="Result/Document" section="Document" arguments="{resultSet:resultSet, document:document}" />
+							</f:for>
+						</ol>
+					</s:widget.resultPaginate>
+				</f:if>
+			</div>
+		</div>
+
+	</div>
+</f:section>
+
+<f:section name="extra">
+	<div id="tx-solr-search-functions">
+		<f:if condition="{resultSet.hasSearched}">
+			<f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchFaceting}">
+				<f:render partial="Result/Facets" section="Facets" arguments="{resultSet:resultSet}" />
+			</f:if>
+		</f:if>
+
+		<div class="hidden-xs">
+			<f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchLastSearches}">
+				<f:render partial="Search/LastSearches" section="LastSearches" arguments="{resultSet:resultSet}" />
+			</f:if>
+		</div>
+		<div class="hidden-xs">
+			<f:if condition="{resultSet.usedSearchRequest.contextTypoScriptConfiguration.searchFrequentSearches}">
+				<f:render partial="Search/FrequentlySearched" section="FrequentlySearched" />
+			</f:if>
+		</div>
+	</div>
+</f:section>

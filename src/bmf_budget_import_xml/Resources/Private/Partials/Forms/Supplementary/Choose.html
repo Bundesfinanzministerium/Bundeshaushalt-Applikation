@@ -1,0 +1,22 @@
+<f:form action="supplementary" enctype="multipart/form-data" name="supplementaryDto" object="{dto}">
+
+    <h3>
+        2. {f:translate(key: 'form.supplementaryBudget.choose.headline')}
+        <f:if condition="{dto.supplementaryBudget}">
+            <br><small>{f:translate(key: 'common.choosen')}: <strong>"{dto.supplementaryBudget.title}"</strong></small>
+        </f:if>
+    </h3>
+
+    <f:form.select property="supplementary"
+                   options="{supplementaryBudgets}"
+                   optionLabelField="title"
+                   optionValueField="uid"
+                   prependOptionLabel="-- {f:translate(key: 'common.choose.please')} --"
+                   prependOptionValue=""
+                   value="{dto.supplementaryBudget.uid}" />
+
+    <f:form.submit value="{f:translate(key: 'common.choose')}" />
+
+    <f:form.hidden property="budget" value="{dto.budget.uid}" />
+
+</f:form>

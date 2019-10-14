@@ -1,0 +1,2 @@
+# system
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_budget_application/Configuration/TypoScript/Setup/" extensions="ts">

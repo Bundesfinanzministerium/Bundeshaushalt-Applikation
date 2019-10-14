@@ -1,0 +1,51 @@
+/*.tx-ppk-videojs {
+    text-shadow:        none;
+    position:           relative;
+}*/
+
+/*.tx-ppk-videojs .video-js {
+    position:           absolute;
+    top:                0;
+    left:               0;
+}*/
+
+/*.tx-ppk-videojs ul,
+.tx-ppk-videojs ol {
+    color:          #FFFFFF;
+    line-height:    normal;
+    font-size:      1em;
+}*/
+
+/*.tx-ppk-videojs img {
+    padding:            0;
+    margin:             0;
+}*/
+
+@media (min-width: 240px) {
+
+    .tx-ppk-videojs .video-js {
+        background-color:   transparent;
+        width:              100% !important;
+    }
+
+    .tx-ppk-videojs .video-js .vjs-tech {
+        position: relative;
+    }
+
+    .tx-ppk-videojs .vjs-poster {
+        position:   absolute;
+        top:        0;
+        left:       0;
+    }
+
+}
+
+.tx-ppk-videojs-dummy {
+    position: absolute;
+    visibility: hidden;
+}
+
+.tx-ppk-videojs-responsive,
+.tx-ppk-videojs-responsive .video-js {
+    height: auto !important;
+}

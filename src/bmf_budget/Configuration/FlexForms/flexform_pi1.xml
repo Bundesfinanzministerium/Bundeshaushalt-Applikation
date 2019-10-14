@@ -1,0 +1,79 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Allgemein</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <settings.budget>
+                        <TCEforms>
+                            <exclude>0</exclude>
+                            <label>LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:choose_budget</label>
+                            <config>
+                                <type>select</type>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:please_choose</numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                                <foreign_table>tx_bmfbudget_domain_model_budget</foreign_table>
+                                <foreign_table_where>
+                                    AND tx_bmfbudget_domain_model_budget.hidden = 0 ORDER BY tx_bmfbudget_domain_model_budget.sorting
+                                </foreign_table_where>
+                            </config>
+                        </TCEforms>
+                    </settings.budget>
+
+                    <settings.default.account>
+                        <TCEforms>
+                            <exclude>0</exclude>
+                            <label>LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:choose_account</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:account_target</numIndex>
+                                        <numIndex index="1">target</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:account_actual</numIndex>
+                                        <numIndex index="1">actual</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.default.account>
+
+                    <settings.default.structure>
+                        <TCEforms>
+                            <exclude>0</exclude>
+                            <label>LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:choose_strucure</label>
+                            <config>
+                                <type>select</type>
+                                <items>
+                                    <numIndex index="0">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:strucure_section</numIndex>
+                                        <numIndex index="1">section</numIndex>
+                                    </numIndex>
+                                    <numIndex index="1">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:strucure_function</numIndex>
+                                        <numIndex index="1">group</numIndex>
+                                    </numIndex>
+                                    <numIndex index="2">
+                                        <numIndex index="0">LLL:EXT:bmf_budget/Resources/Private/Language/locallang_flexform_pi1.xlf:strucure_group</numIndex>
+                                        <numIndex index="1">function</numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.default.structure>
+
+                </el>
+            </ROOT>
+        </sDEF>
+    </sheets>
+</T3DataStructure>

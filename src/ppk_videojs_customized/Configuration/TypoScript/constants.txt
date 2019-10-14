@@ -1,0 +1,15 @@
+plugin.tx_ppkvideojs {
+
+    view {
+        pluginFilesPath  = /typo3conf/ext/ppk_videojs_customized/Resources
+
+        templateRootPath = EXT:ppk_videojs_customized/Resources/Private/Templates
+        partialRootPath  = EXT:ppk_videojs_customized/Resources/Private/Partials
+        layoutRootPath   = EXT:ppk_videojs_customized/Resources/Private/Layouts
+
+        styleRootPath    = EXT:ppk_videojs_customized/Resources/Public/Styles
+        scriptRootPath   = EXT:ppk_videojs_customized/Resources/Public/Scripts
+        libraryRootPath  = EXT:ppk_videojs_customized/Resources/Public/Libraries
+    }
+
+}

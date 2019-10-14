@@ -1,0 +1,37 @@
+<f:if condition="{result.records.group.updated}">
+    <hr>
+    <h2>{f:translate(key: 'result.updated.groups')} ({result.records.group.updated -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.budget')}&nbsp;</th>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.group.updated}" as="record">
+            <tr>
+                <td>{record.budget}&nbsp;</td>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
+
+<f:if condition="{result.records.group.new}">
+    <hr>
+    <h2>{f:translate(key: 'result.inserted.groups')} ({result.records.group.new -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.budget')}&nbsp;</th>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.group.new}" as="record">
+            <tr>
+                <td>{record.budget}&nbsp;</td>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>

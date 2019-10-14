@@ -1,0 +1,28 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_budget/Configuration/TypoScript/Setup/" extensions="ts">
+
+plugin.tx_bmfbudget {
+    view {
+        templateRootPaths.0 = {$plugin.tx_bmfbudget.view.templateRootPath}
+        partialRootPaths.0 = {$plugin.tx_bmfbudget.view.partialRootPath}
+        layoutRootPaths.0 = {$plugin.tx_bmfbudget.view.layoutRootPath}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_bmfbudget.persistence.storagePid}
+        recursive = {$plugin.tx_bmfbudget.persistence.recursive}
+    }
+}
+
+# Module configuration
+module.tx_bmfbudget {
+    view {
+        templateRootPaths.0 = {$module.tx_bmfbudget.view.templateRootPath}
+        partialRootPaths.0 = {$module.tx_bmfbudget.view.partialRootPath}
+        layoutRootPaths.0 = {$module.tx_bmfbudget.view.layoutRootPath}
+    }
+
+    persistence {
+        storagePid = {$plugin.tx_bmfbudget.persistence.storagePid}
+        recursive = {$plugin.tx_bmfbudget.persistence.recursive}
+    }
+}

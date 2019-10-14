@@ -1,0 +1,38 @@
+/*
+ * $Id: fonts.css 646 2012-02-22 09:18:24Z pixelpark $
+ */
+@charset "utf-8";
+/* WEBFONTS ############################################################################################################
+##################################################################################################################### */
+@font-face {
+    font-family:'BundesSerif';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Regular.woff') format('woff'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Regular.ttf')  format('truetype');
+}
+@font-face {
+    font-family:'BundesSerifBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Bold.woff') format('woff'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSerifWeb-Bold.ttf')  format('truetype');
+}
+@font-face {
+    font-family:'BundesSans';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Regular.woff') format('woff'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Regular.ttf')  format('truetype');
+}
+@font-face {
+    font-family:'BundesSansBold';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Bold.eot?#iefix') format('embedded-opentype'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Bold.woff') format('woff'),
+    url('/fileadmin/de.bundeshaushalt/development/Fonts/BundesSansWeb-Bold.ttf')  format('truetype');
+}

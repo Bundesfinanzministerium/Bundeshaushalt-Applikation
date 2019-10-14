@@ -1,0 +1,67 @@
+<h1>{f:translate(key: 'module.header')}</h1>
+<h2>{f:translate(key: 'supplementary.create.header')}</h2>
+
+<f:flashMessages/>
+
+<f:render partial="Forms/Error"/>
+<f:render partial="Forms/Budget/Choose" arguments="{dto:dto, budgets:budgets, budgettitle:'titleTarget'}"/>
+
+<f:if condition="{dto.step}>1">
+
+    <f:if condition="{dto.budget.supplementaryBudgets}">
+        Folgenden Nachtragshaushalte stehen bereits zur Verfügung:
+        <ul>
+            <f:for each="{dto.budget.supplementaryBudgets}" as="supplementaryBudget">
+                <li>{supplementaryBudget.title}</li>
+            </f:for>
+        </ul>
+    </f:if>
+
+    <f:form action="process" enctype="multipart/form-data" name="createSupplementaryDto" object="{dto}" id="bmfProcessForm">
+
+        <h3>2. Bitte geben Sie die Page-ID des Nachtragshaushalt für das Jahr "{dto.budget.year}" an</h3>
+        <f:form.textfield property="rootSysFolderPid" placeholder="0"/>
+
+        <h3>3. Bitte geben Sie einen Titel für den Nachtragshaushalt ein</h3>
+        <f:form.textfield property="title" placeholder="1. Nachtragshaushalt"/>
+
+        <h3>4. Erstellen des Nachtragshaushalt</h3>
+        <f:form.submit name="process" value="erstellen" class="processForm"/>
+
+        <f:form.hidden property="budget" value="{dto.budget.uid}" />
+
+    </f:form>
+
+</f:if>
+
+<f:render partial="Forms/Process" arguments="{inProgress:inProgress}"/>
+
+<f:if condition="{result}">
+    <div id="result">
+        <hr>
+
+        <h1>{f:translate(key: 'result')}</h1>
+
+        <h2>{f:translate(key: 'result.selection')}:</h2>
+
+        <table>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.year')}:</th>
+                <td>{dto.budget.year}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.rootPid')}:</th>
+                <td>{dto.rootSysFolderPid}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.title')}:</th>
+                <td>{dto.title}</td>
+            </tr>
+
+        </table>
+
+        <hr>
+        <h2>{f:translate(key: 'result.statistic')}:</h2>
+        {f:translate(key: 'result.statistic.time')}: {result.process} {f:translate(key: 'result.statistic.time.seconds')}
+    </div>
+</f:if>

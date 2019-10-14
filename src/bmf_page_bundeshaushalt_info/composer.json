@@ -1,0 +1,46 @@
+{
+    "name": "bmf-bundeshaushalt-info/bmf-page-bundeshaushalt-info",
+    "description": "Bundeshaushalt-Info, Page-Template",
+    "type": "typo3-cms-extension",
+    "version": "6.4.2",
+    "license": ["GPL-2.0-or-later"],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.pixelpark.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "typo3/cms-core": "^9.5",
+        "apache-solr-for-typo3/solr": "^8.1"
+    },
+    "replace": {
+        "bmf_page_bundeshaushalt_info": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "PPKOELN\\BmfPageBundeshaushaltInfo\\": "Classes/"
+        }
+    },
+    "config": {
+        "vendor-dir": "../default.instance/vendor",
+        "bin-dir": "../default.instance/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p ../default.instance/typo3conf/ext/",
+            "[ -L ../default.instance/typo3conf/ext/bmf_page_bundeshaushalt_info ] || ln -snvf ../../../dir-project ../default.instance/typo3conf/ext/bmf_page_bundeshaushalt_info"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "../default.instance"
+        }
+    }
+}

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-08-26T13:01:25Z"
+          product-name="bmf_budget_crawler">
+        <header/>
+        <body>
+            <trans-unit id="session.description">
+                <source>session</source>
+            </trans-unit>
+            <trans-unit id="ext_title.description">
+                <source>extTitle</source>
+            </trans-unit>
+            <trans-unit id="ext_class.description">
+                <source>extClass</source>
+            </trans-unit>
+            <trans-unit id="progress.description">
+                <source>progress</source>
+            </trans-unit>
+            <trans-unit id="queues.description">
+                <source>queues</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

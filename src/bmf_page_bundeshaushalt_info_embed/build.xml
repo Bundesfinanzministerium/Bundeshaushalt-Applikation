@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<project name="T3Ext - Deploy T3EXT::bmf_page_bundeshaushalt_info_embed" basedir="." default="help">
+
+    <property name="ext.name" value="bmf_page_bundeshaushalt_info_embed"/>
+    <property name="dir.build" value="/var/cache/jenkins/build/TYPO3_Builds/TYPO3.v.7.4/local"/>
+
+    <property name="path.phpsource" value="Classes"/>
+    <property name="path.phptests" value="Tests"/>
+
+    <import file="${dir.build}/build.xml"/>
+
+    <target name="help"/>
+
+    <target name="development"
+            description="Quality assurance via Jenkins CI"
+            depends="prepare_environment, cleanup_environment"/>
+
+    <target name="release"
+            description="Deployment via Jenkins CI"
+            depends="prepare_environment, tar, transfer_to_artefactory, remote_deployment, cleanup_environment"/>
+
+
+</project>

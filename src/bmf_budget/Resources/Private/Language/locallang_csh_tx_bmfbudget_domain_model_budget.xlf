@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-22T11:53:44Z" product-name="bmf_budget">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="year.description">
+				<source>year</source>
+			</trans-unit>
+			<trans-unit id="section_actual_income.description">
+				<source>sectionActualIncome</source>
+			</trans-unit>
+			<trans-unit id="section_actual_expenses.description">
+				<source>sectionActualExpenses</source>
+			</trans-unit>
+			<trans-unit id="section_target_income.description">
+				<source>sectionTargetIncome</source>
+			</trans-unit>
+			<trans-unit id="section_target_expenses.description">
+				<source>sectionTargetExpenses</source>
+			</trans-unit>
+			<trans-unit id="function_actual_income.description">
+				<source>functionActualIncome</source>
+			</trans-unit>
+			<trans-unit id="function_actual_expenses.description">
+				<source>functionActualExpenses</source>
+			</trans-unit>
+			<trans-unit id="function_target_income.description">
+				<source>functionTargetIncome</source>
+			</trans-unit>
+			<trans-unit id="function_target_expenses.description">
+				<source>functionTargetExpenses</source>
+			</trans-unit>
+			<trans-unit id="group_actual_income.description">
+				<source>groupActualIncome</source>
+			</trans-unit>
+			<trans-unit id="group_actual_expenses.description">
+				<source>groupActualExpenses</source>
+			</trans-unit>
+			<trans-unit id="group_target_income.description">
+				<source>groupTargetIncome</source>
+			</trans-unit>
+			<trans-unit id="group_target_expenses.description">
+				<source>groupTargetExpenses</source>
+			</trans-unit>
+			<trans-unit id="pid_title.description">
+				<source>pidTitle</source>
+			</trans-unit>
+			<trans-unit id="pid_section.description">
+				<source>pidSection</source>
+			</trans-unit>
+			<trans-unit id="pid_function.description">
+				<source>pidFunction</source>
+			</trans-unit>
+			<trans-unit id="pid_group.description">
+				<source>pidGroup</source>
+			</trans-unit>
+			<trans-unit id="pid_budgetgroup.description">
+				<source>pidBudgetgroup</source>
+			</trans-unit>
+			<trans-unit id="pid_titlegroup.description">
+				<source>pidTitlegroup</source>
+			</trans-unit>
+			<trans-unit id="pid_supplementary_budget.description">
+				<source>pidSupplementaryBudget</source>
+			</trans-unit>
+			<trans-unit id="pid_supplementary_title.description">
+				<source>pidSupplementaryTitle</source>
+			</trans-unit>
+			<trans-unit id="info_image.description">
+				<source>infoImage</source>
+			</trans-unit>
+			<trans-unit id="info_text.description">
+				<source>infoText</source>
+			</trans-unit>
+			<trans-unit id="info_link.description">
+				<source>infoLink</source>
+			</trans-unit>
+			<trans-unit id="sections.description">
+				<source>sections</source>
+			</trans-unit>
+			<trans-unit id="groups.description">
+				<source>groups</source>
+			</trans-unit>
+			<trans-unit id="functions.description">
+				<source>functions</source>
+			</trans-unit>
+			<trans-unit id="supplementary_budgets.description">
+				<source>supplementaryBudgets</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

@@ -1,0 +1,33 @@
+<f:if condition="{result.records.section.updated}">
+    <hr>
+    <h2>{f:translate(key: 'result.updated.sections')} ({result.records.section.updated -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.section.updated}" as="record">
+            <tr>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
+
+<f:if condition="{result.records.section.new}">
+    <hr>
+    <h2>{f:translate(key: 'result.inserted.sections')} ({result.records.section.new -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.section.new}" as="record">
+            <tr>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>

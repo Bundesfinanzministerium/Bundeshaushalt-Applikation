@@ -1,0 +1,15 @@
+# Module configuration
+module.tx_bmfbudgetcrawler {
+
+	persistence {
+		storagePid = {$plugin.tx_bmfbudget.persistence.storagePid}
+		recursive = {$plugin.tx_bmfbudget.persistence.recursive}
+	}
+
+	view {
+		templateRootPath = {$module.tx_bmfbudgetcrawler.view.templateRootPath}
+		partialRootPath = {$module.tx_bmfbudgetcrawler.view.partialRootPath}
+		layoutRootPath = {$module.tx_bmfbudgetcrawler.view.layoutRootPath}
+	}
+
+}

@@ -1,0 +1,577 @@
+
+body {
+    background: url(../Images/bg-body.gif) 0 0 repeat-x fixed;
+    color: #333;
+    font-family: BundesSans, Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    padding-bottom: 2%;
+    text-shadow: 1px 1px 0 #fff;
+}
+
+.container {
+    background-color: #ffffff;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    position: relative;
+    *zoom: 1;
+}
+
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
+
+.container {
+    max-width: 940px;
+    padding: 0 2.4% 2.4% 2.4%;
+}
+
+.container.row {
+    width: auto;
+}
+
+.lt-ie9 .container {
+    padding: 0 36px 36px 36px;
+    width: 940px;
+}
+
+/* ############## HEADER - Branding ##################################### */
+#branding {
+    border-bottom: 1px solid #dadada;
+}
+
+/* ############## HEADER - Logo ####################################### */
+#branding #logo {
+    float: left;
+    padding-right: 0.25em;
+    padding-top: 1.125em; /* zur basis 16: padding-top: 18px  */
+    width: auto;
+}
+
+#branding #logo a {
+    display: inline-block;
+    overflow: hidden;
+}
+
+/* ############## HEADER - Headline ################################### */
+#branding h1 {
+    color: #333;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1.875em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0.525em 0 0;
+}
+
+/* ############## HEADER - Searchform ################################# */
+#branding #searchmobile form,
+#branding #search form {
+    border-radius: 0; /* zur basis 14: border-radius: 3px; */
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 0.875em; /* zur basis 16: font-size: 14px; */
+    width: 100%; /* zur basis 14: width: 220px; */
+}
+
+#branding #searchmobile form #inputTextMobile,
+#branding #search form #inputText {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0 35px 0 10px;
+}
+
+#searchmobile,
+#search {
+    position: relative;
+}
+
+#inputTextMobile,
+#inputText {
+    background-color: #f0f0f0;
+    border: 2px solid #f0f0f0;
+    font-size: 15px;
+    height: 31px;
+    margin: 0;
+    padding: 0 35px 0 8px;
+    width: 100%;
+}
+
+@media (max-width: 1023px) {
+    #inputTextMobile,
+    #inputText {
+        height: 36px;
+    }
+}
+
+#inputTextMobile:focus,
+#inputText:focus {
+    border-color: #333;
+}
+
+#inputButtonMobile,
+#inputButton {
+    background: transparent;
+    border: 2px solid #f0f0f0;
+    bottom: 0;
+    display: block;
+    height: 27px;
+    padding: 0;
+    position: absolute;
+    right: 2px;
+    width: 27px;
+}
+
+#inputButtonMobile:focus,
+#inputButton:focus {
+    border-color: #333;
+}
+
+#site-titel span {
+    display: block;
+    font-size: 1.875em;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0;
+    padding: 0.525em 0 0;
+}
+
+@media (max-width: 1023px) {
+    #site-titel {
+        padding-bottom: 30px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 1024px) {
+    #branding {
+        height: 8.125em;
+    }
+
+    #branding #searchmobile,
+    #branding #search {
+        padding-top: 1.125em; /* zur basis 16: padding-top: 18px  */
+    }
+
+    #branding #searchmobile form,
+    #branding #search form {
+        border: 1px solid #dedede;
+        border-radius: 0; /* zur basis 14: border-radius: 3px; */
+    }
+
+    #branding #searchmobile form #inputTextMobile,
+    #branding #search form #inputText {
+        float: left;
+        width: 76%; /* zur basis 14: border: 175px; */
+    }
+
+    #searchmobile,
+    #search {
+        float: right;
+        padding-top: 15px;
+    }
+
+    #inputTextMobile,
+    #inputText {
+        margin: 0 0 1em 0;
+        width: 19.66em;
+    }
+
+    #inputButtonMobile,
+    #inputButton {
+        bottom: 17px;
+    }
+}
+
+/* ############## HEADER - Page Title ####################################
+ ###################################################################### */
+#page-title h1,
+#page-title h2 {
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 30px;
+    font-weight: normal;
+    margin: 0 0 14px 0;
+    padding-bottom: 25px;
+    padding-left: 25.53196%;
+    padding-top: 54px;
+}
+
+/* ############## GLOBAL (content, teaser, feedback)  ####################
+ ###################################################################### */
+#main img,
+#teaser img {
+    height: auto;
+    width: 100%;
+}
+
+/* ############## CONTENT ################################################
+ ###################################################################### */
+#article-main {
+    margin-left: 25.53196%;
+    padding-bottom: 30px;
+    width: 65.95744680199999%;
+}
+
+.csc-default {
+    padding-bottom: 21px;
+}
+
+.csc-default img,
+#article-main img {
+    padding-bottom: 21px;
+}
+
+.csc-textpic-imagewrap {
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    position: relative;
+}
+
+.csc-textpic-intext-left-nowrap {
+    clear: both;
+    overflow: hidden;
+    padding-bottom: 20px;
+    padding-left: 0;
+}
+
+.csc-textpic-intext-left-nowrap .csc-textpic-text {
+    margin-left: 0 !important;
+}
+
+.csc-textpic-intext-left-nowrap .csc-textpic-imagewrap img {
+    max-width: 100%;
+    width: auto !important;
+}
+
+@media (min-width: 570px) {
+    .csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
+        float: left;
+    }
+
+    .csc-textpic-intext-left-nowrap .csc-textpic-text {
+        margin-left: 230px !important;
+    }
+}
+
+@media (min-width: 960px) {
+    .csc-textpic-intext-left-nowrap {
+        padding-left: 235px;
+    }
+
+    .csc-textpic-intext-left-nowrap .csc-textpic-imagewrap {
+        float: left;
+    }
+}
+
+.csc-textpic-caption:before {
+    color: #555;
+    content: 'Bild: ';
+    display: block;
+}
+
+.csc-textpic-caption {
+    display: block !important;
+    font-size: 14px;
+    left: 0;
+    margin-left: -240px;
+    position: absolute;
+    text-align: right;
+    top: 0;
+    width: 220px;
+    z-index: 50;
+}
+
+/* ############## TEASER #################################################
+ ###################################################################### */
+#teaser {
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 3px;
+}
+
+#teaser h1 {
+    color: #555;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28px;
+    margin: 0;
+    padding: 0 0 8px 0;
+    text-align: center;
+}
+
+#teaser div.row {
+    border-top: 1px solid #cccccc;
+    margin: 0;
+    padding: 20px 0 0 0;
+}
+
+.teaser .image,
+#teaser .image {
+    overflow: hidden;
+    padding: 0 0 23px 0;
+    position: relative;
+}
+
+.teaser .image h2,
+.teaser .image h3,
+#teaser .image h2,
+#teaser .image h3 {
+    background-color: #ffffff;
+    border: 0 none;
+    bottom: 33px;
+    font-size: 16px;
+    left: 0;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0 8px 0 0;
+    position: absolute;
+    z-index: 1;
+}
+
+* html .teaser .image h4,
+* html #teaser .image h4 {
+    top: 95px;
+}
+
+.teaser .image .figcaption,
+#teaser .image .figcaption {
+    left: -1000px;
+    position: absolute;
+}
+
+.teaser div.image img,
+#teaser div.image img {
+    height: auto;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.teaser .csc-default,
+#teaser .csc-default {
+    margin: 0;
+    padding: 0;
+}
+
+.teaser .ce-media {
+    margin-right: 0.5em;
+}
+.teaser h2 {
+    font-size: 1.2em;
+}
+.teaser a, .teaser h2 a {
+    text-decoration: none !important;
+}
+.teaser a:hover, .teaser h2 a:hover {
+    text-decoration: underline !important;
+}
+
+
+/* ############## CONTACT ################################################
+ ###################################################################### */
+.js #contact {
+    display: none;
+}
+
+.no-js #contact {
+    display: block;
+}
+
+#contact {
+    overflow: hidden;
+}
+
+#contact h1 {
+    font-size: 24px;
+    margin: 0;
+    padding: 18px 0 23px 0;
+}
+
+#contact img {
+    height: auto;
+    width: 100%;
+}
+
+#contact .csc-default,
+#contact .csc-default img {
+    margin: 0;
+    padding: 0;
+}
+
+/* ############## FOOTER #################################################
+ ###################################################################### */
+#footer {
+    border-top: 1px solid #cccccc;
+    line-height: 15px;
+    padding: 10px 0 40px 0;
+}
+
+#footer a {
+    color: #333;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+#footer a:hover,
+#footer a:focus,
+#footer a:active,
+#footer #copyright a:hover,
+#footer #copyright a:focus,
+#footer #copyright a:active {
+    color: #cc3300;
+    text-decoration: underline;
+}
+
+#footer #copyright {
+    color: #555;
+    float: left;
+    font-size: 14px;
+    line-height: normal;
+    margin: 0;
+    padding: 0;
+}
+
+#footer #copyright a {
+    color: #555;
+}
+
+#footer ul {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+#footer li {
+    border-left: 1px solid #cccccc;
+    display: block;
+    float: left;
+    margin: 0;
+    padding: 0 10px;
+}
+
+#footer ul {
+    margin-right: -10px;
+}
+
+#footer li:first-child {
+    border-left: 0 none;
+}
+
+#footer ul li .selected {
+    color: #cc3300;
+    text-decoration: underline;
+}
+
+* html #footer ul {
+    margin-right: -5px;
+}
+
+* html #footer li {
+    border-left: expression(this.previousSibling == null ? '0' : '1px solid #cccccc' );
+}
+
+.sr-hint {
+    display: block;
+    height: 0;
+    left: -999em;
+    position: absolute;
+    top: -999em;
+    width: 0;
+    color: #000;
+}
+
+/** TYPO3 CSS fixes
+***********************************************************/
+
+#article-main div.csc-textpic,
+#article-main div.csc-textpic div.csc-textpic-imagerow,
+#article-main ul.csc-uploads li {
+    overflow: visible;
+}
+
+#article-main div.csc-textpic-center .csc-textpic-imagewrap,
+#article-main div.csc-textpic-center figure.csc-textpic-imagewrap {
+    overflow: visible;
+}
+
+#ribbon:after {
+    border-color: #C85000 transparent transparent #C85000;
+    right: 0;
+}
+
+/** Ribbon
+***********************************************************/
+
+#ribbon:before {
+    border-color: #C85000 #C85000 transparent transparent;
+    left: 0;
+}
+
+#ribbon:before, #ribbon:after {
+    border-style: solid;
+    border-width: 5px;
+    content: " ";
+    display: block;
+    height: 0;
+    position: absolute;
+    top: 100%;
+    width: 0;
+    z-index: 1;
+}
+
+#ribbon {
+    background: rgb(229, 91, 0); /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIxMDAlIiB5Mj0iMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2U1NWIwMCIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNmZjlhMDAiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+    background: -moz-linear-gradient(left, rgba(229, 91, 0, 1) 0%, rgba(255, 154, 0, 1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgba(229, 91, 0, 1)), color-stop(100%, rgba(255, 154, 0, 1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, rgba(229, 91, 0, 1) 0%, rgba(255, 154, 0, 1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, rgba(229, 91, 0, 1) 0%, rgba(255, 154, 0, 1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, rgba(229, 91, 0, 1) 0%, rgba(255, 154, 0, 1) 100%); /* IE10+ */
+    background: linear-gradient(to right, rgba(229, 91, 0, 1) 0%, rgba(255, 154, 0, 1) 100%); /* W3C */
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+
+    clear: both;
+    /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+    color: #FFFFFF;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e55b00', endColorstr='#ff9a00', GradientType=1); /* IE6-8 */
+    font-size: 1.25em;
+    margin: 0 -18px 8px;
+    padding: 2px 21px;
+    position: relative;
+    text-align: center;
+    text-shadow: -1px -1px 2px #C85000, 1px 1px 2px #F79E31;
+}
+
+#ribbon + div.row {
+    border-top: medium none;
+    padding: 0;
+}
+
+.row .ce-gallery {
+    margin-right: 0 !important;
+}
+
+
+.ce-textpic.row {
+    position: relative;
+    overflow: visible;
+}
+.ce-row, .ce-textpic, .ce-gallery {
+    overflow: visible;
+}
+
+.ce-textpic {
+    clear: left;
+}
+
+.ce-textpic.ce-center.ce-below {
+    overflow: hidden;
+}

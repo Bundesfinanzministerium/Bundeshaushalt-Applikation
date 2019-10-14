@@ -1,0 +1,70 @@
+<h1>{f:translate(key: 'module.header')}</h1>
+<h2>{f:translate(key: 'supplementary.import.header')}</h2>
+
+<f:flashMessages/>
+
+<f:render partial="Forms/Error"/>
+<f:render partial="Forms/Budget/Choose" arguments="{dto:dto, budgets:budgets, budgettitle:'titleTarget'}"/>
+
+<f:if condition="{dto.step}>1">
+    <f:render partial="Forms/Supplementary/Choose" arguments="{dto:dto, supplementaryBudgets:supplementaryBudgets}"/>
+</f:if>
+
+<f:if condition="{dto.step}>2">
+    <f:form action="upload" enctype="multipart/form-data" name="importSupplementaryDto" object="{dto}">
+        <h3>
+            3. {f:translate(key: 'form.file.upload.headline')}
+            <f:if condition="{dto.file}">
+                <br>
+                <small>{f:translate(key: 'common.choosen')}: <strong>"<f:format.crop maxCharacters="80" respectWordBoundaries="FALSE">{dto.file.name}</f:format.crop>"</strong></small>
+            </f:if>
+
+        </h3>
+        <f:form.upload property="file"/>
+        <f:form.submit value="{f:translate(key: 'upload.submit')}"/>
+        <f:form.hidden property="budget" value="{dto.budget.uid}" />
+        <f:form.hidden property="supplementaryBudget" value="{dto.supplementaryBudget.uid}" />
+    </f:form>
+</f:if>
+
+<f:if condition="{dto.step}>3">
+    <f:form action="process" enctype="multipart/form-data" name="importSupplementaryDto" object="{dto}">
+        <h3>
+            4. Import<br>
+            <small>Import der aktuellen Daten</small>
+        </h3>
+        <f:form.hidden property="budget" value="{dto.budget.uid}"/>
+        <f:form.hidden property="supplementaryBudget" value="{dto.supplementaryBudget.uid}"/>
+        <f:form.hidden property="file.name" value="{dto.file.name}"/>
+        <f:form.hidden property="file.type" value="{dto.file.type}"/>
+        <f:form.hidden property="file.size" value="{dto.file.size}"/>
+        <f:form.hidden property="file.absoluteFilename" value="{dto.file.absoluteFilename}"/>
+        <f:form.hidden property="session" value="{dto.session}" id="bmfProcessSession"/>
+        <f:form.submit value="Start import"/>
+    </f:form>
+</f:if>
+
+<f:if condition="{result}">
+    <div id="result">
+        <hr>
+        <h1>{f:translate(key: 'result')}</h1>
+        <h2>{f:translate(key: 'result.selection')}:</h2>
+        <table>
+            <tr>
+                <th>Haushaltsjahr:</th>
+                <td>{dto.budget.year}</td>
+            </tr>
+            <tr>
+                <th>Nachtragshaushalt:</th>
+                <td>{dto.supplementaryBudget.title}</td>
+            </tr>
+            <tr>
+                <th>XML Dokument:</th>
+                <td><f:format.crop maxCharacters="80" respectWordBoundaries="FALSE">{dto.file.name}</f:format.crop></td>
+            </tr>
+        </table>
+        <hr>
+        <h2>{f:translate(key: 'result.statistic')}:</h2>
+        {f:translate(key: 'result.statistic.time')}: {result.process} {f:translate(key: 'result.statistic.time.seconds')}
+    </div>
+</f:if>

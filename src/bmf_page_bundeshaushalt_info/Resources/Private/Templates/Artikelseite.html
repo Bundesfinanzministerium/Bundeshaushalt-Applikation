@@ -1,0 +1,14 @@
+<f:layout name="WebsiteContainer" />
+<f:section name="content">
+    <!-- content area -->
+    <div id="article-main" class="content row">
+        <!--TYPO3SEARCH_begin-->
+        {content -> f:format.raw()}
+        <!--TYPO3SEARCH_end-->
+    </div>
+    <!-- end content area -->
+
+    <f:if condition="{data.show_teaser}">
+        {teaser -> f:format.raw()}
+    </f:if>
+</f:section>

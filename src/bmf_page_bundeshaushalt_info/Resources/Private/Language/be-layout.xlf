@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2014-07-18T13:50:22Z"
+          product-name="bmf_page_bundeshaushalt_info">
+        <header/>
+        <body>
+            <trans-unit id="10_Startseite">
+                <source>Startseite</source>
+            </trans-unit>
+            <trans-unit id="20_Artikelseite">
+                <source>Artikelseite</source>
+            </trans-unit>
+            <trans-unit id="30_Zweispaltig">
+                <source>Zweispaltig</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,63 @@
+<h1>{f:translate(key: 'module.header')}</h1>
+<h2>{f:translate(key: 'label.update.header')}</h2>
+
+<f:flashMessages/>
+
+<f:render partial="Forms/Error"/>
+<f:render partial="Forms/Budget/Choose" arguments="{dto:dto, budgets:budgets, budgettitle:'titleActual'}"/>
+<f:if condition="{dto.step}>1"><f:render partial="Forms/File/Upload.html" arguments="{dto:dto}"/></f:if>
+<f:if condition="{dto.step}>2">
+    <f:form action="process" enctype="multipart/form-data" name="updateLabelDto" object="{dto}" id="bmfProcessForm">
+        <h3>
+            3. {f:translate(key: 'form.xml.section.import')}
+            <br><small>{f:translate(key: 'form.xml.section.import.description')}</small>
+        </h3>
+        <f:form.submit value="{f:translate(key: 'import.process')}" class="processForm"/>
+
+        <f:form.hidden property="budget" value="{dto.budget.uid}"/>
+        <f:form.hidden property="file.name" value="{dto.file.name}"/>
+        <f:form.hidden property="file.type" value="{dto.file.type}"/>
+        <f:form.hidden property="file.size" value="{dto.file.size}"/>
+        <f:form.hidden property="file.absoluteFilename" value="{dto.file.absoluteFilename}"/>
+        <f:form.hidden property="session" value="{dto.session}" id="bmfProcessSession"/>
+    </f:form>
+</f:if>
+
+<f:render partial="Forms/Process" arguments="{inProgress:inProgress}"/>
+
+<f:if condition="{result}">
+
+    <div id="result">
+        <hr>
+
+        <h1>{f:translate(key: 'result')}</h1>
+
+        <h2>{f:translate(key: 'result.selection')}:</h2>
+
+        <table>
+
+            <tr>
+                <th>{f:translate(key: 'result.selection.budgetyear')}:</th>
+                <td>{dto.budget.year}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'result.selection.file')}:</th>
+                <td>{dto.file.name}</td>
+            </tr>
+        </table>
+
+        <h2>{f:translate(key: 'result.statistic')}:</h2>
+
+        <table>
+            <tr>
+                <th>{f:translate(key: 'result.updated.functions')}:</th>
+                <td>{result.records.processed.functions}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'result.updated.groups')}:</th>
+                <td>{result.records.processed.groups}</td>
+            </tr>
+        </table>
+
+    </div>
+</f:if>

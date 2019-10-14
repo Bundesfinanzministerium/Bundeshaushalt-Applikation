@@ -1,0 +1,79 @@
+{
+    "name": "ppk/bmf-bundeshaushalt",
+    "type": "project",
+    "license": ["GPL-2.0-or-later"],
+    "homepage": "https://www.bundeshaushalt.de",
+    "config": {
+        "platform": {
+            "php": "7.2.12"
+        },
+        "vendor-dir": "../vendor",
+        "bin-dir": "../bin"
+    },
+    "extra": {
+        "typo3/cms": {
+            "web-dir": "../public",
+            "root-dir": "../public",
+            "base-dir": "../root",
+            "app-dir": "../"
+        }
+    },
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../src/*"
+        },
+        {
+            "type": "artifact",
+            "url": "../external/"
+        },
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        }
+    ],
+    "require": {
+        "t3/cms": "^9.5",
+        "bmf-bundeshaushalt-info/bmf-budget": "*",
+        "bmf-bundeshaushalt-info/bmf-budget-application": "*",
+        "bmf-bundeshaushalt-info/bmf-budget-application-embed": "*",
+        "bmf-bundeshaushalt-info/bmf-budget-crawler": "*",
+        "bmf-bundeshaushalt-info/bmf-budget-export-rest-solr": "*",
+        "bmf-bundeshaushalt-info/bmf-budget-import-xml": "*",
+        "bmf-bundeshaushalt-info/bmf-page-bundeshaushalt-info": "*",
+        "bmf-bundeshaushalt-info/bmf-page-bundeshaushalt-info-embed": "*",
+        "typo3-extensions/ppk-feedback": "1.2",
+        "typo3-extensions/ppk-videojs": "7.0",
+        "typo3-extensions/ppk-matomo": "1.1",
+        "bmf-bundeshaushalt/ppk-feedback-customized": "*",
+        "bmf-bundeshaushalt-info/ppk-videojs-customized": "*",
+        "helhum/dotenv-connector": "^2.1",
+        "t3/min": "^1.7",
+        "typo3/cms-redirects": "^9.5"
+    },
+    "require-dev": {
+        "jigal/t3adminer": "^9.2"
+    },
+    "scripts": {
+        "t3-install": [
+            "typo3cms install:setup --force --site-name \"BMF Bundeshaushalt Dev Environment\" --use-existing-database 0 --database-user-name \"root\" --database-user-password \"root\" --database-host-name \"localhost\" --database-name \"typo3\" --database-port \"3306\" --database-socket \"\" --admin-user-name \"vagrant\" --admin-password \"password\" --site-setup-type \"site\"",
+            "cp -f /vagrant/project/public/typo3conf/LocalConfiguration.php /var/www/html/public/typo3conf/LocalConfiguration.php",
+            "cp -f /vagrant/project/public/typo3conf/AdditionalConfiguration.php /var/www/html/public/typo3conf/AdditionalConfiguration.php",
+            "cp -f /vagrant/project/.htaccess /var/www/html/.htaccess",
+            "cp -f /var/www/html/root/.env-example /var/www/html/root/.env",
+            "typo3cms database:updateschema"
+        ],
+        "t3-update-packagestates": [
+            "typo3cms install:generatepackagestates"
+        ],
+        "t3-dbexport": [
+            "typo3cms database:export -c Default -e 'cf_*' -e 'cache_*' -e '[bf]e_sessions' -e sys_log > /vagrant/backup/dump.sql"
+        ],
+        "t3-dbimport": [
+            "typo3cms database:import < /vagrant/backup/dump.sql"
+        ],
+        "post-autoload-dump": [
+            "@t3-update-packagestates"
+        ]
+    }
+}

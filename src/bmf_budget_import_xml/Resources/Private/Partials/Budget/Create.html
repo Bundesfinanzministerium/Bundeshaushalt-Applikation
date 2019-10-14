@@ -1,0 +1,57 @@
+<h1>{f:translate(key: 'module.header')}</h1>
+<h2>{f:translate(key: 'budget.create.header')}</h2>
+
+<f:flashMessages/>
+
+<f:form action="process" enctype="multipart/form-data" name="createBudgetDto" object="{dto}">
+
+    <h2>{f:translate(key:'budget.create.enterPid')}</h2>
+    <f:form.textfield property="rootSysFolderPid"/>
+
+    <h2>{f:translate(key:'budget.create.enterTitle')}</h2>
+    <f:form.textarea cols="40" rows="2" property="title"/>
+
+    <h2>{f:translate(key:'budget.create.enterYear')}</h2>
+    <f:form.textfield property="year"/>
+
+    <h2>{f:translate(key:'budget.create.createEntity')}</h2>
+    <f:form.submit value="create"/>
+
+</f:form>
+
+<script type="text/javascript">
+    if (top.content && top.content.nav_frame && top.content.nav_frame.refresh_nav) {
+        top.content.nav_frame.refresh_nav();
+    }
+</script>
+
+<f:render partial="Forms/Process" arguments="{inProgress:inProgress}"/>
+
+<f:if condition="{result}">
+    <div id="result">
+        <hr>
+
+        <h1>{f:translate(key: 'result')}</h1>
+
+        <h2>{f:translate(key: 'result.selection')}:</h2>
+
+        <table>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.rootPid')}:</th>
+                <td>{dto.rootSysFolderPid}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.title')}:</th>
+                <td>{dto.title}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key:'budget.create.result.year')}:</th>
+                <td>{dto.year}</td>
+            </tr>
+        </table>
+
+        <hr>
+        <h2>{f:translate(key: 'result.statistic')}:</h2>
+        {f:translate(key: 'result.statistic.time')}: {result.process} {f:translate(key: 'result.statistic.time.seconds')}
+    </div>
+</f:if>

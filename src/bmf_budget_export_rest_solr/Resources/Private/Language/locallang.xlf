@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-08-26T13:01:25Z"
+          product-name="bmf_budget_export_rest_solr">
+        <header/>
+        <body>
+            <trans-unit id="json.structure.section">
+                <source>Einzelplan</source>
+            </trans-unit>
+            <trans-unit id="json.structure.function">
+                <source>Funktion</source>
+            </trans-unit>
+            <trans-unit id="json.structure.group">
+                <source>Gruppe</source>
+            </trans-unit>
+
+            <trans-unit id="json.account.actual">
+                <source>ist</source>
+            </trans-unit>
+            <trans-unit id="json.account.target">
+                <source>soll</source>
+            </trans-unit>
+
+            <trans-unit id="json.flow.income">
+                <source>e</source>
+            </trans-unit>
+            <trans-unit id="json.flow.expenses">
+                <source>a</source>
+            </trans-unit>
+
+            <!-- detail
+            ######################################################################################################## -->
+            <trans-unit id="json.detail.section">
+                <source>agency</source>
+            </trans-unit>
+            <trans-unit id="json.detail.function">
+                <source>function</source>
+            </trans-unit>
+            <trans-unit id="json.detail.group">
+                <source>group</source>
+            </trans-unit>
+
+            <!-- file and directories
+            ######################################################################################################## -->
+            <trans-unit id="json.file.account.actual">
+                <source>ist</source>
+            </trans-unit>
+            <trans-unit id="json.file.account.target">
+                <source>soll</source>
+            </trans-unit>
+
+            <trans-unit id="json.file.flow.income">
+                <source>einnahmen</source>
+            </trans-unit>
+            <trans-unit id="json.file.flow.expenses">
+                <source>ausgaben</source>
+            </trans-unit>
+
+            <trans-unit id="json.file.structure.section">
+                <source>einzelplan</source>
+            </trans-unit>
+            <trans-unit id="json.file.structure.function">
+                <source>funktion</source>
+            </trans-unit>
+            <trans-unit id="json.file.structure.group">
+                <source>gruppe</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

@@ -1,0 +1,65 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<f:if condition="{referrer.account} == 'target'">
+
+    <f:then><p class="currency"><f:format.currency currencySign=""
+                                                   decimalSeparator=","
+                                                   thousandsSeparator="."
+                                                   decimals="0">{bmfBudget:property(object:detail.entity, property:'current_{referrer.account}_{referrer.flow}')}</f:format.currency></p></f:then>
+
+    <f:else><p class="currency"
+               title="<f:format.currency currencySign='€' decimalSeparator=',' thousandsSeparator='.' decimals='2'>{bmfBudget:property(object:detail.entity, property:'current_{referrer.account}_{referrer.flow}')}</f:format.currency>"><f:format.currency currencySign=""
+                                                                                                                                                                                                                                                             decimalSeparator=","
+                                                                                                                                                                                                                                                             thousandsSeparator="."
+                                                                                                                                                                                                                                                             decimals="0"><f:cObject typoscriptObjectPath="lib.math"
+                                                                                                                                                                                                                                                                                     data="{bmfBudget:property(object:detail.entity, property:'current_{referrer.account}_{referrer.flow}')}/1000"/></f:format.currency></p></f:else>
+
+</f:if>
+<p class="address sr-hint">({f:translate(key:'srhidden.id')}: {detail.entity.address})</p>
+<p class="title">{detail.entity.title}</p>
+
+<p class="pdf">
+
+    <f:if condition="{bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')}">
+
+        <f:then><f:if condition="{detail.entity.supplementaries}">
+            <f:then>
+                <f:if condition="{bmfBudget:property(object:detail.entity, property:'{referrer.account}_page_link')}">
+                    <f:then><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{detail.entity.section.section.address}.pdf#page={bmfBudget:property(object:detail.entity, property:'{referrer.account}_page_link')}"
+                           class="pdfSH"
+                           target="_blank"
+                           title="Stammhaushalt: Siehe Seite {bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')} im PDF-Dokument des zugehörigen Einzelplans"><span class="sr-hint"></span></a></f:then>
+
+                    <f:else><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{detail.entity.section.section.address}.pdf#page={bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')}"
+                           class="pdfSH"
+                           target="_blank"
+                           title="Stammhaushalt: Siehe Seite {bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')} im PDF-Dokument des zugehörigen Einzelplans"><span class="sr-hint"></span></a></f:else>
+            </f:if></f:then>
+
+            <f:else>Siehe Seite {bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')} im
+                <f:if condition="{bmfBudget:property(object:detail.entity, property:'{referrer.account}_page_link')}">
+                    <f:then><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{detail.entity.section.section.address}.pdf#page={bmfBudget:property(object:detail.entity, property:'{referrer.account}_page_link')}"
+                               class="pdf"
+                               target="_blank"><span class="sr-hint"></span></f:then>
+
+                    <f:else><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{detail.entity.section.section.address}.pdf#page={bmfBudget:property(object:detail.entity, property:'{referrer.account}_page')}"
+                               class="pdf"
+                               target="_blank"><span class="sr-hint"></span></f:else>
+                </f:if>PDF-Dokument</a>
+                des zugehörigen Einzelplans
+
+            </f:else>
+
+        </f:if></f:then>
+    </f:if>
+
+    <f:if condition="{detail.entity.supplementaries}">
+        <f:for each="{detail.entity.supplementaries}" as="supplementary" iteration="supplementaryIterator">
+            <f:if condition="{bmfBudget:property(object:supplementary, property:'{referrer.account}_page')}">
+                <f:then><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/n{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}_epl{detail.entity.section.section.address}.pdf#page={bmfBudget:property(object:supplementary, property:'{referrer.account}_page')}"
+                       class="pdfNH{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}"
+                       target="_blank"
+                       title="{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}. Nachtragshaushalt: Siehe Seite {bmfBudget:property(object:supplementary, property:'{referrer.account}_page')} im PDF-Dokument des zugehörigen Einzelplans"><span class="sr-hint"></span></a></f:then>
+            </f:if>
+        </f:for>
+    </f:if>
+</p>

@@ -1,0 +1,21 @@
+<h2>navigation / year</h2>
+
+<ul>
+    <f:for each="{budgets}" as="budget">
+        <li>
+            <f:if condition="{referrer.year}=={budget.year}">
+                <f:then>{budget.year}</f:then>
+                <f:else>
+                    <f:link.action action="show"
+                                   arguments="{year:budget.year,
+                                               account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                               flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                               structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}'
+                                               address:referrer.address}">
+                        {budget.year}
+                    </f:link.action>
+                </f:else>
+            </f:if>
+        </li>
+    </f:for>
+</ul>

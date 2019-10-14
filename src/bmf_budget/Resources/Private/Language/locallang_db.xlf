@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-07-21T11:01:56Z"
+          product-name="bmf_budget">
+        <header/>
+        <body>
+
+            <trans-unit id="please_choose">
+                <source>- please choose -</source>
+            </trans-unit>
+            <trans-unit id="not_specified">
+                <source>Not specified</source>
+            </trans-unit>
+            <trans-unit id="relations">
+                <source>Relations</source>
+            </trans-unit>
+            <trans-unit id="pageids">
+                <source>Page-IDs</source>
+            </trans-unit>
+            <trans-unit id="additional_informations">
+                <source>Additional Informations</source>
+            </trans-unit>
+            <trans-unit id="address">
+                <source>Address</source>
+            </trans-unit>
+
+            <trans-unit id="income">
+                <source>Income</source>
+            </trans-unit>
+            <trans-unit id="expenses">
+                <source>Expenses</source>
+            </trans-unit>
+            <trans-unit id="actual_income">
+                <source>Actual, income</source>
+            </trans-unit>
+            <trans-unit id="actual_expenses">
+                <source>Actual, expenses</source>
+            </trans-unit>
+            <trans-unit id="target_income">
+                <source>Target, income</source>
+            </trans-unit>
+            <trans-unit id="target_expenses">
+                <source>Target, expenses</source>
+            </trans-unit>
+
+            <trans-unit id="budgets">
+                <source>Budget</source>
+            </trans-unit>
+            <trans-unit id="corresponding_budget">
+                <source>Corresponding budget</source>
+            </trans-unit>
+            <trans-unit id="sections">
+                <source>Sections</source>
+            </trans-unit>
+            <trans-unit id="corresponding_section">
+                <source>Corresponding section</source>
+            </trans-unit>
+            <trans-unit id="functions">
+                <source>Functions</source>
+            </trans-unit>
+            <trans-unit id="corresponding_function">
+                <source>Corresponding functions</source>
+            </trans-unit>
+            <trans-unit id="groups">
+                <source>Groups</source>
+            </trans-unit>
+            <trans-unit id="corresponding_group">
+                <source>Corresponding group</source>
+            </trans-unit>
+            <trans-unit id="title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="title_actual">
+                <source>Titel actual</source>
+            </trans-unit>
+            <trans-unit id="title_target">
+                <source>Titel target</source>
+            </trans-unit>
+            <trans-unit id="corresponding_title">
+                <source>Corresponding title</source>
+            </trans-unit>
+            <trans-unit id="budgetgroups">
+                <source>Budgetgroups</source>
+            </trans-unit>
+            <trans-unit id="titlegroups">
+                <source>Titlegroups</source>
+            </trans-unit>
+            <trans-unit id="supplementary_budgets">
+                <source>Supplementary Budgets</source>
+            </trans-unit>
+            <trans-unit id="corresponding_supplementarybudget">
+                <source>Corresponding Supplementary Budgets</source>
+            </trans-unit>
+            <trans-unit id="supplementary_titles">
+                <source>Supplementaries</source>
+            </trans-unit>
+            <trans-unit id="info_image">
+                <source>Image</source>
+            </trans-unit>
+            <trans-unit id="info_text">
+                <source>Text</source>
+            </trans-unit>
+            <trans-unit id="info_link">
+                <source>Link</source>
+            </trans-unit>
+            <trans-unit id="page">
+                <source>Page</source>
+            </trans-unit>
+            <trans-unit id="actual_page">
+                <source>Page (actual)</source>
+            </trans-unit>
+            <trans-unit id="actual_page_link">
+                <source>Page link (actual)</source>
+            </trans-unit>
+            <trans-unit id="target_page">
+                <source>Page (target)</source>
+            </trans-unit>
+            <trans-unit id="target_page_link">
+                <source>Page link (target)</source>
+            </trans-unit>
+            <trans-unit id="year">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="pid_title">
+                <source>Title</source>
+            </trans-unit>
+            <trans-unit id="pid_section">
+                <source>Section</source>
+            </trans-unit>
+            <trans-unit id="pid_function">
+                <source>Function</source>
+            </trans-unit>
+            <trans-unit id="pid_group">
+                <source>Group</source>
+            </trans-unit>
+            <trans-unit id="pid_budgetgroup">
+                <source>Budgetgroup</source>
+            </trans-unit>
+            <trans-unit id="pid_titlegroup">
+                <source>Titlegroup</source>
+            </trans-unit>
+            <trans-unit id="pid_supplementary_budget">
+                <source>Supplementary Budget</source>
+            </trans-unit>
+            <trans-unit id="pid_supplementary_title">
+                <source>Supplementaries</source>
+            </trans-unit>
+            <trans-unit id="flow">
+                <source>Flow</source>
+            </trans-unit>
+            <trans-unit id="flexible">
+                <source>Flexible</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_budget">
+                <source>Budget</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_section">
+                <source>Section</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_functione">
+                <source>Function</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_groupe">
+                <source>Group</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_title">
+                <source>Title</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_budgetgroup">
+                <source>Budgetgroup</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_titlegroup">
+                <source>Titlegroup</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_supplementarytitle">
+                <source>Supplementary Title</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudget_domain_model_supplementarybudget">
+                <source>Supplementary Budget</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

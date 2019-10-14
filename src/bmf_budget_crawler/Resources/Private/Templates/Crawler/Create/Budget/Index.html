@@ -1,0 +1,42 @@
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <h1>BMF, Crawler</h1>
+
+    <h2>Preparing a new crawler</h2>
+
+    <f:form action="create" name="crawlerDto" object="{dto}" enctype="multipart/form-data" >
+
+        <h2>Choose Hook</h2>
+        <f:form.select property="hook"
+                       options="{hooks}"
+                       prependOptionLabel="-- please choose --"
+                       prependOptionValue="" />
+
+        <h2>Choose budget</h2>
+        <f:form.select property="budget"
+                       options="{budgets}"
+                       optionLabelField="titleTarget"
+                       prependOptionLabel="-- please choose --"
+                       prependOptionValue=""
+                       value="{dto.budget.uid}" />
+
+        <h2>Choose account:</h2>
+        <f:form.checkbox property="account" value="target" /> target
+        <f:form.checkbox property="account" value="actual" /> actual
+
+        <h2>Choose flow:</h2>
+        <f:form.checkbox property="flow" value="income" /> income
+        <f:form.checkbox property="flow" value="expenses" /> expenses
+
+        <h2>Choose structure:</h2>
+        <f:form.checkbox property="structure" value="section" /> section
+        <f:form.checkbox property="structure" value="function" /> function
+        <f:form.checkbox property="structure" value="group" /> group
+
+        <h2>Process:</h2>
+
+        <f:form.submit value="crawl tree" class="processForm"/>
+
+    </f:form>
+</f:section>

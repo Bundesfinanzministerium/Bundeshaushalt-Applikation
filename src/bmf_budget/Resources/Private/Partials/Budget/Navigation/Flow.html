@@ -1,0 +1,20 @@
+<h2>navigation / flow</h2>
+
+<ul>
+    <f:for each="{0:'income', 1:'expenses'}" as="flow">
+        <li>
+            <f:if condition="{referrer.flow}=={flow}">
+                <f:then>{f:translate(key:'segment.flow.{flow}')}</f:then>
+                <f:else>
+                    <f:link.action action="show"
+                                   arguments="{year:referrer.year,
+                                               account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                               flow:'{f:translate(key:\'segment.flow.{flow}\')}',
+                                               structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}'}">
+                        {f:translate(key:'segment.flow.{flow}')}
+                    </f:link.action>
+                </f:else>
+            </f:if>
+        </li>
+    </f:for>
+</ul>

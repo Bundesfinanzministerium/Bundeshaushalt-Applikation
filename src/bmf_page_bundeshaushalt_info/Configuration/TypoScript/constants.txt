@@ -1,0 +1,34 @@
+# system
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_page_bundeshaushalt_info/Configuration/TypoScript/Constants/" extensions="ts">
+
+# fluid_styled_content
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bmf_page_bundeshaushalt_info/Configuration/Extensions/fluid_styled_content/Constants.ts">
+
+# environment
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bmf_page_bundeshaushalt_info/Configuration/Environment/constants.ts">
+
+# solr
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bmf_page_bundeshaushalt_info/Configuration/Extensions/solr/TypoScript/Constants.ts">
+
+# plugin
+plugin.tx_bmfpagebundeshaushaltinfo.view {
+    templateRootPaths.default = EXT:bmf_page_bundeshaushalt_info/Resources/Private/Templates/
+    partialRootPaths.default = EXT:bmf_page_bundeshaushalt_info/Resources/Private/Partials/
+    layoutRootPaths.default = EXT:bmf_page_bundeshaushalt_info/Resources/Private/Layouts/
+}
+
+# footer
+footer {
+    copyright  = <a href="http://www.bundesfinanzministerium.de/" target="_blank">Bundesministerium der Finanzen</a>
+}
+
+# globals
+globalPids {
+
+    mainHome       = 2
+    mainArticle    = 7
+    search         = 23
+    kontakt        = 13
+    metaNavigation = 11
+
+}

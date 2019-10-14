@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit bootstrap="../../../../typo3_src/typo3/sysext/core/Build/UnitTestsBootstrap.php">
+
+    <logging>
+        <log type="coverage-clover" target="../../_coverage/clover.xml"/>
+    </logging>
+
+    <filter>
+        <whitelist addUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">../Classes</directory>
+        </whitelist>
+    </filter>
+
+</phpunit>

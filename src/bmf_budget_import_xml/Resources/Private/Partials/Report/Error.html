@@ -1,0 +1,25 @@
+<f:if condition="{result.errors}">
+    <hr>
+    <h2>{f:translate(key: 'result.error')} ({result.errors -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.type')}</th>
+            <th>{f:translate(key: 'common.address')}</th>
+            <th>{f:translate(key: 'common.message')}</th>
+            <th></th>
+        </tr>
+        <f:for each="{result.errors}" as="error">
+            <tr>
+                <td>{error.typ}&nbsp;</td>
+                <td>{error.address}&nbsp;</td>
+                <td>{error.message}&nbsp;</td>
+                <td><f:if condition="{error.difference}">
+                    <f:then><table>
+                        <tr><th>{f:translate(key: 'common.original')}</th><td>{error.difference.org}</td></tr>
+                        <tr><th>{f:translate(key: 'common.new')}</th><td>{error.difference.new}</td></tr>
+                    </table></f:then>
+                </f:if></td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>

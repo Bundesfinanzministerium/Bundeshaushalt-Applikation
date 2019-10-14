@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-07-21T11:01:56Z"
+          product-name="bmf_budget">
+        <header/>
+        <body>
+
+            <trans-unit id="please_choose">
+                <source>- please choose -</source>
+            </trans-unit>
+
+            <trans-unit id="choose_budget">
+                <source>Please choose the default budget:</source>
+            </trans-unit>
+
+            <trans-unit id="choose_account">
+                <source>Please choose the default account:</source>
+            </trans-unit>
+
+            <trans-unit id="choose_strucure">
+                <source>Please choose the default structure:</source>
+            </trans-unit>
+
+            <trans-unit id="account_target">
+                <source>Target</source>
+            </trans-unit>
+
+            <trans-unit id="account_actual">
+                <source>Actual</source>
+            </trans-unit>
+
+            <trans-unit id="strucure_section">
+                <source>Section</source>
+            </trans-unit>
+
+            <trans-unit id="strucure_function">
+                <source>Function</source>
+            </trans-unit>
+
+            <trans-unit id="strucure_group">
+                <source>Group</source>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

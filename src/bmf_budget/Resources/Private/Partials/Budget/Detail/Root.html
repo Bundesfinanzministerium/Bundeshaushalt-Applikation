@@ -1,0 +1,15 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<f:if condition="{referrer.account} == 'target'">
+
+    <f:then><p class="currency"><f:format.currency currencySign=""
+                                                   decimalSeparator=","
+                                                   thousandsSeparator="."
+                                                   decimals="0">{bmfBudget:property(object:detail.entity, property:'{referrer.structure}_{referrer.account}_{referrer.flow}')}</f:format.currency></p></f:then>
+
+    <f:else><p class="currency"
+               title="<f:format.currency currencySign='€' decimalSeparator=',' thousandsSeparator='.' decimals='2'>{bmfBudget:property(object:detail.entity, property:'{referrer.structure}_{referrer.account}_{referrer.flow}')}</f:format.currency>"><f:format.currency currencySign=""
+                                                                                                                                                                                                                                                                          decimalSeparator=","
+                                                                                                                                                                                                                                                                          thousandsSeparator="."
+                                                                                                                                                                                                                                                                          decimals="0"><f:cObject typoscriptObjectPath="lib.math" data="{bmfBudget:property(object:detail.entity, property:'{referrer.structure}_{referrer.account}_{referrer.flow}')}/1000" /></f:format.currency></p></f:else>
+</f:if>
+<p class="title">{bmfBudget:property(object:detail.entity, property:'title_{referrer.account}')}</p>

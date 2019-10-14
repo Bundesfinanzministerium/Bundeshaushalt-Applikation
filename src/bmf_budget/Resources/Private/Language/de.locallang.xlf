@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2015-07-22T11:53:44Z" product-name="bmf_budget">
+        <header/>
+        <body>
+
+            <!-- WizIcon
+            ######################################################################################################## -->
+            <trans-unit id="pi1_wizicon.title">
+                <source>BMF: budget visualisation</source>
+                <target>BMF: Haushaltsvisualisierung</target>
+            </trans-unit>
+            <trans-unit id="pi1_wizicon.description">
+                <source>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </source>
+                <target>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.
+                    Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                </target>
+            </trans-unit>
+
+            <!-- SEO PARAMETER
+            ######################################################################################################## -->
+            <trans-unit id="seo.account.target">
+                <source>Target</source>
+                <target>Soll</target>
+            </trans-unit>
+            <trans-unit id="seo.account.actual">
+                <source>Actual</source>
+                <target>Ist</target>
+            </trans-unit>
+            <trans-unit id="seo.flow.income">
+                <source>Income</source>
+                <target>Einnahme</target>
+            </trans-unit>
+            <trans-unit id="seo.flow.expenses">
+                <source>Expense</source>
+                <target>Ausgabe</target>
+            </trans-unit>
+            <trans-unit id="seo.flows.income">
+                <source>Income</source>
+                <target>Einnahmen</target>
+            </trans-unit>
+            <trans-unit id="seo.flows.expenses">
+                <source>Expenses</source>
+                <target>Ausgaben</target>
+            </trans-unit>
+            <trans-unit id="seo.structure.section">
+                <source>Section</source>
+                <target>Einzelplan</target>
+            </trans-unit>
+            <trans-unit id="seo.structure.function">
+                <source>Function</source>
+                <target>Funktion</target>
+            </trans-unit>
+            <trans-unit id="seo.structure.group">
+                <source>Group</source>
+                <target>Gruppe</target>
+            </trans-unit>
+            <trans-unit id="seo.structures.section">
+                <source>Sections</source>
+                <target>Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="seo.structures.function">
+                <source>Functions</source>
+                <target>Funktionen</target>
+            </trans-unit>
+            <trans-unit id="seo.structures.group">
+                <source>Groups</source>
+                <target>Gruppen</target>
+            </trans-unit>
+
+            <!-- URL Segments
+            ######################################################################################################## -->
+            <trans-unit id="segment.account.target">
+                <source>target</source>
+                <target>soll</target>
+            </trans-unit>
+            <trans-unit id="segment.account.actual">
+                <source>actual</source>
+                <target>ist</target>
+            </trans-unit>
+            <trans-unit id="segment.flow.income">
+                <source>income</source>
+                <target>einnahmen</target>
+            </trans-unit>
+            <trans-unit id="segment.flow.expenses">
+                <source>expenses</source>
+                <target>ausgaben</target>
+            </trans-unit>
+            <trans-unit id="segment.structure.section">
+                <source>section</source>
+                <target>einzelplan</target>
+            </trans-unit>
+            <trans-unit id="segment.structure.function">
+                <source>function</source>
+                <target>funktion</target>
+            </trans-unit>
+            <trans-unit id="segment.structure.group">
+                <source>group</source>
+                <target>gruppe</target>
+            </trans-unit>
+
+            <!-- SR-HIDDEN
+            ######################################################################################################## -->
+            <trans-unit id="srhidden.id">
+                <source>ID</source>
+                <target>ID</target>
+            </trans-unit>
+
+
+            <!-- GLOBALS
+            ######################################################################################################## -->
+            <trans-unit id="account.target">
+                <source>Target</source>
+                <target>Soll</target>
+            </trans-unit>
+            <trans-unit id="account.actual">
+                <source>Actual</source>
+                <target>Ist</target>
+            </trans-unit>
+
+            <trans-unit id="flow.income">
+                <source>Income</source>
+                <target>Einnahmen</target>
+            </trans-unit>
+            <trans-unit id="flow.expenses">
+                <source>Expenses</source>
+                <target>Ausgaben</target>
+            </trans-unit>
+
+            <trans-unit id="structure.section">
+                <source>Sections</source>
+                <target>Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="structure.section.description">
+                <source>Structuring revenue and expenditure in principle by federal ministries. There are also special sections, such as the federal debt.</source>
+                <target>Strukturieren Einnahmen und Ausgaben grundsätzlich nach Bundesministerien. Dazu kommen besondere Einzelpläne, wie die Bundesschuld.</target>
+            </trans-unit>
+            <trans-unit id="structure.function">
+                <source>Functions</source>
+                <target>Funktionen</target>
+            </trans-unit>
+            <trans-unit id="structure.function.description">
+                <source>Structuring revenue and expenditure by the area of responsibility or policy area for which they are intended.</source>
+                <target>Strukturieren Einnahmen und Ausgaben nach dem Aufgaben­gebiet bzw. Politikbereich, für den sie bestimmt sind.</target>
+            </trans-unit>
+            <trans-unit id="structure.group">
+                <source>Groups</source>
+                <target>Gruppen</target>
+            </trans-unit>
+            <trans-unit id="structure.group.description">
+                <source>Structuring revenue and expenditure by the economic type. This can, for example, Its expenditure on personnel or construction.</source>
+                <target>Strukturieren Einnahmen und Ausgaben nach dem ökonomischen Typ. Dies können z. B. Ausgaben für Personal oder Baumaßnahmen sein.</target>
+            </trans-unit>
+
+
+
+
+
+            <!-- Intro & Detail
+            ######################################################################################################## -->
+            <trans-unit id="intro.headline">
+                <source>The structure of the federal budget</source>
+                <target>Die Struktur des Bundeshaushaltes</target>
+            </trans-unit>
+            <trans-unit id="intro.copy">
+                <source>What can I do here?</source>
+                <target>Was kann ich hier tun?</target>
+            </trans-unit>
+            <trans-unit id="intro.subcopy">
+                <source>Instructions and background information</source>
+                <target>Anleitung und Hintergrundinfos</target>
+            </trans-unit>
+
+
+
+
+
+
+
+
+            <trans-unit id="budgetHeading">
+                <source>Budget heading</source>
+                <target>Haushaltsstelle</target>
+            </trans-unit>
+            <trans-unit id="currentItem">
+                <source>Current item</source>
+                <target>Aktueller Posten</target>
+            </trans-unit>
+
+            <trans-unit id="inThousandsOfEuros">
+                <source>in thousands of euros</source>
+                <target>in Tausend Euro</target>
+            </trans-unit>
+
+            <!-- Intro & Detail (Breadcrumb)
+            ######################################################################################################## -->
+            <trans-unit id="breadcrumb.youAreHere">
+                <source>You are here</source>
+                <target>Sie sind hier</target>
+            </trans-unit>
+            <trans-unit id="breadcrumb.toHomePage">
+                <source>To homepage</source>
+                <target>Zum Bundeshaushalt</target>
+            </trans-unit>
+
+
+
+
+
+            <!-- Navigation
+            ######################################################################################################## -->
+            <trans-unit id="nav.homepage">
+                <source>homepage</source>
+                <target>Bundeshaushalt</target>
+            </trans-unit>
+
+            <trans-unit id="nav.related.sections">
+                <source>relating sections</source>
+                <target>Zugehörige Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="nav.related.functions">
+                <source>relating functions</source>
+                <target>Zugehörige Funktionen</target>
+            </trans-unit>
+            <trans-unit id="nav.related.groups">
+                <source>relating groups</source>
+                <target>Zugehörige Gruppen</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

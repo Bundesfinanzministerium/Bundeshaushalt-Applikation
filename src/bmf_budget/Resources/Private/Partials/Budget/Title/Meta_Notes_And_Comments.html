@@ -1,0 +1,63 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<td class="col5 noSPP noSPL meta">
+    <div class="wrapper">
+        <h4>Erläuterungen und Vermerke</h4>
+        <p>
+            <f:if condition="{f:count(subject:entity.supplementaries)} > 0">
+                <f:then>
+
+                    siehe PDF-Dokument des zugehörigen Einzelplans:<br>
+
+                    Seite {bmfBudget:property(object:entity, property:'{referrer.account}_page')} im
+
+                    <f:if condition="{bmfBudget:property(object:entity, property:'{referrer.account}_page_link')}">
+                        <f:then><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{entity.section.section.address}.pdf#page={bmfBudget:property(object:entity, property:'{referrer.account}_page_link')}"
+                               class="pdfSH"
+                               target="_blank">Stammhaushalt</a></f:then>
+
+                        <f:else><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{entity.section.section.address}.pdf#page={bmfBudget:property(object:entity, property:'{referrer.account}_page')}"
+                               class="pdfSH"
+                               target="_blank">Stammhaushalt</a></f:else>
+
+                    </f:if>
+
+                    <f:for each="{entity.supplementaries}" as="supplementary" iteration="supplementaryIterator">
+                        <br>Seite {bmfBudget:property(object:supplementary, property:'{referrer.account}_page')} im
+                        <a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/n{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}_epl{entity.section.section.address}.pdf#page={bmfBudget:property(object:supplementary, property:'{referrer.account}_page')}"
+                           class="pdfNH{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}"
+                           target="_blank">{supplementary.supplementarybudget.title -> f:format.crop(maxCharacters: 1, append:'')}. Nachtragshaushalt</a>
+                    </f:for>
+
+                </f:then>
+                <f:else>
+                    siehe Seite {bmfBudget:property(object:entity, property:'{referrer.account}_page')} im <f:if condition="{bmfBudget:property(object:entity, property:'{referrer.account}_page_link')}">
+                        <f:then><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{entity.section.section.address}.pdf#page={bmfBudget:property(object:entity, property:'{referrer.account}_page_link')}" class="pdf" target="_blank">PDF-Dokument</a></f:then>
+                        <f:else><a href="/fileadmin/de.bundeshaushalt/content_de/dokumente/{referrer.year}/{f:translate(key:'segment.account.{referrer.account}')}/epl{entity.section.section.address}.pdf#page={bmfBudget:property(object:entity, property:'{referrer.account}_page')}" class="pdf" target="_blank">PDF-Dokument</a></f:else>
+                    </f:if> des zugehörigen Einzelplans
+                </f:else>
+            </f:if>
+        </p>
+    </div>
+</td>
+
+<td class="col6 noSPP noSPL meta">
+    <div class="wrapper">
+        <h4>Anmerkungen</h4>
+        <f:if condition="{bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')} < 0">
+            <f:then>
+                <p>Mittelansätze mit negativ veranschlagten Ausgaben sind im Rahmen der Ausführung des Haushaltsplans auszugleichen.</p>
+            </f:then>
+        </f:if>
+        <f:if condition="{bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')} == 0">
+            <f:then>
+                <p><a class="internal-link glossar" title="zum Glossar" href="/glossar.html#leertitel">Leertitel</a>
+                    ohne Dotierung. Buchungsstelle für mögliche, aber betragsmäßig nicht vorhersehbare Einnahmen und Ausgaben.</p>
+            </f:then>
+        </f:if>
+        <f:if condition="{entity.flexible}">
+            <f:then>
+                <p>Titel unterliegt der Flexibilisierung.</p>
+            </f:then>
+        </f:if>
+    </div>
+</td>

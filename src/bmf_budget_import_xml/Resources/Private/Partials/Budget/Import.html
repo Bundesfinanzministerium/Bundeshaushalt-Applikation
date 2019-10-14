@@ -1,0 +1,51 @@
+<h1>{f:translate(key: 'module.header')}</h1>
+<h2>{f:translate(key: 'budget.import.header')}</h2>
+
+<f:flashMessages/>
+
+<f:render partial="Forms/Error"/>
+<f:render partial="Forms/Budget/Choose" arguments="{dto:dto, budgets:budgets, budgettitle:'titleTarget'}"/>
+<f:if condition="{dto.step}>1"><f:render partial="Forms/File/Upload.html" arguments="{dto:dto}"/></f:if>
+<f:if condition="{dto.step}>2"><f:render partial="Forms/Xml/Section.html" arguments="{dto:dto, sections:sections, pageOffset:pageOffset, dtoName:'importBudgetDto'}"/></f:if>
+<f:render partial="Forms/Process" arguments="{inProgress:inProgress}"/>
+
+<f:if condition="{result}">
+
+    <div id="result">
+        <hr>
+
+        <h1>{f:translate(key: 'result')}</h1>
+
+        <h2>{f:translate(key: 'result.selection')}:</h2>
+
+        <table>
+            <tr>
+                <th>{f:translate(key: 'result.selection.budgetyear')}:</th>
+                <td>{dto.budget.year}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'result.selection.file')}:</th>
+                <td>{dto.file.name}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'result.selection.section')}:</th>
+                <td>{section_select}</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'result.selection.pageoffset')}:</th>
+                <td>{dto.pageOffset}</td>
+            </tr>
+        </table>
+
+        <f:render partial="Report/Statistic" arguments="{result:result}"/>
+        <f:render partial="Report/Error" arguments="{result:result}"/>
+        <f:render partial="Report/Title" arguments="{result:result}"/>
+        <f:render partial="Report/Section" arguments="{result:result}"/>
+        <f:render partial="Report/Chapter" arguments="{result:result}"/>
+        <f:render partial="Report/Group" arguments="{result:result}"/>
+        <f:render partial="Report/Function" arguments="{result:result}"/>
+        <f:render partial="Report/Budgetgroup" arguments="{result:result}"/>
+        <f:render partial="Report/Titlegroup" arguments="{result:result}"/>
+
+    </div>
+</f:if>

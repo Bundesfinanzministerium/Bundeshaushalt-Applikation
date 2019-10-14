@@ -1,0 +1,31 @@
+plugin.tx_ppkvideojs {
+
+	view {
+		templateRootPaths.0 = {$plugin.tx_ppkvideojs.view.templateRootPath}
+		partialRootPaths.0  = {$plugin.tx_ppkvideojs.view.partialRootPath}
+		layoutRootPaths.0   = {$plugin.tx_ppkvideojs.view.layoutRootPath}
+	}
+
+	persistence {
+		storagePid = {$plugin.tx_ppkvideojs.persistence.storagePid}
+	}
+
+	settings{
+		pluginRootPath = {$plugin.tx_ppkvideojs.view.pluginFilesPath}
+	}
+
+}
+
+// page.includeJS.000_jquery = EXT:core/Resources/Public/JavaScript/Contrib/jquery/jquery-1.11.3.js
+
+page.includeJS {
+	ppVideojs_js_file_1  = {$plugin.tx_ppkvideojs.view.libraryRootPath}/video-js/video.js
+	ppVideojs_js_file_2  = {$plugin.tx_ppkvideojs.view.scriptRootPath}/ppk-videojs.js
+}
+
+page.includeCSS {
+	700 = {$plugin.tx_ppkvideojs.view.styleRootPath}/ppk_videojs_global.css
+	700.media = all
+	710 = {$plugin.tx_ppkvideojs.view.libraryRootPath}/video-js/video-js.css
+	710.media = all
+}

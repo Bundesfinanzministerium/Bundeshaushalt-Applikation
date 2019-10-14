@@ -1,0 +1,53 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<f:layout name="Default"/>
+
+<f:section name="main">
+
+    <f:render partial="Budget/Navigation/Breadcrumb"
+              arguments="{budgets:budgets,
+                          detail:result.detail,
+                          childs:result.childs,
+                          referrer:referrer,
+                          segments:segments}"/>
+
+    <h1 class="sr-hint">{f:translate(key: 'currentItem')}: <f:if condition="{0:result.detail.type}=={0:'Root'}">
+        <f:then>{bmfBudget:property(object:result.detail.entity, property:'title_{referrer.account}')}</f:then>
+        <f:else>{result.detail.entity.title}</f:else>
+    </f:if></h1>
+
+    <div id="data-details" class="row">
+
+        <div id="unit-info" class="grid_3">
+            <p class="address">{f:translate(key: 'budgetHeading')}: {result.detail.entity.address} - {result.detail.entity.functione.address}</p>
+            <div class="agency">
+                <h2>{f:translate(key: 'structure.{referrer.structure}')}</h2>
+                <p>{f:translate(key: 'structure.{referrer.structure}.description')}</p>
+            </div>
+        </div>
+
+        <div id="unit-detail" class="grid_6" aria-hidden="true">
+            <f:image src="EXT:bmf_budget/Resources/Public/Images/data-circle-background.jpg"/>
+            <!--TYPO3SEARCH_begin-->
+            <div class="html">
+                <strong>
+                    <small>{referrer.year}</small><br/>
+                    {f:translate(key: 'flow.{referrer.flow}')}<br/>
+                    <small>{f:translate(key: 'inThousandsOfEuros')}</small>
+                </strong>
+                <f:render partial="Budget/Detail/{result.detail.type}"
+                          arguments="{detail:result.detail, referrer:referrer}"/>
+            </div>
+            <!--TYPO3SEARCH_end-->
+        </div>
+
+        <f:if condition="{result.related}"><f:render partial="Budget/Navigation/Depend"
+                                                     arguments="{related:result.related, referrer:referrer}"/></f:if>
+
+    </div>
+
+    <f:render partial="Budget/Navigation/Structure" arguments="{referrer:referrer}"/>
+
+    <f:if condition="{result}"><f:render partial="Budget/List/{result.list.type}"
+                                         arguments="{list:result.list, referrer:referrer}"/></f:if>
+
+</f:section>

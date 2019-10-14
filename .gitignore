@@ -1,0 +1,12 @@
+/.idea
+/public/**
+/public/typo3conf/**
+/vendor
+/bin
+/root/.env
+/var
+!/public/typo3conf
+!/public/typo3conf/LocalConfiguration.php
+!/public/typo3conf/AdditionalConfiguration.php
+!/public/.htaccess
+!/public/version.txt

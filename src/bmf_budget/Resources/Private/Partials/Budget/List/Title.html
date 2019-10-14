@@ -1,0 +1,122 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<h2 class="sr-hint">Tabellarische Übersicht</h2>
+
+<div class="data-table">
+    <table id="bundeshaushalt-data" class="title">
+        <thead>
+        <tr class="head">
+            <th class="col1" tabindex="0">Betrag <br><small> in Tausend Euro</small></th>
+            <th class="col2" tabindex="0">Posten <br><small> unterhalb von Steuern</small></th>
+            <th class="col3 noSPL" tabindex="0">Anteil <br><small> an Summe pos. Posten</small></th>
+            <th class="col4 noSPL noSPP">Details</th>
+            <th class="col5 noSPL noSPP">Erläuterungen und Vermerke</th>
+            <th class="col6 noSPL noSPP">Anmerkungen</th>
+        </tr>
+        </thead>
+        <tbody>
+        <f:for each="{list.entities}" as="entity">
+            <tr{f:if(condition:'{entity.address}=={referrer.address}',then:' class="active"')}>
+
+            <f:if condition="{referrer.account} == 'target'">
+                <f:then>
+                    <td class="col1">
+                        <f:format.currency currencySign="" decimalSeparator="," thousandsSeparator="." decimals="0">
+                            {bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')}
+                        </f:format.currency>
+                    </td>
+                </f:then>
+
+                <f:else>
+                    <td class="col1" title="<f:format.currency currencySign='€' decimalSeparator=',' thousandsSeparator='.' decimals='2'>{bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')}</f:format.currency>">
+                        <f:format.currency currencySign="" decimalSeparator="," thousandsSeparator="." decimals="0">
+                            <f:cObject typoscriptObjectPath="lib.math" data="{bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')}/1000"/>
+                        </f:format.currency>
+                    </td>
+                </f:else>
+            </f:if>
+
+            <td class="col2"><h3><f:if condition="{entity.address}=={referrer.address}">
+                            <f:then><strong><f:format.crop maxCharacters="70" respectWordBoundaries="false" respectHtml="false" append=" ...">{entity.title}</f:format.crop></strong></f:then>
+                            <f:else><f:link.action action="show"
+                                               title="{entity.title}"
+                                               arguments="{year:referrer.year,
+                                                           account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                                           flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                                           structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}',
+                                                           address:entity.address}"><f:format.crop maxCharacters="70" respectWordBoundaries="false" respectHtml="false" append=" ...">{entity.title}</f:format.crop></f:link.action></f:else>
+                        </f:if></h3><span class="balkenProzent" style="width: {bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'{referrer.account}_{referrer.flow}\')}', decimal:'0')}%; background-color: #FFCC22;"></span></td>
+
+                <td class="col3 noSPP">{bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'current_{referrer.account}_{referrer.flow}\')}', decimal:'2')}%</td>
+
+                <f:if condition="{entity.address}=={referrer.address}">
+                    <f:then>
+
+
+                        <td class="col4 noSPP noSPL meta">
+                            <div class="wrapper">
+                                <dl>
+
+                                    <dt>Einzelplan {entity.section.section.address}</dt>
+                                    <dd><strong><f:link.action action="show"
+                                                               title="{entity.title}"
+                                                               arguments="{year:referrer.year,
+                                                                           account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                                                           flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                                                           structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}',
+                                                                           address:entity.section.section.address}">{entity.section.section.title}</f:link.action></strong></dd>
+
+                                    <dt>Kapitel {entity.section.address}</dt>
+                                    <dd><f:link.action action="show"
+                                                       title="{entity.title}"
+                                                       arguments="{year:referrer.year,
+                                                                   account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                                                   flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                                                   structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}',
+                                                                   address:entity.section.address}">{entity.section.title}</f:link.action></dd>
+
+                                    <f:if condition="{entity.titlegroup}">
+                                        <f:then>
+                                            <dt class="additional">Titelgruppe {entity.titlegroup.address}</dt>
+                                            <dd class="additional">{entity.titlegroup.title}</dd>
+                                        </f:then></f:if>
+
+                                    <f:if condition="{entity.budgetgroup}"><f:then>
+                                        <dt class="additional">Bereich</dt>
+                                        <dd class="additional">{entity.budgetgroup.title}</dd>
+                                    </f:then></f:if>
+
+                                    <dt class="additional">Titelnummer:</dt>
+                                    <dd class="additional">{entity.titlenumber}</dd>
+                                </dl>
+                                <div class="saeulen">
+                                    <img src="/typo3conf/ext/bmf_budget/Resources/Public/Images/table_bar_shadow.png">
+                                    <div class="saeule1" style="height:{bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'current_{referrer.account}_{referrer.flow}\')}', decimal:'0')}%; background-color:#C85000; border-color:#d55500;"><p>{bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'current_{referrer.account}_{referrer.flow}\')}', decimal:'2')}%</p></div>
+                                    <div class="saeule2"></div>
+                                </div>
+                            </div>
+                        </td>
+
+
+                        <f:if condition="{bmfBudget:property(object:entity, property:'current_{referrer.account}_{referrer.flow}')} <= 0">
+                            <f:then><f:render partial="Budget/Title/Meta_Notes_And_Comments"
+                                              arguments="{entity:entity, referrer:referrer}"/></f:then>
+                            <f:else>
+                                <f:if condition="{entity.flexible}">
+                                    <f:then><f:render partial="Budget/Title/Meta_Notes_And_Comments"
+                                                      arguments="{entity:entity, referrer:referrer}"/></f:then>
+                                    <f:else><f:render partial="Budget/Title/Meta_Notes"
+                                                      arguments="{entity:entity, referrer:referrer}"/></f:else>
+                                </f:if>
+                            </f:else>
+                        </f:if>
+                    </f:then>
+                    <f:else>
+                        <td class="col4 noSPP noSPL meta"></td>
+                        <td class="col5 noSPP noSPL meta"></td>
+                        <td class="col6 noSPP noSPL meta"></td>
+                    </f:else>
+                </f:if>
+            </tr>
+        </f:for>
+    </table>
+</div>

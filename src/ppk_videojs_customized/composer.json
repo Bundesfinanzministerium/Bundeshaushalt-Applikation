@@ -1,0 +1,40 @@
+{
+    "name": "bmf-bundeshaushalt-info/ppk-videojs-customized",
+    "description": "Video.JS - HTML5 media player (customized)",
+    "type": "typo3-cms-extension",
+    "version": "6.3.0",
+    "license": ["GPL-2.0-or-later"],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.pixelpark.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "typo3/cms-core": "^9.5"
+    },
+    "replace": {
+        "ppk_videojs_customized": "self.version"
+    },
+    "config": {
+        "vendor-dir": "../default.instance/vendor",
+        "bin-dir": "../default.instance/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p ../default.instance/typo3conf/ext/",
+            "[ -L ../default.instance/typo3conf/ext/ppk_videojs_customized ] || ln -snvf ../../../dir-project ../default.instance/typo3conf/ext/ppk_videojs_customized"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "../default.instance"
+        }
+    }
+}

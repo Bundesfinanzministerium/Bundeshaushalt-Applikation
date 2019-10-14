@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+/** BREADCRUMB #########################################################################################################
+##################################################################################################################### */
+.breadcrumbArticle,
+#data-breadcrumb {
+    border-bottom: 0.0625rem solid #cccccc;
+    border-top: 0.0625rem solid #cccccc;
+    display: block;
+    font-size: 14px;
+    line-height: normal;
+    margin-bottom: 25px;
+    padding: 5px 0;
+}
+
+.js.lt-ie8 .breadcrumbArticle,
+.js.lt-ie8 #data-breadcrumb {
+    margin-bottom: 45px;
+}
+
+.breadcrumbArticle.fixed,
+#data-breadcrumb.fixed {
+    background: #fff url("../Images/bg-breadcrump.png") repeat-x left bottom;
+    border-bottom: none !important;
+    padding-bottom: 15px !important;
+    position: fixed;
+    top: -1px;
+    width: 100%;
+    z-index: 100 !important;
+}
+
+#data-breadcrumb p {
+    float: left;
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0;
+    padding: 0 4px 0 2px;
+}
+
+.breadcrumbArticle > ul,
+#data-breadcrumb > ul {
+    float: left;
+}
+
+.breadcrumbArticle ul,
+#data-breadcrumb ul {
+    font-size: 14px;
+    line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.breadcrumbArticle ul li,
+#data-breadcrumb ul li,
+#data-breadcrumb ul li.level1 {
+    float: left;
+    position: relative;
+}
+
+.breadcrumbArticle ul li strong,
+#data-breadcrumb ul li strong {
+    font-weight: normal;
+    text-decoration: underline;
+}
+
+#data-breadcrumb ul li.level1 strong {
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+}
+
+.breadcrumbArticle ul li a,
+.breadcrumbArticle ul li span,
+#data-breadcrumb ul li a,
+#data-breadcrumb ul li span {
+    color: #333;
+    line-height: 18px;
+    padding: 0 2px 0 2px;
+}
+
+.breadcrumbArticle ul li span,
+#data-breadcrumb ul li span {
+    color: #b0b0b0;
+}
+
+#data-breadcrumb ul li:hover a,
+#data-breadcrumb ul li.sfHover a {
+    z-index: 101;
+}
+
+#data-breadcrumb ul li a:hover,
+#data-breadcrumb ul li a:active {
+    color: #cc3300;
+    text-decoration: underline;
+}
+
+#data-breadcrumb ul ul {
+    background: #ffffff;
+    border: 0.0625rem solid #e7e7e7;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    display: block;
+    left: 0;
+    padding: 2.5em 10px 10px 10px;
+    position: absolute;
+    top: -999em;
+    width: 72px;
+    z-index: 99;
+}
+
+#data-breadcrumb ul ul li a,
+#data-breadcrumb ul ul li span {
+    line-height: 25px;
+}
+
+#data-breadcrumb li:hover {
+    visibility: inherit; /* fixes IE7 'sticky bug' */
+}
+
+#data-breadcrumb a {
+    display: block;
+    position: relative;
+}
+
+#data-breadcrumb li:hover ul,
+#data-breadcrumb li.sfHover ul {
+    left: 0.6em;
+    top: -1em; /* match top ul list item height */
+    z-index: 99;
+}
+
+#data-breadcrumb.sf-menu li:hover li ul,
+#data-breadcrumb.sf-menu li.sfHover li ul {
+    top: -999em;
+}
+
+#data-breadcrumb.sf-menu li li:hover ul,
+#data-breadcrumb.sf-menu li li.sfHover ul {
+    left: 10em; /* match ul width */
+    top: 0;
+}
+
+#data-breadcrumb.sf-menu li li:hover li ul,
+#data-breadcrumb.sf-menu li li.sfHover li ul {
+    top: -999em;
+}
+
+#data-breadcrumb.sf-menu li li li:hover ul,
+#data-breadcrumb.sf-menu li li li.sfHover ul {
+    left: 10em; /* match ul width */
+    top: 0;
+}
+
+#data-breadcrumb ul.stay {
+    border: none 0;
+    border-radius: 0;
+    box-shadow: none;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: static;
+    width: auto;
+}
+
+#data-breadcrumb ul.stay li,
+#data-breadcrumb ul.stay a,
+#data-breadcrumb ul.stay strong {
+    display: block;
+    float: none;
+    line-height: 18px;
+}
+
+.breadcrumbArticle ul.bcArticle > li:first-child,
+#data-breadcrumb ul.breadcrumb > li:first-child {
+    background: none;
+    padding-left: 0;
+}
+
+.breadcrumbArticle ul.bcArticle li,
+#data-breadcrumb ul.breadcrumb li {
+    background: url("../Images/breadcrumb_arrow-next.gif") no-repeat 9px 6px;
+    padding: 0 0 0 20px;
+}
+
+#data-breadcrumb ul.breadcrumb li li {
+    background: none;
+    padding: 0;
+}
+
+#data-breadcrumb ul.breadcrumb li.level2 {
+    background: url("../Images/breadcrumb_arrow-next-level.gif") no-repeat 0 2px;
+    padding: 4px 0 0 20px;
+}
+
+#data-breadcrumb ul.breadcrumb li.level3 {
+    background: url("../Images/breadcrumb_arrow-next-level.gif") no-repeat 20px 2px;
+    padding: 4px 0 0 40px;
+}
+
+#data-breadcrumb ul li.year ul {
+    width: 34px;
+}
+
+#data-breadcrumb ul li.account ul {
+    width: 26px;
+}
+
+#data-breadcrumb ul li.flow ul {
+    width: 70px;
+}
+
+#data-breadcrumb ul li.structure ul {
+    width: 64px;
+}
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="messages" date="2015-07-22T11:53:44Z" product-name="bmf_budget">
+		<header/>
+		<body>
+			<trans-unit id="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="supplementary_titles.description">
+				<source>supplementaryTitles</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

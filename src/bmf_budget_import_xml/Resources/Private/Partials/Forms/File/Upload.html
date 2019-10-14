@@ -1,0 +1,13 @@
+<f:form action="upload" enctype="multipart/form-data" name="uploadDto" object="{dto}">
+    <h3>
+        2. {f:translate(key: 'form.file.upload.headline')}
+        <f:if condition="{dto.file}">
+            <br>
+            <small>{f:translate(key: 'common.choosen')}: <strong>"<f:format.crop maxCharacters="80" respectWordBoundaries="FALSE">{dto.file.name}</f:format.crop>"</strong></small>
+        </f:if>
+
+    </h3>
+    <f:form.upload property="file"/>
+    <f:form.submit value="{f:translate(key: 'upload.submit')}"/>
+    <f:form.hidden property="budget" value="{dto.budget.uid}" />
+</f:form>

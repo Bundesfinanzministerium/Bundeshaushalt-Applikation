@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+
+<xliff version="1.0">
+
+    <file source-language="en"
+          target-language="de"
+          datatype="plaintext"
+          original="messages"
+          date="2016-08-18T12:05:23Z"
+          product-name="bmf_budget_import_xml">
+
+        <header/>
+
+        <body>
+
+            <trans-unit id="mlang_tabs_tab">
+                <target>BMF, Import</target>
+            </trans-unit>
+
+            <trans-unit id="mlang_labels_tabdescr">
+                <target>kleine beschreibugn</target>
+            </trans-unit>
+
+            <trans-unit id="mlang_labels_tablabel">
+                <target>Reiter Beschriftung</target>
+            </trans-unit>
+
+            <!-- COMMON
+            ######################################################################################################## -->
+            <trans-unit id="module.header">
+                <target>BMF, Import (XML)</target>
+            </trans-unit>
+
+            <trans-unit id="module.overview">
+                <target>(DE) Übersicht</target>
+            </trans-unit>
+
+            <trans-unit id="budget.choose.label">
+                <target>(DE) Bitte wählen Sie den zugehörigen Haushaltsplan aus</target>
+            </trans-unit>
+
+            <trans-unit id="upload.header">
+                <target>(DE) Datei upload</target>
+            </trans-unit>
+
+            <trans-unit id="upload.submit">
+                <target>(DE) Datei hochladen</target>
+            </trans-unit>
+
+            <trans-unit id="import.process">
+                <target>(DE) Import starten</target>
+            </trans-unit>
+
+
+            <!-- BUDGET IMPORT
+            ######################################################################################################## -->
+            <trans-unit id="budget.import.header">
+                <target>(DE) Import des Haushaltsplan (SOLL)</target>
+            </trans-unit>
+
+            <trans-unit id="budget.import.description">
+                <target>(DE) Dieser Import wurde entworfen für das Einspielen der SOLL Daten (Haushaltsrechnung) des jeweiligen Haushaltsplans</target>
+            </trans-unit>
+
+
+            <!-- BUDGET UPDATE
+            ######################################################################################################## -->
+            <trans-unit id="budget.update.header">
+                <target>(DE) Aktualisieren des Haushaltsplan (IST)</target>
+            </trans-unit>
+
+            <trans-unit id="budget.update.description">
+                <target>(DE) Dieser Import wurde entworfen das Einspielen / Aktualisieren der IST Daten (Haushaltsrechnung) des jeweiligen Haushaltsplans</target>
+            </trans-unit>
+
+
+            <!-- BUDGET CREATE
+            ######################################################################################################### -->
+            <trans-unit id="budget.create.header">
+                <target>(DE) Erstellen eines neuen Haushaltsplan</target>
+            </trans-unit>
+
+            <trans-unit id="budget.create.description">
+                <target>(DE) Diese Funktion erzeugt ein initiales Bundeshaushaltsjahr inkl. aller Systemordner und Referenzierungen</target>
+            </trans-unit>
+
+            <trans-unit id="budget.create.enterPid">
+                <target>(DE)Enter the root PID</target>
+            </trans-unit>
+            <trans-unit id="budget.create.enterTitle">
+                <target>(DE)Enter the title of the new target budget</target>
+            </trans-unit>
+            <trans-unit id="budget.create.enterYear">
+                <target>(DE)Enter the year</target>
+            </trans-unit>
+            <trans-unit id="budget.create.createEntity">
+                <target>(DE)Create pages and entities</target>
+            </trans-unit>
+
+            <trans-unit id="budget.create.result.rootPid">
+                <target>(DE)Root PID</target>
+            </trans-unit>
+            <trans-unit id="budget.create.result.title">
+                <target>(DE)Title</target>
+            </trans-unit>
+            <trans-unit id="budget.create.result.year">
+                <target>(DE)Year</target>
+            </trans-unit>
+
+            <trans-unit id="form.budget.choose.headline">
+                <target>Bitte wählen Sie das Haushaltsjahr</target>
+            </trans-unit>
+
+            <trans-unit id="form.file.upload.headline">
+                <target>Bitte wählen Sie das XML Dokument aus</target>
+            </trans-unit>
+
+            <trans-unit id="form.xml.section.headline">
+                <target>Bitte wählen Sie den zu verarbeitenden Einzelplan aus</target>
+            </trans-unit>
+
+            <trans-unit id="form.xml.section.page">
+                <target>Bitte geben Sie die Startseite des zugehörigen PDF - Dokumentes an</target>
+            </trans-unit>
+            <trans-unit id="form.xml.section.page">
+                <target>Startseite des PDF - Dokument</target>
+            </trans-unit>
+            <trans-unit id="form.xml.section.page.description">
+                <target>Bitte geben Sie die Startseite des zugehörigen Einzelplan PDF-Dokumentes an. Dieser Wert ist notwendig für die Berechnung der Seitenzahl je Titel im PDF.</target>
+            </trans-unit>
+
+            <trans-unit id="form.xml.section.import">
+                <target>Import</target>
+            </trans-unit>
+            <trans-unit id="form.xml.section.import.description">
+                <target>Drücken Sie bitte die "Import starten" um den Import einzuleiten</target>
+            </trans-unit>
+
+
+            <!-- SUPPLEMENTARY CREATE
+            ######################################################################################################## -->
+            <trans-unit id="supplementary.create.header">
+                <target>(DE) Erstellen eines neuen Nachtragshaushalt</target>
+            </trans-unit>
+
+            <trans-unit id="supplementary.create.description">
+                <target>(DE) Diese Funktion erzeugt einen initialen Nachtragshaushalt angebunden an einen bestehenden Haushaltsplan</target>
+            </trans-unit>
+
+
+            <!-- SUPPLEMENTARY IMPORT
+            ######################################################################################################## -->
+            <trans-unit id="supplementary.import.header">
+                <target>(DE) Import der Nachtragshaushalt (SOLL)</target>
+            </trans-unit>
+
+            <trans-unit id="supplementary.import.description">
+                <target>(DE) Dieser Import wurde entworfen für das Einspielen des Nachtragshaushaltes des jeweiligen Nachtragshaushalt</target>
+            </trans-unit>
+
+            <trans-unit id="form.supplementaryBudget.choose.headline">
+                <target>(DE) Bitte wählen Sie den zugehörigen Nachtragshaushalt aus</target>
+            </trans-unit>
+
+            <!-- BUDGET UPDATE
+            ######################################################################################################## -->
+            <trans-unit id="label.update.header">
+                <target>(DE) Aktualisieren der Funktions- und Gruppenbezeichnung</target>
+            </trans-unit>
+
+            <trans-unit id="label.update.description">
+                <target>Dieser Import aktuelisiert die Funktions- und Gruppenbezeichnung aller Daten bezogen ausgehend von einem Haushaltsplan</target>
+            </trans-unit>
+
+            <!-- REPORT
+            ######################################################################################################## -->
+            <trans-unit id="result">
+                <target>Ergebnis</target>
+            </trans-unit>
+
+            <trans-unit id="result.selection">
+                <target>Ihre Auswahl</target>
+            </trans-unit>
+
+            <trans-unit id="result.selection.budgetyear">
+                <target>Haushaltsjahr</target>
+            </trans-unit>
+
+            <trans-unit id="result.selection.file">
+                <target>Datei</target>
+            </trans-unit>
+
+            <trans-unit id="result.selection.section">
+                <target>Einzelplan</target>
+            </trans-unit>
+
+            <trans-unit id="result.selection.pageoffset">
+                <target>PDF Startseite</target>
+            </trans-unit>
+
+            <trans-unit id="result.statistic">
+                <target>Statistik</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.time">
+                <target>Ausführungszeit</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.time.seconds">
+                <target>sek.</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.section">
+                <target>Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.chapter">
+                <target>Kapitel</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.group">
+                <target>Gruppen</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.function">
+                <target>Funktionen</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.titlegroup">
+                <target>Titelgruppen</target>
+            </trans-unit>
+            <trans-unit id="result.statistic.budgetgroup">
+                <target>Umsatzgruppen</target>
+            </trans-unit>
+
+            <trans-unit id="result.error">
+                <target>Fehler</target>
+            </trans-unit>
+
+            <trans-unit id="result.updated.titles">
+                <target>Aktualisierte Titel</target>
+            </trans-unit>
+            <trans-unit id="result.updated.sections">
+                <target>Aktualisierte Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="result.updated.chapter">
+                <target>Aktualisierte Kapitel</target>
+            </trans-unit>
+            <trans-unit id="result.updated.groups">
+                <target>Aktualisierte Gruppen</target>
+            </trans-unit>
+            <trans-unit id="result.updated.functions">
+                <target>Aktualisierte Funktionen</target>
+            </trans-unit>
+            <trans-unit id="result.updated.titlegroups">
+                <target>Aktualisierte Titelgruppen</target>
+            </trans-unit>
+            <trans-unit id="result.updated.budgetgroups">
+                <target>Aktualisierte Umsatzgruppen</target>
+            </trans-unit>
+
+            <trans-unit id="result.inserted.titles">
+                <target>Neu angelegte Titel</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.sections">
+                <target>Neu angelegte Einzelpläne</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.chapter">
+                <target>Neu angelegte Kapitel</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.groups">
+                <target>Neu angelegte Gruppen</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.functions">
+                <target>Neu angelegte Funktionen</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.titlegroups">
+                <target>Neu angelegte Titelgruppen</target>
+            </trans-unit>
+            <trans-unit id="result.inserted.budgetgroups">
+                <target>Neu angelegte Umsatzgruppen</target>
+            </trans-unit>
+
+            <!-- COMMON
+            ######################################################################################################## -->
+            <trans-unit id="common.type">
+                <target>Typ</target>
+            </trans-unit>
+            <trans-unit id="common.address">
+                <target>Adresse</target>
+            </trans-unit>
+            <trans-unit id="common.label">
+                <target>Bezeichnung</target>
+            </trans-unit>
+            <trans-unit id="common.budget">
+                <target>Haushaltsplan</target>
+            </trans-unit>
+            <trans-unit id="common.title">
+                <target>Titel</target>
+            </trans-unit>
+            <trans-unit id="common.section">
+                <target>Einzelplan</target>
+            </trans-unit>
+            <trans-unit id="common.chapter">
+                <target>Kapitel</target>
+            </trans-unit>
+            <trans-unit id="common.group">
+                <target>Gruppe</target>
+            </trans-unit>
+            <trans-unit id="common.function">
+                <target>Funktion</target>
+            </trans-unit>
+            <trans-unit id="common.budgetgroup">
+                <target>Umsatzgruppe</target>
+            </trans-unit>
+            <trans-unit id="common.titlegroup">
+                <target>Titelgrouppe</target>
+            </trans-unit>
+            <trans-unit id="common.message">
+                <target>Meldung</target>
+            </trans-unit>
+            <trans-unit id="common.original">
+                <target>Original</target>
+            </trans-unit>
+            <trans-unit id="common.updated">
+                <target>Aktualisiert</target>
+            </trans-unit>
+            <trans-unit id="common.new">
+                <target>Neu</target>
+            </trans-unit>
+            <trans-unit id="common.choose">
+                <target>auswählen</target>
+            </trans-unit>
+            <trans-unit id="common.choose.please">
+                <target>Bitte auswählen</target>
+            </trans-unit>
+            <trans-unit id="common.choosen">
+                <target>Auswahl</target>
+            </trans-unit>
+
+        </body>
+    </file>
+</xliff>

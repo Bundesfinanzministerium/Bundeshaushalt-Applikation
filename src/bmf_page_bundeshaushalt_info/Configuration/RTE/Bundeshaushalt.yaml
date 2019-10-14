@@ -1,0 +1,57 @@
+# Load default processing options
+imports:
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+  - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+
+# Add configuration for the editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    # can be "default", but a custom stylesSet can be defined here, which fits TYPO3 best
+    stylesSet:
+      - { name: "Download", element: "a", attributes: { class: "download" } }
+      - { name: "Download PDF", element: "a", attributes: { class: "download pdf" } }
+      - { name: "Download Excel", element: "a", attributes: { class: "download xls" } }
+      - { name: "Bund", element: "a", attributes: { class: "bund" } }
+      - { name: "Extern", element: "a", attributes: { class: "extern" } }
+      - { name: "Glossar", element: "a", attributes: { class: "glossar" } }
+      - { name: "Visualisierung", element: "a", attributes: { class: "visualisierung" } }
+
+    format_tags: "p;h1;h2;h3;pre"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles ] }
+      - { name: paragraph, groups: [ list, indent, blocks, align ] }
+      - { name: links, groups: [ links ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ spellchecker ] }
+      - { name: insert, groups: [ insert ] }
+      - { name: tools, groups: [ table, specialchar, insertcharacters ] }
+      - { name: document, groups: [ mode ] }
+
+    justifyClasses:
+      - text-left
+      - text-center
+      - text-right
+      - text-justify
+
+    extraPlugins:
+      - justify
+      - autolink
+      - wordcount
+
+    removePlugins:
+      - image
+
+    removeButtons:
+      - Anchor
+      - Underline
+      - Strike
+
+# Allow s and u tag
+processing:
+  allowTags:
+    - s
+    - u

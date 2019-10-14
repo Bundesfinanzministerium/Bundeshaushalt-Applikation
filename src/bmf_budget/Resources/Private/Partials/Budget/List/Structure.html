@@ -1,0 +1,58 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+<h2 class="sr-hint">Tabellarische Übersicht</h2>
+
+<div class="data-table">
+    <table id="bundeshaushalt-data" class="titel">
+        <thead>
+        <tr class="head">
+            <th class="col1" tabindex="0">Betrag <br>
+                <small> in Tausend Euro</small>
+            </th>
+            <th class="col2" tabindex="0">Posten <br>
+                <small> unterhalb von: Einnahmen</small>
+            </th>
+            <th class="col3 noSPL" tabindex="0">Anteil <br>
+                <small>an Summe pos. Posten</small>
+            </th>
+        </tr>
+        </thead>
+        <tbody>
+        <f:for each="{list.entities}" as="entity">
+            <tr>
+
+                <f:if condition="{referrer.account} == 'target'">
+                    <f:then>
+                        <td class="col1">
+                            <f:format.currency currencySign="" decimalSeparator="," thousandsSeparator="." decimals="0">
+                                {bmfBudget:property(object:entity, property:'{referrer.account}_{referrer.flow}')}
+                            </f:format.currency>
+                        </td>
+                    </f:then>
+                    <f:else>
+                        <td class="col1" title="<f:format.currency currencySign='€' decimalSeparator=',' thousandsSeparator='.' decimals='2'>{bmfBudget:property(object:entity, property:'{referrer.account}_{referrer.flow}')}</f:format.currency>">
+                            <f:format.currency currencySign="" decimalSeparator="," thousandsSeparator="." decimals="0">
+                                <f:cObject typoscriptObjectPath="lib.math" data="{bmfBudget:property(object:entity, property:'{referrer.account}_{referrer.flow}')}/1000"/>
+                            </f:format.currency>
+                        </td>
+                    </f:else>
+                </f:if>
+
+                <td class="col2">
+                    <h3>
+                        <f:link.action action="show"
+                                       title="{entity.title}"
+                                       arguments="{year:referrer.year,
+                                           account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                           flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                           structure:'{f:translate(key:\'segment.structure.{referrer.structure}\')}',
+                                           address:entity.address}">
+                            {entity.title}
+                        </f:link.action>
+                    </h3>
+                    <span class="balkenProzent" style="width: {bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'{referrer.account}_{referrer.flow}\')}', decimal:'0')}%; background-color: #FFCC22;"></span>
+                </td>
+                <td class="col3 noSPP">{bmfBudget:math.percent(total:'{list.total}', value:'{bmfBudget:property(object:entity, property:\'{referrer.account}_{referrer.flow}\')}', decimal:'2')}%</td>
+            </tr>
+        </f:for>
+    </table>
+</div>

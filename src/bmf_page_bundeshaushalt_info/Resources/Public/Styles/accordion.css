@@ -1,0 +1,70 @@
+.ppAccordionWrapper {
+    margin: 0 0 30px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.ppAccordionWrapper li {
+    margin: 0;
+    padding: 0;
+}
+
+.ppAccordion-title h3,
+.ppAccordion-title a {
+    color: #333;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    margin: 0;
+    display: block;
+    text-shadow: none;
+    position: relative;
+}
+
+#article-main .ppAccordion-title a,
+#article-main .ppAccordion-title a:link,
+#article-main .ppAccordion-title a:visited {
+    border-bottom: 1px solid #ccc;
+    padding: 0.625em 1.25em 0.625em 0.625em;
+    color: #333;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+.ppAccordion-title a:after {
+    content: url("../Images/pfeil-glossar-down.png");
+    display: block;
+    position: absolute;
+    right: 1.25rem;
+    top: 0.8125rem;
+}
+
+#article-main .ppAccordion-title a.active,
+#article-main .ppAccordion-title a:hover,
+#article-main .ppAccordion-title a:focus {
+    background-color: #C85000;
+    color: #fff;
+    text-decoration: underline;
+}
+
+.ppAccordion-title a:hover:after,
+.ppAccordion-title a:focus:after,
+.ppAccordion-title a:active:after {
+    content: url("../Images/pfeil-glossar-down-white.png");
+}
+
+.ppAccordion-title a.active:after {
+    content: url("../Images/pfeil-glossar-up.png");
+}
+
+.glossar .ppAccordion-block {
+    padding: 0.625em 1.25em 0.625em 0.625em;
+}
+
+.ppAccordion {
+    display: none;
+}
+
+.no-js .ppAccordion,
+.ppAccordion.in {
+    display: block;
+}

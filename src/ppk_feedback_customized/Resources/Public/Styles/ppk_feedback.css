@@ -1,0 +1,216 @@
+
+#ppFeedback .messages:focus {
+    outline: none;
+    border: none;
+}
+
+.tx-ppk-feedback h2 {
+    font-size: 24px;
+    padding: 18px 0 18px 0;
+}
+
+.tx-ppk-feedback hr {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tx-ppk-feedback .error ul {
+    list-style: circle;
+    color: #C85000;
+}
+
+#contact div.thanks,
+form#feedbackForm {
+    width:      420px;
+    padding:    20px 20px 20px 20px;
+    background: url(../Images/bg-form.gif) repeat-y left top;
+}
+
+form#feedbackForm img {
+    width:auto;
+    height:auto;
+}
+
+form#feedbackForm p {
+    background-color: transparent;
+    border: solid 1px transparent;
+    margin: 0;
+    padding: 7px 5px 7px 35px;
+    width: 385px;
+    overflow: hidden;
+    -webkit-background-clip: padding-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+form#feedbackForm p.error{
+    background:#fffbcf url(../Images/bg-form-error.gif) no-repeat 10px center;
+    border: solid 1px #C85000;
+}
+
+form#feedbackForm p.loading {
+    background: #ffffff url(../Images/ajax-loader.gif) no-repeat 10px center;
+    border: solid 1px #ddd;
+}
+
+
+form#feedbackForm div.row           { padding-bottom: 20px; }
+form#feedbackForm div.label.small   { float:left; width: 150px; padding: 0 10px 0 0; }
+form#feedbackForm div.field.small   { float:left; width: 260px; }
+form#feedbackForm div.label.full    { width:420px; padding: 0 0 10px 0; }
+form#feedbackForm div.field.full    { width:420px; }
+form#feedbackForm label             { width: 100%; cursor: pointer; }
+
+
+
+form#feedbackForm input,
+form#feedbackForm label,
+form#feedbackForm textarea,
+form#feedbackForm select{
+    line-height: 20px;
+    display:block;
+    color:#333;
+}
+
+
+
+form#feedbackForm input,
+form#feedbackForm textarea,
+form#feedbackForm select {
+    border: solid 1px #ddd;
+    border-top-color:#999;
+    border-right-color:#ccc;
+    border-bottom-color:#ccc;
+    border-left-color:#999;
+    width: 100%;
+    box-shadow: inset 1px 1px 2px rgba(0,0,0,0.1);
+    color:#666;
+    -webkit-background-clip: padding-box;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+}
+
+
+form#feedbackForm select option {
+    border-bottom: solid 1px #eee;
+    line-height: 25px;
+}
+
+form#feedbackForm textarea {
+    resize: vertical;
+    height: 200px;
+    width: 100%;
+}
+
+form#feedbackForm input:hover,
+form#feedbackForm textarea:hover,
+form#feedbackForm select:hover,
+form#feedbackForm input:focus,
+form#feedbackForm textarea:focus,
+form#feedbackForm select:focus,
+form#feedbackForm input:active,
+form#feedbackForm textarea:active,
+form#feedbackForm select:active {
+    border-color:#ccc;
+		-webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+form#feedbackForm input:focus,
+form#feedbackForm textarea:focus{
+    border-color:#666;
+    color: #333;
+}
+
+form#feedbackForm input#submit{
+    border: none;
+    width: 100px;
+    font-weight: bold;
+    cursor:pointer;
+    color: #fff;
+    text-shadow: 1px 1px #c35421;
+    margin-top: 0;
+    margin-bottom: 1px;
+    float: right;
+    background: #C85000;
+    -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    -ms-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    -o-box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    box-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+}
+
+form#feedbackForm input#submit:hover,
+form#feedbackForm input#submit:focus,
+form#feedbackForm input#submit:active{
+    color: #fff;
+}
+
+form#feedbackForm input#submit:active{
+    margin-top: 1px;
+    margin-bottom: 0;
+}
+
+form#feedbackForm input.error,
+form#feedbackForm select.error,
+form#feedbackForm textarea.error {
+    color: #000;
+    background: url(../Images/bg-form-error.gif) no-repeat 96% center;
+    border: solid 1px #C85000!important;
+    -webkit-box-shadow: 0 0 3px #c35421!important;
+    -moz-box-shadow: 0 0 3px #c35421!important;
+    -ms-box-shadow: 0 0 3px #c35421!important;
+    -o-box-shadow: 0 0 3px #c35421!important;
+    box-shadow: 0 0 3px #c35421!important;
+}
+
+form#feedbackForm input.error:hover,
+form#feedbackForm select.error:hover,
+form#feedbackForm textarea.error:hover,
+form#feedbackForm input.error:focus,
+form#feedbackForm select.error:focus,
+form#feedbackForm textarea.error:focus,
+form#feedbackForm input.error:active,
+form#feedbackForm select.error:active,
+form#feedbackForm textarea.error:active {
+    -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5)!important;
+		box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.5)!important;
+}
+
+form#feedbackForm select            { font-size: 14px; width: 100%; }
+form#feedbackForm input             { font-size: 14px; padding: 3px 4px 3px 4px; width: 96%; }
+form#feedbackForm textarea          { font-size: 14px; padding: 3px 4px 3px 4px; width: 98%; }
+form#feedbackForm select.error      { background: url(../Images/bg-form-error.gif) no-repeat 90% center; }
+form#feedbackForm textarea.error    { background: url(../Images/bg-form-error.gif) no-repeat 96% 10px; }
+
+form#feedbackForm input#termsAccepted { width: 16px; display: inline; }
+
+/** MEDIA QUERIES ######################################################################################################
+##################################################################################################################### */
+@media (max-width: 1005px) {
+
+}
+
+/* TODO: optimize */
+@media (max-width: 996px) {
+    form#feedbackForm div.label.small {
+        float: none;
+    }
+    form#feedbackForm textarea {
+        width: 73%;
+    }
+    form#feedbackForm p {
+        width: 65%;  
+    }
+}
+
+
+@media (max-width: 479px) {
+   
+}

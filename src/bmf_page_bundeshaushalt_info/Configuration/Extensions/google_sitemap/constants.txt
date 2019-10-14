@@ -1,0 +1,8 @@
+plugin.tx_bmfpagebundeshaushaltinfo {
+    settings {
+        google_sitemap {
+            # cat=plugin.tx_bmfpagebundeshaushaltinfo//a; type=string; label=Excluded Pages
+            excludeList = 11,12,13,23,24,25,36,37,38,124
+        }
+    }
+}

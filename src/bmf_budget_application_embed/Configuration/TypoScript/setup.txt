@@ -1,0 +1,20 @@
+# system
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bmf_budget_application_embed/Configuration/TypoScript/Setup/" extensions="ts">
+
+plugin.tx_bmfbudgetapplicationembed {
+	view {
+		templateRootPaths.0 = {$plugin.tx_bmfbudgetapplicationembed.view.templateRootPath}
+		partialRootPaths.0 = {$plugin.tx_bmfbudgetapplicationembed.view.partialRootPath}
+		layoutRootPaths.0 = {$plugin.tx_bmfbudgetapplicationembed.view.layoutRootPath}
+	}
+	persistence {
+		storagePid = {$plugin.tx_bmfbudgetapplicationembed.persistence.storagePid}
+	}
+	features {
+		# uncomment the following line to enable the new Property Mapper.
+		# rewrittenPropertyMapper = 1
+	}
+	settings {
+		serviceDomain  = {$config.domain}
+	}
+}

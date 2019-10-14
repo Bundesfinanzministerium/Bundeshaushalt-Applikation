@@ -1,0 +1,86 @@
+Release 1.5.5
+[BUGFIX] Add sorting for "indexed" to always get latest entries in index (c6b5802)
+
+Release 1.5.4
+[BUGFIX] Remove inclusion of file, which has been deleted earlier (a470ab2)
+
+Release 1.5.3
+[TASK] Add 2018-IST to app configuration (1e1a304)
+
+Release 1.5.2
+[TASK] Remove 2018-IST from app configuration (06368c1)
+
+Release 1.5.1
+[TASK] Update dependencies (14ae317)
+
+Release 1.5.0
+[TASK] Use artifact repo in composer.json for ppk dependencies (e0b0b0e)
+[TASK] Remove employee name from js script in EXT:bmf_page_bundeshaushalt_info (1de1001)
+[TASK] Update copyright & licence in EXT:ppk_videojs_customized (73ad61f)
+[TASK] Update copyright & licence in EXT:ppk_feedback_customized (e76d502)
+[TASK] Update copyright & licence in EXT:bmf_page_bundeshaushalt_info_embed (ffcf48d)
+[TASK] Update copyright & licence in EXT:bmf_page_bundeshaushalt_info (7729995)
+[TASK] Update copyright & licence in EXT:bmf_budget_import_xml (94299b4)
+[TASK] Update copyright & licence in EXT:bmf_budget_export_rest_solr (4eda2e0)
+[TASK] Update copyright & licence in EXT:bmf_budget_crawler (422274d)
+[TASK] Update copyright & licence in EXT:bmf_budget_application_embed (b0f6a6e)
+[TASK] Update copyright & licence in EXT:bmf_budget_application (3c3ada2)
+[TASK] Update copyright & licence in EXT:bmf_budget (2102230)
+[TASK] Code Style Fixes (PSR-2) (d748cb8)
+[TASK] Update TYPO3 CMS to 9.5.9 (a58998b)
+
+Release 1.4.6
+[TASK] Add data "2018 IST" in static configuration (09cf228)
+
+Release 1.4.5
+[TASK] Add data "2018 IST" in static configuration (8712d74)
+
+Release 1.4.4
+[TASK] Set Piwik Tracker Request Timeout to 10 seconds (226058f)
+
+Release 1.4.3
+[TASK] Update Piwik/Matomo credentials for Production (4780d8e)
+
+Release 1.4.2
+[TASK] Restore PiwikTracker used in send_rest.php endpoint (b5b0d6c)
+
+Release 1.4.1
+[TASK] Update dependencies (76bdc5b)
+
+Release 1.4.0
+[BUGFIX][!!!] Do not track send_rest.php calls (35bb3ae)
+
+Release 1.3.99
+[REVERT] Back to 1.1.0 (ead5836)
+
+Release 1.3.7
+
+Release 1.3.6
+[FIX] update ppk_matomo to 1.0.5 (d27f415)
+
+Release 1.3.5
+[TASK] update ppk_matomo to 1.0.4 (7d74aa4)
+
+Release 1.3.4
+
+Release 1.3.3
+
+Release 1.3.2
+
+Release 1.3.1
+[TASK] remove dump autoloade (6b8409a)
+
+Release 1.2.2
+[TASK] add trakking to for test server (5909bda)
+
+Release 1.2.1
+[TASK]  render percentage values under 0.01 and over 0 as "< 0.01" for accordeon table too (839f369)
+
+Release 1.2.0
+[TASK] correct link to Anleitungen (d9284e9)
+[TASK] render percentage values under 0.01 and over 0 as "< 0.01" (0b7561f)
+
+Release 1.1.0
+[DEVOPS] Add version.txt file (ab9fbf6)
+[DEVOPS] TYPO3/Composer Update (3ef3c58)
+

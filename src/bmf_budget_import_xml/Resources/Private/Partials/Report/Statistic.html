@@ -1,0 +1,45 @@
+<hr>
+<h2>{f:translate(key: 'result.statistic')}:</h2>
+{f:translate(key: 'result.statistic.time')}: {result.process} {f:translate(key: 'result.statistic.time.seconds')}
+<table>
+    <tr>
+        <th>{f:translate(key: 'common.type')}</th>
+        <th>{f:translate(key: 'common.updated')}</th>
+        <th>{f:translate(key: 'common.new')}</th>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.title')}:</th>
+        <td>{result.records.title.updated -> f:count()}</td>
+        <td>{result.records.title.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.section')}:</th>
+        <td>{result.records.section.updated -> f:count()}</td>
+        <td>{result.records.section.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.chapter')}:</th>
+        <td>{result.records.chapter.updated -> f:count()}</td>
+        <td>{result.records.chapter.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.group')}:</th>
+        <td>{result.records.group.updated -> f:count()}</td>
+        <td>{result.records.group.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.function')}:</th>
+        <td>{result.records.function.updated -> f:count()}</td>
+        <td>{result.records.function.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.budgetgroup')}:</th>
+        <td>{result.records.budgetgroup.updated -> f:count()}</td>
+        <td>{result.records.budgetgroup.new -> f:count()}</td>
+    </tr>
+    <tr>
+        <th>{f:translate(key: 'common.titlegroup')}:</th>
+        <td>{result.records.titlegroup.updated -> f:count()}</td>
+        <td>{result.records.titlegroup.new -> f:count()}</td>
+    </tr>
+</table>

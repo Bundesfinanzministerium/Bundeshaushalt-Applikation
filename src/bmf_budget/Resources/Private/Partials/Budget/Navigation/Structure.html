@@ -1,0 +1,13 @@
+<div id="data-unitNavigation">
+    <h2 class="sr-hint">Daten-Tabellen : Gliederungs-Navigation</h2>
+    <ul>
+        <f:for each="{0:'group', 1:'section', 2:'function'}" as="structure"><li class="{structure}"><f:if condition="{referrer.structure}=={structure}">
+                    <f:then><strong>{f:translate(key:'structure.{structure}')}</strong></f:then>
+                    <f:else><f:link.action action="show"
+                                       arguments="{year:referrer.year,
+                                                   account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                                   flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                                   structure:'{f:translate(key:\'segment.structure.{structure}\')}'}">{f:translate(key:'structure.{structure}')}</f:link.action></f:else>
+                </f:if></li></f:for>
+    </ul>
+</div>

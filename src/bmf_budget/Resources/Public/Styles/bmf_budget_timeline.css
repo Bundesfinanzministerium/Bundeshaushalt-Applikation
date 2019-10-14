@@ -1,0 +1,397 @@
+#data-timeline {
+    background-color: #f8f8f8;
+    border: 0.0625rem solid #C85000;
+    height: 33px;
+    margin-bottom: 40px;
+    overflow: hidden;
+    position: relative;
+}
+
+/* H E A D E R
+**************************************************************************************************/
+
+#data-timeline .header {
+    line-height: normal;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+#data-timeline .header a {
+    border: 0.0625rem solid #C85000;
+    display: block;
+    height: 33px;
+    position: absolute;
+    right: -1px;
+    text-align: center;
+    top: -1px;
+    width: 100%;
+}
+
+#data-timeline .header a:before {
+    content: url("../Images/timeline_arrow_down_white.png");
+    border: 0.0625rem solid #eee;
+    border-left: 0.0625rem solid #C85000;
+    height: 32px;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 33px;
+    display: block;
+    overflow: hidden;
+}
+
+#data-timeline.opened .header a:before {
+    content: url("../Images/timeline_arrow_up_white.png");
+    border-color: #000;
+}
+
+#data-timeline .header a:hover:before,
+#data-timeline .header a:focus:before,
+#data-timeline .header a:active:before {
+    border: 0.0625rem solid #000;
+    height: 31px;
+    width: 33px;
+}
+
+#data-timeline .header h2 {
+    color: #C85000;
+    font-family: "BundesSansBold", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    letter-spacing: 0.04375rem;
+    margin: 0 auto 20px auto;
+    padding: 7px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#data-timeline .info {
+    background-color: #fae9df;
+    margin: 0 0 14px 0;
+    padding: 0;
+}
+
+#data-timeline .info p {
+    background-color: transparent;
+    /* http://websemantics.co.uk/online_tools/image_to_data_uri_convertor/ */
+    background-image: url(data:image/gif;base64,R0lGODlhGgAZAPcAAAAAAP/////9/v/+//3+//z///7///7//f///f/++vfdxvrq2/rl1Pfk1f1lAP95IPyHOP2tePq3ivrIpfnQtPzXvfvXv/rbxvni0v9hAP9iAP9jAP9kAP5hAP5iAP5kAP5lAP1jAP1kAPxiAP9hAf9iAf9lAf1jAfxkAf9iAv9jAv5kAv1lAv9iA/9jA/9kA/1jA/xjA/9jBP5kBP9mB/9nCf5qCv9rC/5pC/9pDP9rDf5rDv9wF/5yGv1zG/50HP11Hf54I/15JP9/LP9+MP6EN/6GOPyKQf+NR/yRS/6VVP6WV/ubXvudX/6eYv2fYv2mcf2ocv+te/quffuxgvyyg/+6kPu6kvy+l/vBnPrLrfrSuPvTuvzZw/nezf9iBP2IQv6JQ/+PT/2eZv6qe/y8lv29mfu9mPu/m/7DofzNsfvMsPzQt/rQt/vRuf3ax/rZxv3n2vrp3/5wJvzTvf99P/58QP98Qf+UZf/w6f+TZf6TZf+TZv+SZ/+TaP+UaP2ph/68ov+ylP+6ofnm3/+xmP+5o/+6pP+7pP66o//v6//u7P7+/v///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAI0ALAAAAAAaABkAAAj/ABsJHCjwQoQwQnS84FEECheCECF6YeICxgYYGmJwQMFhAxI6ESGe2bFhQ4mSHDx8GcFBQ4kVUUIKlKKiJMoSLzNw+CCCg4wQS0JeMblhRggOLU5wONFzg4YQNTk0gVgBx4YVTpduuDMo0SE8HUBo2MAhxIo0BMGEKKqh4wYRfxgVMGDoQwkVGlR8IOFjIAURbZ12WKphTwAEAwLZNHl0hQSBTzK0mKH1pAY+AgIY8HOCqIaxG4oIfLCCA063ne0EWO1HwwoNH1oEftGAwYeai22WCDDAgJ6SIcb2PKFBiwWiuUuOMGAgwB/iLomexMKGbHKbAhgZ6FNy7AkVpjdY0IHz4Xp35gOcEt+A+0UINI1qmN/AIk+CAyWYfuleEoSbRkTMZ1pUnbG3Vkc6xNHIFB2YVwIghwiC0gYprCCCBxyIIZACNJinBwIFIFBId2utgNUEA40hQ2BQ3dVHAAcMgIhnGrCwAQQEYfBDeRxEFcIcihCwSB0nqaDUBjmARFAbN1iEVwZ4tSUCTqBx4IAZIa3Rg0slmBBCCVptsFYJH9hQhkyNvGFEj091ltdVTgWhxgJoCpTFELiZOMJrQFRBSJ0QdUGFE0kcoQQZW8ghU0AAOw==);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    color: #C85000;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 8px 34px 8px 34px;
+    text-align: center;
+    width: 60%;
+}
+
+#data-timeline .header .year {
+    color: #666666;
+    display: block;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+#data-timeline .header .flow {
+    color: #000000;
+    display: block;
+    font-family: "BundesSansBold", Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#data-timeline .header .value {
+    color: #000000;
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 30px;
+    padding-bottom: 4px;
+}
+
+#data-timeline .header .label {
+    color: #757575;
+    display: block;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin: 0 auto;
+    padding-bottom: 26px;
+    width: 70%;
+}
+
+#data-timeline .application {
+    position: relative;
+    /* background-color: #c5f8cd; */
+}
+
+#data-timeline svg {
+    display: block;
+}
+
+#data-timeline .horizontal table {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#data-timeline .horizontal td {
+    border: none;
+    color: #555;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+#data-timeline .horizontal td.active {
+    font-family: "BundesSansBold", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+#data-timeline .nav {
+    border: 0.0625rem solid #C85000;
+    height: 33px;
+    position: absolute;
+    top: 20px;
+    width: 33px;
+}
+
+#data-timeline .nav:hover,
+#data-timeline .nav:focus,
+#data-timeline .nav:active {
+    border-color: #000;
+}
+
+#data-timeline .nav.previous {
+    left: 0;
+}
+
+#data-timeline .nav.previous:before {
+    content: url("../Images/timeline_arrow_left_orange.png");
+}
+
+#data-timeline .nav.previous.disabled:before {
+    content: url("../Images/timeline_arrow_left_gray.png");
+    cursor: default;
+}
+
+#data-timeline .nav.next {
+    right: 0;
+}
+
+#data-timeline .nav.next:before {
+    content: url("../Images/timeline_arrow_right_orange.png");
+}
+
+#data-timeline .nav.next.disabled:before {
+    content: url("../Images/timeline_arrow_right_gray.png");
+    cursor: default;
+}
+
+/** NORMAL **/
+
+#data-timeline .wrapper {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 750px;
+}
+
+#data-timeline .budget {
+    display: block;
+    float: left;
+    height: 251px;
+    /* width: 100px; */
+    list-style: none;
+    position: relative;
+    width: 90px;
+}
+
+#data-timeline .budget li {
+    color: #555;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+
+    font-size: 14px;
+    position: absolute;
+    right: 8px;
+}
+
+#data-timeline .stage {
+    display: block;
+    float: left;
+    height: 240px;
+    overflow: hidden;
+    padding: 11px 1px 0 1px;
+    width: 500px;
+}
+
+/* ACCOUNT
+*******************************************************************/
+
+#data-timeline .account {
+    display: block;
+    float: right;
+    margin: 0;
+    overflow: hidden;
+    padding: 0 10px 10px 8px;
+    width: 120px;
+}
+
+#data-timeline .account form {
+    background-color: #ffffff;
+    border: 0.0625rem solid #d9d9d9;
+    box-shadow: 3px 3px 5px 0 rgba(184, 184, 184, 1);
+    -moz-box-shadow: 3px 3px 5px 0 rgba(184, 184, 184, 1);
+    -webkit-box-shadow: 3px 3px 5px 0 rgba(184, 184, 184, 1);
+    color: #757575;
+    display: block;
+    margin: 0;
+
+    overflow: hidden;
+    padding: 0;
+    width: 110px;
+}
+
+/*
+  BundesSans Bold 14pt
+*/
+#data-timeline .account form legend {
+    background-color: #f8f8f8;
+    border-bottom: 0.0625rem solid #d9d9d9;
+    display: block;
+    font-family: "BundesSansBold", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+    padding: 8px 0 8px 0;
+    text-align: center;
+
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/*
+  BundesSerif Reg 14pt
+*/
+#data-timeline .account ul {
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#data-timeline .account form label {
+    border-top: 0.0625rem solid #d9d9d9;
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 14px;
+
+    margin: 0 12px 0 12px;
+    padding: 8px 0 8px 0;
+
+    text-transform: uppercase;
+}
+
+#data-timeline .account label:first-child {
+    border-top: none;
+}
+
+#data-timeline .account input {
+    float: right;
+    margin: 2px 0 0 0;
+}
+
+/* L E G E N D
+*******************************************************************/
+
+#data-timeline .legend {
+    display: block;
+    margin: 20px 0 0 0;
+    padding: 0;
+}
+
+#data-timeline .legend ul,
+#data-timeline .legend li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#data-timeline span.color {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+/* A P P L I C A T I O N
+*******************************************************************/
+#data-timeline rect {
+    cursor: pointer;
+}
+
+/* Mittlere Monitore */
+@media only screen and (min-width: 451px) and (max-width: 900px) {
+
+    #data-timeline .header {
+
+    }
+
+    #data-timeline .wrapper {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    #data-timeline .stage {
+        float: none;
+        margin: 0 125px 0 100px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: auto;
+    }
+
+}
+
+/* Tabletts */
+@media only screen and (max-width: 639px) {
+
+    #data-timeline .header {
+
+    }
+
+    #data-timeline .wrapper {
+        margin: 0 50px;
+        width: auto;
+    }
+
+    #data-timeline .stage {
+        float: none;
+        margin: 0 0 0 90px;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        width: auto;
+    }
+
+    #data-timeline .account {
+        height: auto;
+        padding: 0 0 20px 0;
+        width: 100%;
+    }
+
+    #data-timeline .account form {
+        display: block;
+        float: left;
+        margin: 0;
+        padding: 0;
+    }
+
+    #data-timeline .legend {
+        display: block;
+        float: left;
+        margin: 0 0 0 20px;
+        padding: 0;
+    }
+
+}

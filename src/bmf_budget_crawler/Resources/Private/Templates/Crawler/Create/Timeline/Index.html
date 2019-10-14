@@ -1,0 +1,21 @@
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <h1>BMF, Crawler</h1>
+
+    <h2>Preparing a new timeline crawler</h2>
+
+    <f:form action="create" name="crawlerDto" object="{dto}" enctype="multipart/form-data">
+
+        <h2>Choose Hook</h2>
+        <f:form.select property="hook"
+                       options="{hooks}"
+                       prependOptionLabel="-- please choose --"
+                       prependOptionValue="" />
+
+        <h2>Process:</h2>
+
+        <f:form.submit value="crawl tree" class="processForm"/>
+
+    </f:form>
+</f:section>

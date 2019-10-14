@@ -1,0 +1,521 @@
+p {
+    color: #333;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0 0 21px 0;
+}
+
+/* Headlines ###########################################################################################################
+##################################################################################################################### */
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.main h1 {
+    font-size: 34px;
+    line-height: 36px;
+    padding: 0 0 0 0;
+}
+
+.main h2 {
+    border-bottom: 1px solid #dddddd;
+    font-size: 30px;
+    line-height: 32px;
+    padding: 0 0 18px 0;
+}
+
+.main h3 {
+    color: #555;
+    font-size: 26px;
+    line-height: 28px;
+    padding: 0 0 7px 0;
+}
+
+.main h4 {
+    font-size: 22px;
+    line-height: 24px;
+    padding: 0 0 7px 0;
+}
+
+.main h5 {
+    font-family: "BundesSans";
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    padding: 0 0 0 0;
+}
+
+.main h6 {
+    font-family: "BundesSans";
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 0 0 0 0;
+}
+
+/* Links ###############################################################################################################
+##################################################################################################################### */
+a, a:link, a:visited {
+    color: #C85000;
+    text-decoration: none;
+}
+
+a:hover, a:focus, a:active {
+    color: #a60013;
+    text-decoration: underline;
+}
+
+a:focus,
+input[type="submit"]:focus {
+    outline: 1px dotted #555;
+}
+
+a.extern:after,
+a.bund:after,
+a.download:after,
+a.visualisierung:after,
+a.pdf:after,
+a.xls:after,
+a.pdfSH:after,
+a.pdfNH1:after,
+a.pdfNH2:after {
+    bottom: -2px;
+    color: #fff;
+    content: "";
+    display: inline-block;
+    font-size: 12px;
+    height: 15px;
+    overflow: hidden;
+    padding-left: 5px;
+    position: relative;
+    width: 20px;
+}
+
+a.extern:after {
+    content: url("../Images/icon-externer-link.png") "Externer Link";
+}
+
+a.download:after {
+    content: url("../Images/icon-download.png") "Download";
+}
+
+a.bund:after {
+    content: url("../Images/icon-bundesadler.png") "Bund";
+}
+
+a.visualisierung:after {
+    content: url("../Images/icon-visualisierung.png") "Visualisierung";
+}
+
+a.pdf:after {
+    content: url("../Images/icon-pdf.png") "PDF";
+}
+
+a.xls:after {
+    content: url("../Images/icon-xls.png") "Excel";
+}
+
+a.glossar {
+    border-bottom: 2px dotted #CCC;
+    color: #333;
+}
+
+a.glossar:hover,
+a.glossar:focus,
+a.glossar:active {
+    border-bottom: 2px dotted #cc3300;
+    color: #cc3300;
+    text-decoration: none;
+}
+
+a.pdfSH:after {
+    content: url("../Images/icon-pdf.png") "PDF";
+}
+
+a.pdfNH1:after {
+    content: url("../Images/icon-pdf.png") "PDF";
+}
+
+a.pdfNH2:after {
+    content: url("../Images/icon-pdf.png") "PDF";
+}
+
+#article-main a,
+.copy a {
+    text-decoration: underline;
+}
+
+/* Listen ##############################################################################################################
+##################################################################################################################### */
+ol, ul {
+    color: #333;
+    font-family: "BundesSans";
+    font-size: 14px;
+    line-height: 21px;
+    margin: 0 0 0 18px;
+    padding: 0 0 21px 0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+/* Suche #############################################################################################################
+##################################################################################################################### */
+#tx-solr-search-form-pi-results {
+    border: 1px solid #ccc;
+    border-radius: 0.21429em 0.21429em 0.21429em 0.21429em;
+    display: block;
+    height: 1.75em;
+    margin: 3em 0 0 0;
+    width: 20em;
+}
+
+.lt-ie9 #tx-solr-search-form-pi-results {
+    height: 1.7em;
+}
+
+#tx-solr-search-form-pi-results fieldset {
+    display: block;
+}
+
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-form {
+    float: left;
+}
+
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-form input {
+    border: 0 none;
+    display: block;
+    padding: 3px 0 0 5px;
+    width: 14em;
+    zoom: 1;
+}
+
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-submit input {
+    background: #C85000;
+    border: medium none;
+    border-radius: 0.21429em 0.21429em 0.21429em 0.21429em;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    cursor: pointer;
+    float: right;
+    font-size: 0.875em;
+    font-weight: bold;
+    height: 1.8em;
+    margin: 1px 1px 1px 0px;
+    text-shadow: 1px 1px #C35421;
+    width: 5em;
+}
+
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-submit input {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8833', endColorstr='#e75925', GradientType=0); /* IE6-8 */
+}
+
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-submit input:hover,
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-submit input:focus,
+#tx-solr-search-form-pi-results .tx-solr-search-form-pi-results-submit input:active {
+    color: #fff;
+}
+
+.tx-solr .tx-solr-whatis {
+    padding: 1em 0 1em 0.5em;
+}
+
+.tx-solr .tx-solr-browsebox p {
+    color: #555;
+    padding: 0 .5em .5em .5em;
+}
+
+.tx-solr .tx-solr-browsebox.first-browsebox { /* add bgnd only to 1st browsebox */
+    background: url("../Images/bg_table-head.gif") repeat-x scroll left bottom transparent;
+}
+
+.tx-solr .results-list {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* pagination */
+.tx-solr-pagination-page-browser ul {
+    border-top: 4px solid #EEEEEE;
+    margin: 0;
+    padding-top: 4px;
+}
+
+.tx-solr-pagination-page-browser ul li {
+    background: #ffffff; /* Old browsers */
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiNmZmZmZmYiIHN0b3Atb3BhY2l0eT0iMSIvPgogICAgPHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZjhmOGY4IiBzdG9wLW9wYWNpdHk9IjEiLz4KICA8L2xpbmVhckdyYWRpZW50PgogIDxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjZ3JhZC11Y2dnLWdlbmVyYXRlZCkiIC8+Cjwvc3ZnPg==);
+    background: -moz-linear-gradient(top, #ffffff 50%, #f8f8f8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffffff), color-stop(100%, #f8f8f8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #ffffff 50%, #f8f8f8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #ffffff 50%, #f8f8f8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #ffffff 50%, #f8f8f8 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #ffffff 50%, #f8f8f8 100%); /* W3C */
+    border-left: 1px solid #CCC;
+    display: inline;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8', GradientType=0); /* IE6-8 */
+    padding: 7px 1em;
+}
+
+.lt-ie9 .tx-solr-pagination-page-browser ul li {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#f8f8f8', GradientType=0); /* IE6-8 */
+}
+
+.tx-solr-pagination-page-browser ul li:first-child {
+    border-left: none;
+}
+
+.tx-pagebrowse-current {
+    background: #eee;
+    background-image: none !important;
+}
+
+.tx-pagebrowse-current a {
+    color: #333;
+}
+
+.tx-solr-pagination-page-browser ul.small {
+    font-size: 12px;
+}
+
+.tx-solr-pagination-page-browser ul.small li {
+    padding: 7px 0.3em;
+}
+
+/* search result item */
+.res {
+    border-bottom: 1px solid #CCC;
+    padding: 0 0 0 .5em;
+}
+
+.res:hover,
+.res:focus {
+    background: #f8f8f8;
+}
+
+.res .info, .res .result-number {
+    display: none;
+}
+
+.res .title a {
+    color: #333;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.res .descr {
+    padding: 0;
+}
+
+.res .path {
+    font-size: 14px;
+    margin: 0 0 1em 0;
+}
+
+.res .path dt {
+    float: left;
+}
+
+.res span.restype {
+    background: url('../Images/sprites.png') no-repeat;
+    display: inline-block;
+    height: 16px;
+    margin: -2px 6px;
+    width: 22px;
+}
+
+.res span.restype.epl {
+    background-position: 0 -216px;
+}
+
+.res span.restype.grp {
+    background-position: 0 -192px;
+}
+
+.res span.restype.fkt {
+    background-position: 0 -168px;
+}
+
+/* Glossar #############################################################################################################
+##################################################################################################################### */
+dl.glossar { /* basis: 16px */
+    margin: 0;
+    padding: 0 0 3em 0;
+}
+
+dl.glossar dt a { /* basis: 16px */
+    border-bottom: 1px solid #cccccc;
+    color: #333;
+    display: block;
+    margin: 0;
+    padding: 0.625em 1.25em 0.625em 0.625em; /* basis 16: 10px 20px 10px 10px; */
+}
+
+dl.glossar dt a:hover,
+dl.glossar dt a:focus {
+    background: url("../Images/pfeil-glossar-down.png") no-repeat scroll 36.2em .8em #C85000;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #E0592C;
+}
+
+dl.glossar dt.dtOpened a {
+    background: url("../Images/pfeil-glossar-up.png") no-repeat scroll 36.2em .8em #C85000;
+    color: #ffffff;
+    text-shadow: 1px 1px 0 #E0592C;
+}
+
+dl.glossar dd { /* basis: 16px */
+    background: #F8F8F8;
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 11px 8px -10px #CCC inset; /* basis 16: 0 11px 8px -10px #CCC inset; */
+    margin: 0;
+    padding: 0.9375em 1.25em 0 0.625em; /* basis 16: 15px 20px 0 10px; */
+}
+
+html.js dl.glossar dd { /* hide dd in glossar in case of JavaScript */
+    display: none;
+}
+
+.lt-ie9 dl.glossar dd {
+    background: url("../Images/content_shadow_top.gif") repeat-x 0 0 #eeeeee;
+}
+
+/* Zitat ###############################################################################################################
+##################################################################################################################### */
+blockquote {
+    margin: 0;
+    padding: 0 0 21px 0; /* basis 16: padding: 0 0 23px 0;   */
+}
+
+blockquote p {
+    border-left: 0.1875em solid #555; /* basis 16: border-left: 3px       */
+    color: #555;
+    padding: 0 0 0 25px; /* basis 16: padding: 0 0 0 35px;   */
+}
+
+p.block {
+    border-left: 0.1875em solid #555; /* basis 16: border-left: 3px       */
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 0 0 25px; /* basis 16: padding: 0 0 0 35px;   */
+}
+
+blockquote p.hervor {
+    background-color: #fffbcf;
+    border-left: 0.1875em solid #e2da7d; /* basis 16: border-left: 3px       */
+    padding: 21px 26px 21px 35px; /* basis 16: padding: 23px 26px 23px 35px;   */
+}
+
+p.hervor {
+    background-color: #fffbcf;
+    border-left: 0.1875em solid #e2da7d; /* basis 16: border-left: 3px       */
+    margin-bottom: 20px;
+    padding: 21px 26px 21px 35px; /* basis 16: padding: 23px 26px 23px 35px;   */
+}
+
+/* Tabelle #############################################################################################################
+##################################################################################################################### */
+table {
+    color: #333;
+    font-size: 14px;
+    margin-bottom: 21px;
+    padding: 0;
+    width: 100%;
+}
+
+table caption {
+    display: none;
+}
+
+table thead tr {
+    background: url("../Images/bg_table-head.gif") repeat-x scroll left bottom transparent;
+}
+
+table th {
+    background: url("../Images/bg_table-head_spacer.gif") no-repeat left bottom;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: normal;
+    padding: 11px 10px 11px 10px;
+    text-align: left;
+}
+
+table th:first-child {
+    background: none;
+}
+
+* html table th {
+    background: expression(this.previousSibling == null ? 'none' : 'url("../Images/bg_table-head_spacer.gif") no-repeat left bottom' );
+}
+
+th.align-left {
+    text-align: left;
+}
+
+th.align-center {
+    text-align: center;
+}
+
+th.align-right {
+    text-align: right;
+}
+
+th.number {
+    text-align: right;
+}
+
+td {
+    border-bottom: 1px solid #e0e0e0;
+    border-left: 4px solid #ffffff;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    line-height: normal;
+    padding: 10px 10px 7px 10px;
+}
+
+tr:last-child td {
+    border-bottom: 0 none;
+}
+
+/* remove first #### */
+td:first-child {
+    border-left: 0 none;
+}
+
+/* ie6 hack #### */
+* html table td {
+    border-left: expression(this.previousSibling == null ? '0' : '4px solid #ffffff' );
+}
+
+td.align-left {
+    text-align: left;
+}
+
+td.align-center {
+    text-align: center;
+}
+
+td.align-right {
+    text-align: right;
+}
+
+td.number {
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-weight: bold;
+    text-align: right;
+}
+
+/*
+.main table tbody tr:hover td { background-color: #f6f6f6; }
+*/
+
+.results-highlight {
+    background: #ffedad;
+}

@@ -1,0 +1,27 @@
+<f:layout name="Default" />
+
+<f:section name="main">
+    <video id="{settings.uId}" class="video-js vjs-default-skin vjs-big-play-centered"<f:if condition="{settings.controls}"><f:then>
+    controls</f:then>
+</f:if><f:if condition="{settings.autoplay}"><f:then>
+    autoplay</f:then>
+</f:if>
+    preload="{settings.preload}"
+    width="{settings.width}"
+    height="{settings.height}"<f:if condition="{poster}"><f:then>
+    poster="{f:uri.image(image:'{poster}')}"</f:then>
+</f:if>
+    data-setup='{"language":"de"}'>
+    <f:if condition="{videoMp4}"><f:then>
+        <source src="{videoMp4.publicUrl}" type='video/mp4' /></f:then>
+    </f:if><f:if condition="{videoWebm}"><f:then>
+    <source src="{videoWebm.publicUrl}" type='video/webm' /></f:then>
+</f:if><f:if condition="videoOgv"><f:then>
+    <source src="{videoOgv.publicUrl}" type='video/ogg' /></f:then>
+</f:if><f:if condition="{captionEnglish}"><f:then>
+    <track kind="captions" src="{captionEnglish.publicUrl}" srclang="en" label="English" /></f:then>
+</f:if><f:if condition="{captionGerman}"><f:then>
+    <track kind="captions" src="{captionGerman.publicUrl}" srclang="de" label="Deutsch" /></f:then>
+</f:if>
+    </video>
+</f:section>

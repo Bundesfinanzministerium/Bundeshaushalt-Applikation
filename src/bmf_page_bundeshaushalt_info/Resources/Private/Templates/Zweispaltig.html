@@ -1,0 +1,33 @@
+<f:layout name="WebsiteContainer" />
+<f:section name="content">
+    <!-- content area -->
+    <div id="article-main" class="content">
+        <!--TYPO3SEARCH_begin-->
+        <div class="row">
+            <div class="grid_12">
+                {main -> f:format.raw()}
+            </div>
+        </div>
+        <div class="row">
+            <div class="grid_6">
+                {content -> f:format.raw()}
+            </div>
+            <div class="grid_6">
+                {content2 -> f:format.raw()}
+            </div>
+        </div>
+        <f:if condition="{col1}">
+            <div class="row">
+                <div class="grid_12">
+                    {col1 -> f:format.raw()}
+                </div>
+            </div>
+        </f:if>
+        <!--TYPO3SEARCH_end-->
+    </div>
+    <!-- end content area -->
+
+    <f:if condition="{data.show_teaser}">
+        {teaser -> f:format.raw()}
+    </f:if>
+</f:section>

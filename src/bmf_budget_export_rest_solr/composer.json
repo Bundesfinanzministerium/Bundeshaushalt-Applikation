@@ -1,0 +1,46 @@
+{
+    "name": "bmf-bundeshaushalt-info/bmf-budget-export-rest-solr",
+    "description": "BMF, budget visualization - rest solr exporter",
+    "type": "typo3-cms-extension",
+    "version": "1.1.0",
+    "license": ["GPL-2.0-or-later"],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.pixelpark.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "typo3/cms-core": "^9.5",
+        "bmf-bundeshaushalt-info/bmf-budget": ">=6.2.0 || <=9.5.99"
+    },
+    "replace": {
+        "bmf_budget_export_rest_solr": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "PPKOELN\\BmfBudgetExportRestSolr\\": "Classes/"
+        }
+    },
+    "config": {
+        "vendor-dir": "../default.instance/vendor",
+        "bin-dir": "../default.instance/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p ../default.instance/typo3conf/ext/",
+            "[ -L ../default.instance/typo3conf/ext/bmf_budget_export_rest_solr ] || ln -snvf ../../../dir-project ../default.instance/typo3conf/ext/bmf_budget_export_rest_solr"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "../default.instance"
+        }
+    }
+}

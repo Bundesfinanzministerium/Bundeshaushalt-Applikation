@@ -1,0 +1,101 @@
+<div id="unit-overview" class="grid_3">
+
+    <f:if condition="{related.section}">
+        <h2>{f:translate(key:'nav.related.sections')}</h2>
+        <ul>
+            <li class="level1x">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.section\')}',
+                                       address:related.section.section.address}">
+                    {related.section.section.title}
+                </f:link.action>
+            </li>
+            <li class="level2">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.section\')}',
+                                       address:related.section.address}">
+                    {related.section.title}
+                </f:link.action>
+            </li>
+        </ul>
+    </f:if>
+
+    <f:if condition="{related.function}">
+        <h2>{f:translate(key:'nav.related.functions')}</h2>
+        <ul>
+            <li class="level1x">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.function\')}',
+                                       address:related.function.functione.functione.address}">
+                    {related.function.functione.functione.title}
+                </f:link.action>
+            </li>
+            <li class="level2x">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.function\')}',
+                                       address:related.function.functione.address}">
+                    {related.function.functione.title}
+                </f:link.action>
+            </li>
+            <li class="level3">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.function\')}',
+                                       address:related.function.address}">
+                    {related.function.title}
+                </f:link.action>
+            </li>
+        </ul>
+    </f:if>
+
+    <f:if condition="{related.group}">
+        <h2>{f:translate(key:'nav.related.groups')}</h2>
+        <ul>
+            <li class="level1x">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.group\')}',
+                                       address:related.group.groupe.groupe.address}">
+                    {related.group.groupe.groupe.title}
+                </f:link.action>
+            </li>
+            <li class="level2x">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.group\')}',
+                                       address:related.group.groupe.address}">
+                    {related.group.groupe.title}
+                </f:link.action>
+            </li>
+            <li class="level3">
+                <f:link.action action="show"
+                               arguments="{year:referrer.year,
+                                       account:'{f:translate(key:\'segment.account.{referrer.account}\')}',
+                                       flow:'{f:translate(key:\'segment.flow.{referrer.flow}\')}',
+                                       structure:'{f:translate(key:\'segment.structure.group\')}',
+                                       address:related.group.address}">
+                    {related.group.title}
+                </f:link.action>
+            </li>
+        </ul>
+    </f:if>
+
+</div>

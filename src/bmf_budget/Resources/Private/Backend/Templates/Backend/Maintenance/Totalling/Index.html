@@ -1,0 +1,104 @@
+{namespace bmfBudget=PPKOELN\BmfBudget\ViewHelpers}
+
+<f:layout name="Default"/>
+
+<f:section name="content">
+
+    <h1>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.header')}</h1>
+
+    <f:flashMessages/>
+
+    <f:render partial="FormErrors" />
+
+    <f:form action="index" enctype="multipart/form-data" name="totallingform" object="{totallingform}">
+
+        <h2>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.fst.step')}</h2>
+
+        <f:form.select property="budget"
+                       options="{budgets}"
+                       optionLabelField="titleTarget"
+                       prependOptionLabel="{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure.choose')}"
+                       prependOptionValue="" />
+
+        <h2>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.snd.step')}</h2>
+
+        <f:form.radio property="structure" value="section" />  {f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure.section')} <br>
+        <f:form.radio property="structure" value="function" /> {f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure.function')} <br>
+        <f:form.radio property="structure" value="group" />    {f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure.group')} <br>
+
+        <h2>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.thd.step')}</h2>
+
+        <f:form.submit value="{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.process')}" />
+
+    </f:form>
+
+    <f:if condition="{totallingform}">
+
+        <hr>
+
+        <h1>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.result')}</h1>
+
+        <h2>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.selection')}</h2>
+
+        <table>
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.budget')}&nbsp;</th>
+                <td>{totallingform.budget.title}&nbsp;</td>
+            </tr>
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure')}&nbsp;</th>
+                <td>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.structure.{totallingform.structure}')}&nbsp;</td>
+            </tr>
+        </table>
+
+        <h2>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.calculation')}</h2>
+
+        <table>
+
+            <tr>
+                <th>&nbsp;</th>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.target')}&nbsp;</th>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.actual')}&nbsp;</th>
+            </tr>
+
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.income')}&nbsp;</th>
+                <td>
+                    <f:if condition="{bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_target_income')}">
+                        <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator=".">
+                            {bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_target_income')}
+                        </f:format.currency>
+                    </f:if>&nbsp;
+                </td>
+                <td>
+                    <f:if condition="{bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_actual_income')}">
+                        <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator=".">
+                            {bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_actual_income')}
+                        </f:format.currency>
+                    </f:if>&nbsp;
+                </td>
+            </tr>
+
+            <tr>
+                <th>{f:translate(key: 'LLL:EXT:bmf_budget/Resources/Private/Language/locallang_mod1.xlf:totalling.expenses')}&nbsp;</th>
+                <td>
+                    <f:if condition="{bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_target_expenses')}">
+                        <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator=".">
+                            {bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_target_expenses')}
+                        </f:format.currency>
+                    </f:if>&nbsp;
+                </td>
+                <td>
+                    <f:if condition="{bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_actual_expenses')}">
+                        <f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator=".">
+                            {bmfBudget:property(object:'{totallingform.budget}', property:'{totallingform.structure}_actual_expenses')}
+                        </f:format.currency>
+                    </f:if>&nbsp;
+                </td>
+            </tr>
+
+        </table>
+
+    </f:if>
+
+</f:section>

@@ -1,0 +1,758 @@
+@charset "utf-8";
+
+/** DATENTABELLE - HEADER ##############################################################################################
+##################################################################################################################### */
+#bundeshaushalt-data {
+    border-collapse: collapse;
+    font-size: 1rem; /* basis: 16px */
+    width: 940px;
+}
+
+#bundeshaushalt-data tr { /* basis: 16px */
+    border: none;
+    clear: both;
+    display: block;
+    float: left;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#bundeshaushalt-data th { /* basis: 16px */
+    cursor: pointer;
+    display: block;
+    float: left;
+    font-size: 1rem; /* 16px */
+    height: 2.5rem; /* 40px */
+    line-height: 1rem; /* 16px */
+    padding: 0.3125rem 0 0 0; /* 5px 0 0 0 */
+    position: relative;
+    vertical-align: top;
+}
+
+#bundeshaushalt-data th:hover { /* basis: 16px */
+    background-color: #F7F7F7;
+}
+
+#bundeshaushalt-data thead th span.sortarrow { /* :hover ergänzen*/
+    display: inline-block;
+    height: 10px;
+    width: 21px;
+}
+
+#bundeshaushalt-data thead th span.sortarrow:before { /* :hover ergänzen*/
+    content: url("../Images/arrow_small_tb.png");
+    display: inline-block;
+    height: 10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 10px;
+}
+
+#bundeshaushalt-data thead th.tablesorter-headerDesc span.sortarrow:before {
+    content: url("../Images/arrow_small_t.png");
+}
+
+#bundeshaushalt-data thead th.tablesorter-headerAsc span.sortarrow:before {
+    content: url("../Images/arrow_small_b.png");
+}
+
+.lt-ie8 #bundeshaushalt-data th { /* basis: 16px */
+    padding-bottom: 0.25em; /* 4px */
+}
+
+#bundeshaushalt-data th small { /* basis: 16px */
+    color: #555;
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 0.75em; /* 12px */
+}
+
+.lt-ie9 #bundeshaushalt-data th small { /* basis: 16px */
+    font-size: 0.6875em; /* 11px */
+    line-height: 1.81818em; /* basis 11: 20px */
+}
+
+#bundeshaushalt-data th.col1 { /* basis: 16px */
+    padding-right: 0.625em; /* 10px */
+    text-align: right;
+    width: 7.8125em; /* 125px */
+}
+
+#bundeshaushalt-data th.col2 { /* basis: 16px */
+    padding-left: 0.625em; /* 10px */
+    width: 40.625em; /* 650px */
+}
+
+#bundeshaushalt-data th.col3 { /* basis: 16px */
+    padding-right: 0.625em; /* 10px */
+    text-align: right;
+    width: 8.4375em; /* 135px */
+}
+
+#bundeshaushalt-data th.col4,
+#bundeshaushalt-data th.col5,
+#bundeshaushalt-data th.col6 {
+    display: block;
+    height: 1px;
+    left: -999em;
+    margin-right: -1px;
+    margin-top: -1px;
+    overflow: hidden;
+    position: absolute;
+    top: -999em;
+    width: 1px;
+}
+
+/** DATENTABELLE - BODY ################################################################################################
+##################################################################################################################### */
+#bundeshaushalt-data tr { /* basis: 16px */
+    clear: both;
+    display: block;
+    float: left;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 10px 0 1px 0; /* 10px 0 1px 0; */
+    position: relative;
+    width: 100%;
+}
+
+#bundeshaushalt-data td { /* basis: 16px */
+    display: block;
+    float: left;
+}
+
+#bundeshaushalt-data td.col1,
+#bundeshaushalt-data td.col2,
+#bundeshaushalt-data td.col3 {
+    border: 0 none;
+    padding: 4px 0 4px 0;
+}
+
+#bundeshaushalt-data td.col1 {
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 1.4375em; /* 23px */
+    margin: 0;
+    padding-right: 10px;
+    text-align: right;
+    width: 125px;
+}
+
+#bundeshaushalt-data td.col2 {
+    border-bottom: 0.0625rem solid #eeeeee;
+    padding: 4px 0 0 0;
+    width: 660px;
+}
+
+#bundeshaushalt-data td.col3 {
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 23px;
+    padding-right: 10px;
+    position: relative;
+    text-align: right;
+    width: 135px;
+}
+
+#bundeshaushalt-data td.col2 h3 {
+    font-family: "BundesSans", Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+}
+
+#bundeshaushalt-data td.col2 a,
+#bundeshaushalt-data td.col2 strong {
+    color: #333;
+    float: left;
+    font-weight: normal;
+    padding-top: 4px;
+    padding-right: 55px;
+}
+
+#bundeshaushalt-data td.col2 a:hover {
+    color: #CC3300;
+}
+
+#bundeshaushalt-data td.col2 a:focus {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+#bundeshaushalt-data td.col2 div.col4 a,
+#bundeshaushalt-data td.col2 div.col4 strong {
+    padding: 0;
+}
+
+#bundeshaushalt-data td.col2 a.pdf,
+#bundeshaushalt-data td.col2 a.pdfSH,
+#bundeshaushalt-data td.col2 a.pdfNH1,
+#bundeshaushalt-data td.col2 a.pdfNH2 {
+    color: #333;
+    float: none;
+    font-weight: normal;
+    padding-top: 0;
+    padding-right: 0;
+}
+
+#bundeshaushalt-data td.col2 .balkenProzent {
+    clear: both;
+    float: left;
+    font-size: 0;
+    height: 3px;
+    margin: 4px 0 1px 0;
+    width: 100%;
+}
+
+.js #bundeshaushalt-data tr td.col3 a {
+    float: left;
+    height: 36px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 50px;
+}
+
+.lt-ie8 #bundeshaushalt-data tr.active td.col1 {
+    padding-bottom: 290px;
+}
+
+.lt-ie8 #bundeshaushalt-data td.col4 {
+    bottom: 125px;
+    height: 160px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 940px;
+}
+
+.lt-ie8 #bundeshaushalt-data td.col5 {
+    bottom: 0;
+    height: 125px;
+    left: 0;
+    position: absolute;
+    width: 470px;
+}
+
+.lt-ie8 #bundeshaushalt-data td.col6 {
+    bottom: 0;
+    height: 125px;
+    left: 470px;
+    position: absolute;
+    width: 470px;
+}
+
+.lt-ie8 #bundeshaushalt-data td.col5.wide {
+    bottom: 0;
+    height: 125px;
+    left: 0;
+    position: absolute;
+    width: 940px;
+}
+
+.lt-ie7 #bundeshaushalt-data tr {
+    border-top: 10px solid #ffffff;
+}
+
+.lt-ie9 #bundeshaushalt-data td.col4 {
+    background: url("../Images/table_ltIE9_shodow_top.gif") repeat-x 0 0 #eeeeee;
+}
+
+.lt-ie9 #bundeshaushalt-data td.col5 {
+    background: url("../Images/table_ltIE9_shodow_bottom.gif") repeat-x 0 bottom #eeeeee;
+}
+
+.lt-ie9 #bundeshaushalt-data td.col6 {
+    background: url("../Images/table_ltIE9_shodow_bottom.gif") repeat-x 0 bottom #eeeeee;
+}
+
+.lt-ie8 #bundeshaushalt-data div.col4 {
+    bottom: 125px;
+    height: 160px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 940px;
+}
+
+.lt-ie8 #bundeshaushalt-data div.col5 {
+    bottom: 0;
+    height: 125px;
+    left: 0;
+    position: absolute;
+    width: 470px;
+}
+
+.lt-ie8 #bundeshaushalt-data div.col6 {
+    bottom: 0;
+    height: 125px;
+    left: 470px;
+    position: absolute;
+    width: 470px;
+}
+
+.lt-ie8 #bundeshaushalt-data div.col5.wide {
+    bottom: 0;
+    height: 125px;
+    left: 0;
+    position: absolute;
+    width: 940px;
+}
+
+.lt-ie9 #bundeshaushalt-data div.col4 {
+    background: url("../Images/table_ltIE9_shodow_top.gif") repeat-x 0 0 #eeeeee;
+}
+
+.lt-ie9 #bundeshaushalt-data div.col5 {
+    background: url("../Images/table_ltIE9_shodow_bottom.gif") repeat-x 0 bottom #eeeeee;
+}
+
+.lt-ie9 #bundeshaushalt-data div.col6 {
+    background: url("../Images/table_ltIE9_shodow_bottom.gif") repeat-x 0 bottom #eeeeee;
+}
+
+/* TABELLE META INFORMATIONEN ##########################################################################################
+##################################################################################################################### */
+#bundeshaushalt-data td.col4,
+#bundeshaushalt-data td.col5,
+#bundeshaushalt-data td.col6 {
+    background-color: #f6f6f6 !important;
+    border: 0 none;
+    border-top: 0.0625rem solid #FFFFFF;
+    box-shadow: 0 11px 8px -10px #CCC inset;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+#bundeshaushalt-data div.col4,
+#bundeshaushalt-data div.col5,
+#bundeshaushalt-data div.col6 {
+    background-color: #f6f6f6 !important;
+    border: 0 none;
+    border-top: 0.0625rem solid #FFFFFF;
+    box-shadow: 0 11px 8px -10px #CCC inset;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+#bundeshaushalt-data td.col5,
+#bundeshaushalt-data td.col6 {
+    box-shadow: 0 -11px 8px -10px #CCC inset;
+    width: 50%;
+}
+
+#bundeshaushalt-data div.col5,
+#bundeshaushalt-data div.col6 {
+    box-shadow: 0 -11px 8px -10px #CCC inset;
+    float: left;
+    width: 50%;
+}
+
+#bundeshaushalt-data td.col5.wide {
+    width: 100%;
+}
+
+#bundeshaushalt-data div.col5.wide {
+    width: 100%;
+}
+
+#bundeshaushalt-data td.col5.wide .wrapper {
+    height: auto;
+    padding-bottom: 10px;
+}
+
+#bundeshaushalt-data div.col5.wide .wrapper {
+    height: auto;
+    padding-bottom: 10px;
+}
+
+#bundeshaushalt-data .col4 div.wrapper {
+    height: 125px;
+    padding: 35px 0 0 0;
+    position: relative;
+}
+
+#bundeshaushalt-data .col5 div.wrapper {
+    height: 125px;
+    overflow: hidden;
+}
+
+#bundeshaushalt-data .col6 div.wrapper {
+    border-left: 0.0625rem solid #ffffff;
+    height: 125px;
+    overflow: hidden;
+}
+
+#bundeshaushalt-data .col4 dl {
+    display: block;
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    width: 790px;
+}
+
+#bundeshaushalt-data .col4 dl dt {
+    clear: left;
+    color: #555;
+    float: left;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 16px;
+    padding: 0 10px 10px 0;
+    text-align: right;
+    width: 125px;
+}
+
+#bundeshaushalt-data .col4 dl dd {
+    float: left;
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 10px 0;
+    width: 650px;
+}
+
+#bundeshaushalt-data .col5 h4,
+#bundeshaushalt-data .col6 h4 {
+    background-color: #eeeeee;
+    color: #333;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 10px 0;
+    padding: 0 20px 0 20px;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+#bundeshaushalt-data .col5 p,
+#bundeshaushalt-data .col6 p {
+    font-size: 14px;
+    padding: 0 20px 0 20px;
+    text-shadow: 0 1px 0 #ffffff;
+}
+
+#bundeshaushalt-data .col4 a {
+    color: #333;
+}
+
+#bundeshaushalt-data .col4 a:hover {
+    color: #CC3300;
+}
+
+#bundeshaushalt-data .col4 .saeulen {
+    bottom: 0;
+    display: block;
+    float: left;
+    height: 128px;
+    position: absolute;
+    right: 0;
+    width: 270px;
+}
+
+@media (max-width: 1005px) {
+    #bundeshaushalt-data .col4 .saeulen {
+        display: block;
+        float: none;
+        height: 87px;
+        position: relative;
+        width: 100%;
+        clear: both;
+    }
+
+    #bundeshaushalt-data div.col5,
+    #bundeshaushalt-data div.col6 {
+        box-shadow: 0 -11px 8px -10px #CCC inset;
+        float: none;
+        width: 100%;
+    }
+}
+
+#bundeshaushalt-data .col4 .saeulen img {
+    bottom: 0;
+    position: absolute;
+    right: 0;
+    width: 216px;
+    z-index: 10;
+}
+
+#bundeshaushalt-data .col4 .saeulen div {
+    border-left: 0.0625rem solid #cfcdcd;
+    border-right: 0.0625rem solid #cfcdcd;
+    border-top: 0.0625rem solid #cfcdcd;
+    bottom: 0;
+    height: 100%;
+    position: absolute;
+    width: 66px;
+}
+
+#bundeshaushalt-data .col4 .saeule1 {
+    left: 125px;
+}
+
+#bundeshaushalt-data .col4 .saeule2 {
+    background: url("../Images/table_balken_referece_background.gif") repeat 0 0 #cc3300;
+    left: 197px;
+}
+
+#bundeshaushalt-data .col4 .saeule1 p {
+    display: block;
+    font-family: "BundesSerif", Georgia, Times New roman, serif;
+    font-size: 18px;
+    margin-top: -24px;
+    text-align: center;
+}
+
+
+
+/* javascript enabled #################################### */
+.js #bundeshaushalt-data .collapse {
+    display: none;
+    margin-left: -135px;
+    margin-top: 30px;
+    width: 940px;
+}
+
+.js #bundeshaushalt-data .collapse.in {
+    display: block;
+}
+
+.js #bundeshaushalt-data tr.hover td.col1,
+.js #bundeshaushalt-data tr.hover td.col2,
+.js #bundeshaushalt-data tr.hover td.col3,
+.js #bundeshaushalt-data tr:hover td.col1,
+.js #bundeshaushalt-data tr:hover td.col2,
+.js #bundeshaushalt-data tr:hover td.col3 {
+    background-color: #eeeeee;
+}
+
+.js #bundeshaushalt-data tr.hover td.col2 h3 a,
+.js #bundeshaushalt-data tr:hover td.col2 h3 a {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+.js #bundeshaushalt-data tr td.col2 h3 strong {
+    color: #CC3300;
+    text-decoration: underline;
+}
+
+.js #bundeshaushalt-data tr td.col2 .collapse a {
+    color: #CC3300;
+}
+
+.js #bundeshaushalt-data tr.hover td.col3 h3 a,
+.js #bundeshaushalt-data tr:hover td.col3 h3 a,
+.js #bundeshaushalt-data tr td.col3 a:hover,
+.js #bundeshaushalt-data tr td.col3 a:focus,
+.js #bundeshaushalt-data tr td.col3 a:active {
+    background: #ff7f23;
+    display: block;
+    outline: none;
+}
+
+.js #bundeshaushalt-data tr.hover td.col3 a:before,
+.js #bundeshaushalt-data tr:hover td.col3 a:before,
+.js #bundeshaushalt-data tr td.col3 a:hover:before,
+.js #bundeshaushalt-data tr td.col3 a:focus:before,
+.js #bundeshaushalt-data tr td.col3 a:active:before {
+    content: url("../Images/table_arrow_normal.gif");
+    display: block;
+    width: 50px;
+    height: 36px;
+}
+
+.js #bundeshaushalt-data tr td.col3 a:focus:before {
+    outline: 2px dotted #333;
+}
+
+.js #bundeshaushalt-data tr.active td {
+    background-color: #eeeeee;
+    border-bottom: none;
+}
+
+.js #bundeshaushalt-data tr.active div.col5,
+.js #bundeshaushalt-data tr.active div.col6,
+.js #bundeshaushalt-data tr.active td.col4,
+.js #bundeshaushalt-data tr.active td.col5,
+.js #bundeshaushalt-data tr.active td.col6 {
+    display: block;
+}
+
+.js #bundeshaushalt-data tr.active div.col4 {
+    display: table;
+}
+
+.js #bundeshaushalt-data tr.active td.col3 a {
+    background: #cc3300;
+    display: block;
+}
+.js #bundeshaushalt-data tr.active td.col3 a:before {
+    content: url("../Images/table_arrow_active.gif");
+    display: block;
+}
+
+
+/* javascript disabled ################################### */
+/* .no-js #bundeshaushalt-data tr td { background-color: #eeeeee; } */
+.no-js #bundeshaushalt-data tr.active td {
+    background-color: #eeeeee;
+}
+
+.no-js #bundeshaushalt-data tr:hover td.col1,
+.no-js #bundeshaushalt-data tr:hover td.col2,
+.no-js #bundeshaushalt-data tr:hover td.col3 {
+    background-color: #eeeeee;
+}
+
+.no-js #bundeshaushalt-data td.col4,
+.no-js #bundeshaushalt-data td.col5,
+.no-js #bundeshaushalt-data td.col6 {
+    display: block;
+}
+
+.no-js #bundeshaushalt-data div.col4,
+.no-js #bundeshaushalt-data div.col5,
+.no-js #bundeshaushalt-data div.col6 {
+    display: block;
+}
+
+/** MEDIA QUERIES ######################################################################################################
+##################################################################################################################### */
+@media (max-width: 1005px) {
+
+    #main #bundeshaushalt-data {
+        font-size: 0.875em;
+        width: 100%;
+    }
+
+    #main #bundeshaushalt-data tr {
+        display: table-row;
+        float: none;
+        width: auto;
+    }
+
+    #main #bundeshaushalt-data th.col4,
+    #main #bundeshaushalt-data th.col5,
+    #main #bundeshaushalt-data th.col6,
+    #main #bundeshaushalt-data td.col4,
+    #main #bundeshaushalt-data td.col5,
+    #main #bundeshaushalt-data td.col6 {
+        display: none;
+    }
+
+    #main #bundeshaushalt-data div.collapse,
+    #main #bundeshaushalt-data div.col4,
+    #main #bundeshaushalt-data div.col5,
+    #main #bundeshaushalt-data div.col6 {
+        display: none;
+    }
+
+    #main #bundeshaushalt-data th,
+    #main #bundeshaushalt-data tr td.col1,
+    #main #bundeshaushalt-data tr td.col2,
+    #main #bundeshaushalt-data tr td.col3 {
+        display: table-cell;
+        float: none;
+        width: auto;
+    }
+
+    #main #bundeshaushalt-data tr td.col3 a {
+        display: block;
+        left: -50px;
+    }
+
+    .js #bundeshaushalt-data .collapse {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .js #bundeshaushalt-data .collapse.in,
+    #main #bundeshaushalt-data .collapse.in div.col4,
+    #main #bundeshaushalt-data .collapse.in div.col5,
+    #main #bundeshaushalt-data .collapse.in div.col6 {
+        display: block !important;
+    }
+
+    #main #bundeshaushalt-data .collapse.in div.col4.hidden,
+    #main #bundeshaushalt-data .collapse.in div.col5.hidden,
+    #main #bundeshaushalt-data .collapse.in div.col6.hidden {
+        display: none !important;
+    }
+
+    #bundeshaushalt-data .col4 div.wrapper {
+        height: auto;
+    }
+
+    #bundeshaushalt-data .col4 dl {
+        overflow: visible;
+        width: 100%;
+        float: none;
+        padding-bottom: 20px;
+    }
+
+    /* Contain floats: h5bp.com/q */
+    #bundeshaushalt-data .col4 dl:before, #bundeshaushalt-data .col4 dl:after {
+        content: "";
+        display: table;
+    }
+
+    #bundeshaushalt-data .col4 dl:after {
+        clear: both;
+    }
+
+    #bundeshaushalt-data .col4 dl {
+        *zoom: 1;
+    }
+
+
+    #bundeshaushalt-data .col4 dl dt {
+        width: 100%;
+        float: none;
+        text-align: left;
+    }
+
+    #bundeshaushalt-data .col4 dl dd {
+        width: 100%;
+        float: none;
+    }
+
+    #main #bundeshaushalt-data div.collapse {
+
+    }
+
+    #main #bundeshaushalt-data tr td.col1 {
+        width: 100px;
+    }
+
+    #main #bundeshaushalt-data tr td.col3 {
+        width: 80px;
+    }
+
+}
+
+@media (max-width: 639px) {
+    .data-table {
+        display: block;
+        width: 100%;
+        min-height: 0%;
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 479px) {
+    .data-table {
+        display: block;
+        width: 100%;
+        min-height: 0%;
+        overflow-x: auto;
+    }
+
+    #bundeshaushalt-data .col4 .saeule1 {
+        left: 10px;
+    }
+
+    #bundeshaushalt-data .col4 .saeule2 {
+        left: 110px;
+    }
+}

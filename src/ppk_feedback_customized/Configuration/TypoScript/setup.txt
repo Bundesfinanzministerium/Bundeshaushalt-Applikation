@@ -1,0 +1,3 @@
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:ppk_feedback/Configuration/TypoScript/setup.txt">
+
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:ppk_feedback_customized/Configuration/TypoScript/Setup/" extensions="ts">

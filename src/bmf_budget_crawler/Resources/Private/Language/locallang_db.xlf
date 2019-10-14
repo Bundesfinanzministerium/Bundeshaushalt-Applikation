@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2015-08-26T13:01:25Z"
+          product-name="bmf_budget_crawler">
+        <header/>
+        <body>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler">
+                <source>Crawler</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.ext_title">
+                <source>Ext Title</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.ext_class">
+                <source>Ext Class</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.preprocessed">
+                <source>Pre-processed</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.progress">
+                <source>Progress</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.queues">
+                <source>Queues</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.budget">
+                <source>Budget</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.account">
+                <source>Account</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.account.target">
+                <source>Target</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.account.actual">
+                <source>Actual</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.flow">
+                <source>Flow</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.flow.income">
+                <source>Income</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.flow.expenses">
+                <source>Expenses</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.structure">
+                <source>Structure</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.structure.section">
+                <source>Section</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.structure.function">
+                <source>Function</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.structure.group">
+                <source>Group</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.error">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.error_message">
+                <source>Error Message</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.process_start">
+                <source>Process start</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_crawler.process_end">
+                <source>Process end</source>
+            </trans-unit>
+
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue">
+                <source>Queue</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.budget">
+                <source>Budget</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.year">
+                <source>Year</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.account">
+                <source>Account</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.flow">
+                <source>Flow</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.structure">
+                <source>Structure</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.address">
+                <source>Address</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.status">
+                <source>Status</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.result">
+                <source>Result</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.error">
+                <source>Error</source>
+            </trans-unit>
+            <trans-unit id="tx_bmfbudgetcrawler_domain_model_queue.error_message">
+                <source>Error Message</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

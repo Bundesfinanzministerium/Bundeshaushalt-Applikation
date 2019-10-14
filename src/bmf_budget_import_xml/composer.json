@@ -1,0 +1,56 @@
+{
+    "name": "bmf-bundeshaushalt-info/bmf-budget-import-xml",
+    "description": "BMF, budget visualization - xml importer",
+    "type": "typo3-cms-extension",
+    "version": "1.2.0",
+    "license": ["GPL-2.0-or-later"],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://composer.typo3.org/"
+        },
+        {
+            "type": "composer",
+            "url": "https://satis.pixelpark.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.2.0",
+        "typo3/cms-core": "^9.5",
+        "bmf-bundeshaushalt-info/bmf-budget": ">=6.2.0 || <=9.5.99"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.8.0",
+        "mikey179/vfsStream": "1.6.0"
+    },
+    "replace": {
+        "bmf_budget_import_xml": "self.version"
+    },
+    "autoload": {
+        "psr-4": {
+            "PPK\\BmfBudgetImportXml\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "PPK\\BmfBudgetImportXml\\Tests\\": "Tests/",
+            "TYPO3\\CMS\\Core\\Tests\\": "../default.instance/typo3/sysext/core/Tests/"
+        }
+    },
+    "config": {
+        "vendor-dir": "../default.instance/vendor",
+        "bin-dir": "../default.instance/bin"
+    },
+    "scripts": {
+        "post-autoload-dump": [
+            "mkdir -p ../default.instance/typo3conf/ext/",
+            "[ -L ../default.instance/typo3conf/ext/bmf_budget_import_xml ] || ln -snvf ../../../dir-project ../default.instance/typo3conf/ext/bmf_budget_import_xml"
+        ]
+    },
+    "extra": {
+        "typo3/cms": {
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "web-dir": "../default.instance"
+        }
+    }
+}

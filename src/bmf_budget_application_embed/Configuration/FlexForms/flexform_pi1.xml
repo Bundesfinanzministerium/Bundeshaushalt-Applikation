@@ -1,0 +1,28 @@
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>= Global Properties =</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+
+                    <settings.uId>
+                        <TCEforms>
+                            <label>Unique Identifier:</label>
+                            <config>
+                                <type>input</type>
+                                <size>20</size>
+                                <max>20</max>
+                                <eval>trim</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.uId>
+
+                </el>
+            </ROOT>
+        </sDEF>
+
+    </sheets>
+</T3DataStructure>

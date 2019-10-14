@@ -1,0 +1,70 @@
+/////////////////////////////////////////////////
+// Please define local project details:
+CTM_PROJECT_NAME = 'bmf_budget'
+CTM_PROJECT_TYPE = 't3-76-extension'
+
+/////////////////////////////////////////////////
+// Please define vcs credentials:
+CTM_VCS_CREDENTIALS = 'd1d6ad59-8d5a-45b4-acfb-64a36d7fd8cd'
+
+/////////////////////////////////////////////////
+// Please define project architeture repository
+CTM_VCS_REPOSITORY_ARCHITECTURE = 'git@git.pixelpark.com:bmf-bundeshaushalt-info/architecture.git'
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// Defining CI Tools repository
+CTM_VCS_REPOSITORY_CI = 'git@git.pixelpark.com:ppkoeln-ci/' + CTM_PROJECT_TYPE + '.git'
+
+// Defining debug option (true||false)
+CTM_DEBUG = true
+
+node('mesos-custom-typo3-php71') {
+
+    // get absolute workspace path
+    CTM_WORKSPACE = pwd()
+
+    // Defining checkout directories
+    CTM_CHECKOUT_DIRECTORY_PROJECT = CTM_WORKSPACE + '/dir-project'
+    CTM_CHECKOUT_DIRECTORY_CI = CTM_WORKSPACE + '/dir-ci'
+    CTM_CHECKOUT_DIRECTORY_ARCHITECTURE = CTM_WORKSPACE + '/dir-architecture'
+
+    // Cleanup checkout directories
+    sh('rm -Rf ' + CTM_CHECKOUT_DIRECTORY_PROJECT + ';' +
+       'rm -Rf ' + CTM_CHECKOUT_DIRECTORY_CI + ';' +
+       'rm -Rf ' + CTM_CHECKOUT_DIRECTORY_ARCHITECTURE + ';'
+    );
+
+    // get branch name
+    CTM_GIT_BRANCH = "${env.BRANCH_NAME}".trim()
+
+    stage('Environment') {
+
+        // checkout project
+        dir(CTM_CHECKOUT_DIRECTORY_PROJECT) {
+            checkout([
+                    $class: 'GitSCM',
+                    branches: scm.branches,
+                    doGenerateSubmoduleConfigurations: scm.doGenerateSubmoduleConfigurations,
+                    extensions: scm.extensions + [[$class: 'CloneOption', noTags: false, reference: '', shallow: true]],
+                    submoduleCfg: [],
+                    userRemoteConfigs: scm.userRemoteConfigs
+            ])
+        }
+
+        // checkout ci-tools
+        dir(CTM_CHECKOUT_DIRECTORY_CI) {
+            git url: CTM_VCS_REPOSITORY_CI, credentialsId: CTM_VCS_CREDENTIALS
+        }
+
+        // checkout architecture definitions and
+        dir(CTM_CHECKOUT_DIRECTORY_ARCHITECTURE) {
+            git url: CTM_VCS_REPOSITORY_ARCHITECTURE, credentialsId: CTM_VCS_CREDENTIALS
+        }
+
+        load CTM_CHECKOUT_DIRECTORY_CI + "/common.groovy"
+    }
+
+    // load common pipeline script
+    load CTM_CHECKOUT_DIRECTORY_CI + "/pipeline.groovy"
+}

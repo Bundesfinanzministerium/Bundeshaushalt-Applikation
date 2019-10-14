@@ -1,0 +1,18 @@
+<div id="slick-{record.uid}" class="slick-wrapper">
+    <ul class="slider slider-nav">
+        <f:for each="{contentElements}" as="contentElement">
+            <li class="slider-nav-inner">
+                <h3>
+                    <a href="#">{contentElement.header}</a>
+                </h3>
+            </li>
+        </f:for>
+    </ul>
+    <ul class="slider slider-for">
+        <f:for each="{contentElements}" as="contentElement">
+            <li class="slider-for-inner">
+                <f:cObject typoscriptObjectPath="tt_content" data="{contentElement}" />
+            </li>
+        </f:for>
+    </ul>
+</div>

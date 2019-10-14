@@ -1,0 +1,26 @@
+plugin.tx_bmfbudget {
+	view {
+		# cat=plugin.tx_bmfbudget/file; type=string; label=Path to template root (FE)
+		templateRootPath = EXT:bmf_budget/Resources/Private/Templates/
+		# cat=plugin.tx_bmfbudget/file; type=string; label=Path to template partials (FE)
+		partialRootPath = EXT:bmf_budget/Resources/Private/Partials/
+		# cat=plugin.tx_bmfbudget/file; type=string; label=Path to template layouts (FE)
+		layoutRootPath = EXT:bmf_budget/Resources/Private/Layouts/
+	}
+	persistence {
+		# cat=plugin.tx_bmfbudget//a; type=string; label=Default storage PID
+		storagePid = 14
+		recursive = 2
+	}
+}
+
+module.tx_bmfbudget {
+	view {
+		# cat=module.tx_bmfbudget/file; type=string; label=Path to template root (BE)
+		templateRootPath = EXT:bmf_budget/Resources/Private/Backend/Templates/
+		# cat=module.tx_bmfbudget/file; type=string; label=Path to template partials (BE)
+		partialRootPath = EXT:bmf_budget/Resources/Private/Backend/Partials/
+		# cat=module.tx_bmfbudget/file; type=string; label=Path to template layouts (BE)
+		layoutRootPath = EXT:bmf_budget/Resources/Private/Backend/Layouts/
+	}
+}

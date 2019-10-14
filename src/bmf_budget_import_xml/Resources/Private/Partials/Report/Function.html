@@ -1,0 +1,37 @@
+<f:if condition="{result.records.function.updated}">
+    <hr>
+    <h2>{f:translate(key: 'result.updated.functions')} ({result.records.function.updated -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.budget')}&nbsp;</th>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.function.updated}" as="record">
+            <tr>
+                <td>{record.budget}&nbsp;</td>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>
+
+<f:if condition="{result.records.function.new}">
+    <hr>
+    <h2>{f:translate(key: 'result.inserted.functions')} ({result.records.function.new -> f:count()}):</h2>
+    <table>
+        <tr>
+            <th>{f:translate(key: 'common.budget')}&nbsp;</th>
+            <th>{f:translate(key: 'common.address')}&nbsp;</th>
+            <th>{f:translate(key: 'common.label')}&nbsp;</th>
+        </tr>
+        <f:for each="{result.records.function.new}" as="record">
+            <tr>
+                <td>{record.budget}&nbsp;</td>
+                <td>{record.address}&nbsp;</td>
+                <td>{record.label}&nbsp;</td>
+            </tr>
+        </f:for>
+    </table>
+</f:if>

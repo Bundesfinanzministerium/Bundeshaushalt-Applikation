@@ -1,0 +1,30 @@
+<f:form action="process" enctype="multipart/form-data" name="{dtoName}" object="{dto}" id="bmfProcessForm">
+
+    <h3>
+        3. {f:translate(key: 'form.xml.section.headline')}
+    </h3>
+    <f:form.select property="section"
+                   options="{sections}"
+                   prependOptionLabel="-- {f:translate(key: 'common.choose.please')} --"
+                   prependOptionValue=""/>
+
+    <h3>
+        4. {f:translate(key: 'form.xml.section.page')}
+        <br><small>{f:translate(key: 'form.xml.section.page.description')}</small>
+    </h3>
+    <f:form.textfield property="pageOffset"/>
+
+    <h3>
+        5. {f:translate(key: 'form.xml.section.import')}
+        <br><small>{f:translate(key: 'form.xml.section.import.description')}</small>
+    </h3>
+    <f:form.submit value="{f:translate(key: 'import.process')}" class="processForm"/>
+
+    <f:form.hidden property="budget" value="{dto.budget.uid}"/>
+    <f:form.hidden property="file.name" value="{dto.file.name}"/>
+    <f:form.hidden property="file.type" value="{dto.file.type}"/>
+    <f:form.hidden property="file.size" value="{dto.file.size}"/>
+    <f:form.hidden property="file.absoluteFilename" value="{dto.file.absoluteFilename}"/>
+    <f:form.hidden property="session" value="{dto.session}" id="bmfProcessSession"/>
+
+</f:form>
